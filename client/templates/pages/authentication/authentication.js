@@ -6,7 +6,11 @@ Router.route('/', function () {
 
 
 }, {
-  name: 'authentication'
+  name: 'authentication',
+  waitOn: function() {
+    Meteor.remote.subscribe('user');
+    Meteor.subscribe('users');
+  }
 });
 
 // Ao Entrar

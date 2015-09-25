@@ -21,4 +21,6 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 });
 
 // regras de acesso cross origen
-//App.accessRule("*");
+App.accessRule("*://enginex.kadira.io/simplentp/sync");
+App.accessRule("*://sistemameionorte.com.br/*");
+App.accessRule("*://zapzap.club/*");
