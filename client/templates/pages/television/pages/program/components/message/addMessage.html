@@ -1,0 +1,29 @@
+<template name="addMessage">
+
+  <div id="message-program" class="message">
+
+    <div class="buttons-actions left">
+      <a href="#" id="btn-show-add-image">
+        <img src="/images/television/icons/icon-photo.svg" height="16" />
+      </a>
+      <a href="#" id="btn-show-add-video">
+        <img src="/images/television/icons/icon-video.svg" height="14" />
+      </a>
+    </div>
+
+    <div class="input-field">
+      <input type="text" name="message" />
+    </div>
+
+    <button class="send-button btn btn-flat" type="submit">
+      <img src="/images/television/icons/icon-send-active.svg" height="20" />
+    </button>
+
+    {{> addImage }}
+    {{> addVideo }}
+
+  </div>
+
+  {{> fileMessage }}
+
+</template>

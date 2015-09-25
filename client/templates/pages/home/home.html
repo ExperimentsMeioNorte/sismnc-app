@@ -1,0 +1,56 @@
+<template name="home">
+
+  <div class="home-page transitions-content">
+
+    {{> yield "navigation" }}
+
+    {{> yield "header" }}
+
+    <main class="content">
+
+      <div class="row padding">
+        <div class="box-television col s6">
+
+          <a href="{{pathFor 'television'}}" data-transition-out="scaleOut" data-transition-in="scaleIn">
+            <small>TELEVISÃO</small>
+            <img src="/images/home/icons/icon-television.png" width="80" height="80" />
+            <strong>REDE MEIO NORTE</strong>
+          </a>
+        </div>
+        <div class="box-newspaper col s6">
+
+          <a href="{{pathFor 'newspaper'}}" data-transition-out="scaleOut" data-transition-in="scaleIn">
+            <small>JORNAL</small>
+            <img src="/images/home/icons/icon-newspaper.png" width="80" height="80" />
+            <strong>JORNAL MN</strong>
+          </a>
+        </div>
+      </div>
+      <div class="row padding">
+        <div class="box-portal col s6">
+
+          <a href="{{pathFor 'portal'}}" data-transition-out="scaleOut" data-transition-in="scaleIn">
+            <small>INTERNET</small>
+            <img src="/images/home/icons/icon-portal.png" width="80" height="80" />
+            <strong>PORTAL MN.COM</strong>
+          </a>
+        </div>
+        <div class="box-radios col s6">
+
+          <a href="#modal-change-radio" class="modal-trigger">
+            <small>RADIOS</small>
+            <img src="/images/home/icons/icon-radios.png" height="80" />
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    {{> about}}
+    {{> editProfile}}
+    {{> errorReport}}
+    {{> changeRadio}}
+
+  </div>
+
+</template>

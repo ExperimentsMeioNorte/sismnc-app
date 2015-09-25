@@ -4,9 +4,8 @@ Router.route('/', function () {
   this.layout('ApplicationLayout');
   this.render('authentication');
 
-
 }, {
-  name: 'authentication'
+  name: 'authentication',
 });
 
 // Ao Entrar
@@ -133,6 +132,7 @@ Template.authentication.events({
           }
         }
       });
+
     },
 
     // desloga na rede social atual

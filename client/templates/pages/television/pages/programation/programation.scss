@@ -1,0 +1,55 @@
+.programation-list {
+
+  .programation-tabs-header{
+    @extend .col;
+    @extend .s12;
+
+    .tabs {
+      background:#f8f8fc;
+      .tab {
+        a {
+          font-size:14px;letter-spacing:-0.04em;font-weight:normal;color:#798B91;
+        }
+      }
+      .active {color:#62A0BD!important;font-weight:bold!important;}
+    }
+
+    .indicator {background-color:#62A0BD!important;}
+
+  }
+
+  .tab-container {
+    @extend .col;
+    @extend .s12;
+  }
+
+  .programation-item {
+    padding:15px 0;border-bottom:1px solid #e5e5e5;display:table;width:100%;position:relative;
+
+    &:active, &:focus {
+      background:#f9f9fc;
+    }
+    a {
+      color:#798B91;
+    }
+    .item-date {
+      float:left;margin:14px 10px 0 0.75rem;
+      span {
+        width:100%;display:block;color:#666;
+      }
+    }
+    .item-avatar {
+      float:left;margin:0 10px;
+      img {}
+    }
+    .item-name {
+      font-size:16px;float:left;color:#798B91;font-weight:bold;max-width:170px;
+    }
+  }
+  .program-active {
+    &:before {
+      position:absolute;right:0;top:34px;background:#FBC02D;color:#fff;content:"NO AR";float:right;padding:2px 4px 2px 8px;border-radius:28px 0 0 28px;font-size:12px;font-weight:bold;
+    }
+  }
+
+}

@@ -18,7 +18,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 iron:router
 fourseven:scss
-jamielob:transitions
 zimme:active-route
 ejson
 meteorhacks:kadira
@@ -28,3 +27,4 @@ particle4dev:cordova-fb
 accounts-ui
 accounts-base
 service-configuration
+jamielob:transitions

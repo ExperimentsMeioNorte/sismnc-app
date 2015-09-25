@@ -1,0 +1,68 @@
+<template name="television">
+
+   <div class="television-page transitions-content">
+
+    {{> yield "navigation" }}
+
+    {{> yield "header"}}
+
+    <main class="content has-header">
+
+      <!-- <ul class="programs-list">
+      {{> programs}}
+      </ul> -->
+
+      <ul class="programs-list">
+        <div class="list-category">
+          <strong>JORNALISMO POPULAR</strong>
+          <li class="programs-list-item">
+            <a href="{{ pathFor 'program' }}">
+              <img src="/images/television/img-patrulha.png" width="100%" />
+            </a>
+          </li>
+          <li class="programs-list-item">
+            <a href="{{ pathFor 'program' }}">
+              <img src="/images/television/img-ronda.png" width="100%" />
+            </a>
+          </li>
+        </div>
+        <div class="list-category">
+          <strong>ESPORTIVIDADE</strong>
+          <li class="programs-list-item">
+            <a href="{{ pathFor 'program' }}">
+              <img src="/images/television/img-ole.png" width="100%" />
+            </a>
+          </li>
+        </div>
+        <div class="list-category">
+          <strong>DOMINGO AVENTURA</strong>
+          <li class="programs-list-item">
+            <a href="{{ pathFor 'program' }}">
+              <img src="/images/television/img-incrivel.png" width="100%" />
+            </a>
+          </li>
+        </div>
+      </ul>
+
+
+    </main>
+
+    {{> share }}
+
+  </div>
+
+</template>
+
+
+<!-- <template name="programs">
+    {{#each programList}}
+      <div class="list-category">
+        {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}
+        <li class="programs-list-item">
+          <a href="{{pathFor 'program' _id=this.program_id }}" data-transition-out="slideFadeLeftOut" data-transition-in="slideFadeRightIn">
+            <img src="{{image_avatar}}" width="100%" />
+          </a>
+        </li>
+      </div>
+    {{/each}}
+</template> -->

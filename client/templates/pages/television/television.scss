@@ -1,0 +1,42 @@
+// Cor primária #798B91;
+
+.television-page {
+  .header {
+    background:#798B91!important;color:#fff;
+    .logo, .title {
+      position:absolute;left:0;top:0;height:48px;line-height:48px;z-index:0;width:100%;font-size:22px;
+      img {
+        margin:8px 0;
+      }
+    }
+  }
+  .programs-list {
+    margin:0;padding:0;list-style: none;
+    .programs-list-item {
+      a {
+        display:block;float:left;width:100%;height:128px;
+        img {
+          width:100%;height:128px;
+        }
+      }
+    }
+    .list-category {
+      strong{padding:8px 5px;color:#798A91;font-size:12px;font-weight:bold;display:table;width:100%;}
+    }
+  }
+
+
+}
+
+.back-to-home {
+  color:#798A91!important;
+}
+
+#television-navigation {
+  .item-nav {
+    height:46px!important;line-height:46px!important;clear:both;
+    a {
+      font-size:18px;height:46px!important;line-height:46px!important;color:#798A91;
+    }
+  }
+}

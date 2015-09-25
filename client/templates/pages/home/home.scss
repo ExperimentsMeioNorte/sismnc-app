@@ -1,0 +1,157 @@
+// Página inicial (Sistema Meio Norte)
+.home-page {
+
+  color:#fff;
+  background: #445da2;
+  background: linear-gradient(to bottom, #445da2 0%, #5d80c6 100%);
+
+  .header {
+    .side-right {
+      .button {
+        img {
+          margin-top:8px;
+        }
+      }
+    }
+
+   .logo {
+      float:left;width:204px;height:120px;position:absolute;left:50%;margin-left:-102px;top:20px;
+    }
+
+  }
+
+  .content {
+    display:inline;
+
+    .row {
+      margin-bottom:1%;
+      &:first-child {
+        margin-top:168px;
+      }
+    }
+    .col {
+      background:rgba(0,0,0,0.05);width:49%!important;margin:0 0.5%!important;height:166px;position:relative;padding-top:40px;
+
+      transition:all 0.2s ease-in-out;
+
+      &:hover {
+        background:transparent;
+      }
+
+      small {
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        font-weight:bold;
+        padding: 10px 0;
+        font-size:14px;
+        background: rgba(255,255,255,0.08);
+      }
+
+      a {
+        display:block;color:#fff;width:100%;text-align:center;padding:20px 0;
+
+        strong {
+          font-weight:bold;clear:both;width:100%;display:none;font-size:10px;
+        }
+
+      }
+    }
+
+  }
+
+  .padding {
+    padding:0 20px;
+  }
+
+
+}
+
+.side-nav {
+  .item-nav {
+    .link-nav {
+
+     }
+  }
+}
+
+
+#main-navigation {
+  .item-logout {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 300px;
+    background: #f8f8fc;
+    left: 0;
+      a {
+        line-height:22px;height:22px;
+      }
+      img {
+        float:left;margin-right:15px;
+      }
+      span {
+        color:#666;
+      }
+  }
+  .item-avatar {
+    height:90px;padding-top:15px;padding-bottom:15px;background:#f8f8fc;margin-bottom:15px;
+    img {
+      float:left;margin-right:15px;
+    }
+    strong {font-size: 18px;margin-top:8px;color:#666;}
+    span {color:#666;font-size:12px;}
+  }
+  .item-nav {
+    .link-nav {
+      height:46px;line-height:46px;
+      img {margin-right:10px;float:left;margin-top:12px;}
+      span {line-height:48px;color:#666;font-weight:400;}
+    }
+  }
+}
+
+.change-image {margin: 5px 8px;height: 32px;}
+
+.checkbox-field {
+  padding:22px 0.75rem!important;
+}
+.social-checkbox {
+  padding:5px 0.75rem !important;color:#9e9e9e;
+  i {
+    font-size:18px;
+  }
+}
+
+.file-field {
+  display:table;width:100%;
+  .title-form {
+    font-weight:normal!important;color:#9e9e9e!important;font-size:1rem!important;margin-bottom:10px;
+  }
+  .file-path {
+    border:0 none!important;width:0!important;height:0!important;
+  }
+}
+
+.upload-image-element {
+  background: #f8f8fc;
+  display:table;width:100%;
+  padding: 90px 0;
+  text-align: center;
+}
+
+
+#modal-error-report {
+  .file-field {
+    .title-form {
+      margin-bottom:10px;
+    }
+  }
+}
+
+
+
+
