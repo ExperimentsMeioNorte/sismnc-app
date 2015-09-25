@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Sistema-Meio-Norte-(app)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Dashboard" sketch:type="MSArtboardGroup" transform="translate(-671.000000, -88.000000)" fill="#FFFFFF">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(671.000000, 88.000000)">
+                <g id="Shape" sketch:type="MSShapeGroup">
+                    <path d="M24,48 C10.7451653,48 0,37.2548267 0,24 C0,10.7451733 10.7451653,0 24,0 C37.2548347,0 48,10.7451733 48,24 C48,37.2548267 37.2548347,48 24,48 L24,48 Z M24,45.3333333 C35.7820747,45.3333333 45.3333333,35.78208 45.3333333,24 C45.3333333,12.21792 35.7820747,2.66666667 24,2.66666667 C12.2179253,2.66666667 2.66666667,12.21792 2.66666667,24 C2.66666667,35.78208 12.2179253,45.3333333 24,45.3333333 L24,45.3333333 Z M21.3333333,23.4422133 C21.3333333,21.98304 22.5169733,20.8001333 24,20.8001333 C25.47276,20.8001333 26.6666667,22.00272 26.6666667,23.4422133 L26.6666667,34.1580533 C26.6666667,35.6172267 25.4830267,36.8001333 24,36.8001333 C22.52724,36.8001333 21.3333333,35.59752 21.3333333,34.1580533 L21.3333333,23.4422133 L21.3333333,23.4422133 Z M24,16 C25.47276,16 26.6666667,14.80608 26.6666667,13.3333333 C26.6666667,11.8605867 25.47276,10.6666667 24,10.6666667 C22.52724,10.6666667 21.3333333,11.8605867 21.3333333,13.3333333 C21.3333333,14.80608 22.52724,16 24,16 L24,16 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

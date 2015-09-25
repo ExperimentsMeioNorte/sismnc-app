@@ -1,0 +1,32 @@
+<template name="navigation">
+  <ul id="main-navigation" class="side-nav">
+    <li class="item-avatar">
+      <img src="images/avatar/avatar1.png" height="60" />
+      <strong class="truncate">Alexandre Garcia</strong>
+      <span class="truncate">alexandregarcia@gmail.com</span>
+    </li>
+    <li class="item-nav">
+      <a class="link-nav modal-trigger" href="#modal-edit-profile">
+        <img src="images/home/icons/icon-edit.svg" height="24" />
+        <span>Editar Perfil</span>
+      </a>
+    </li>
+    <li class="item-nav">
+      <a class="link-nav modal-trigger" href="#modal-error-report">
+        <img src="images/home/icons/icon-alert.svg" height="22" />
+        <span>Reportar Erro</span>
+      </a>
+    </li>
+
+
+    <li class="item-logout">
+      <a href="{{ pathFor 'authentication' }}" title="" data-transition-out="scaleOut" data-transition-in="scaleIn" class="modal-action modal-close">
+
+        <img src="images/home/icons/icon-logout.svg" height="22" />
+        <span>Desconectar</span>
+
+      </a>
+    </li>
+
+  </ul>
+</template>

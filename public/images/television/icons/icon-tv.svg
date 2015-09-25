@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="42px" viewBox="0 0 61 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group + HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Rede-Meio-Norte" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Timeline(Rede)" sketch:type="MSArtboardGroup" transform="translate(-666.000000, -78.000000)" fill="#FFFFFF">
+            <g id="Group-+-HD" sketch:type="MSLayerGroup" transform="translate(665.000000, 78.000000)">
+                <g id="Group" transform="translate(0.909091, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M16.6675738,41.6975036 L30.5454545,24.737516 L44.4233353,41.6975036 L16.6675738,41.6975036 Z" id="Shape"></path>
+                    <path d="M60.553137,0.467189716 L0.537772087,0.467189716 L0.537772087,36.6290009 L17.3532332,36.6290009 L21.1277213,32.0108835 L5.15252859,32.0108835 L5.15252859,5.08194622 L55.9383805,5.08194622 L55.9383805,32.0108835 L39.9598269,32.0108835 L43.7376758,36.6290009 L60.553137,36.6290009 L60.553137,0.467189716 Z" id="Shape"></path>
+                </g>
+                <text id="HD" sketch:type="MSTextLayer" font-family="Roboto" font-size="14" font-weight="bold">
+                    <tspan x="22" y="22">HD</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
