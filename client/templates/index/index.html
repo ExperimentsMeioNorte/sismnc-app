@@ -1,0 +1,75 @@
+<template name="index">
+
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+      <!-- {{#if isAndroid}}
+        {{> ionIcon icon='navicon-round'}}
+      {{else}}
+        {{> ionIcon icon='android-menu'}}
+      {{/if}} -->
+      {{> ionIcon icon='navicon-round'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">
+      <img src="images/home/logo-white.png" width="204" height="120" />
+    </h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+
+      <div class="box-index box-television">
+
+        <a href="{{pathFor 'television'}}" onClick="IonNavigation.skipTransitions = true; return true;">
+          <small>TELEVISÃO</small>
+          <img src="/images/home/icons/icon-television-white.png" width="80" height="80" />
+          <strong>REDE MEIO NORTE</strong>
+        </a>
+
+      </div>
+      <div class="box-index box-newspaper">
+
+          <a href="{{pathFor 'newspaper'}}" onClick="IonNavigation.skipTransitions = true; return true;">
+            <small>JORNAL</small>
+            <img src="/images/home/icons/icon-newspaper-white.png" width="80" height="80" />
+            <strong>JORNAL MN</strong>
+          </a>
+
+      </div>
+      <div class="box-index box-portal">
+
+          <a href="{{pathFor 'portal'}}" onClick="IonNavigation.skipTransitions = true; return true;">
+            <small>INTERNET</small>
+            <img src="/images/home/icons/icon-portal-white.png" width="80" height="80" />
+            <strong>PORTAL MN.COM</strong>
+          </a>
+        </div>
+        <div class="box-index box-radios">
+
+          <a href="#" class="modal-trigger" data-ion-modal="_changeRadio">
+            <small>RADIOS</small>
+            <img src="/images/home/icons/icon-radios-white.png" height="80" />
+          </a>
+
+        </div>
+
+
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>
+
+
+
+<!-- {{#ionList}}
+
+  {{#ionItem path="tabs.one" iconLeft=true iconRight=true}}
+    {{> ionIcon icon="ios-checkmark" class="positive"}}
+    Tabs
+    {{> ionIcon icon="ios-arrow-right"}}
+  {{/ionItem}}
+
+{{/ionList}} -->

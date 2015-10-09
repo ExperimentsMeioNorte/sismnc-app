@@ -1,11 +1,70 @@
-<template name="ApplicationLayout">
+<template name="layout">
+  {{#ionBody}}
 
-  <div class="transitions-container" style="height:100%;">
+    {{#ionSideMenuContainer}}
 
-    {{> yield }}
+      {{#ionSideMenus}}
 
-  </div>
+        {{#ionSideMenu class="home-menu"}}
+          <div class="bar bar-header">
+            <!-- <div class="item-avatar">
+              <img src="{{ avatar }}" height="60" />
+              <strong class="truncate">{{ name }}</strong>
+              <span class="truncate">{{ email }}</span>
+            </div> -->
+            <div class="item-avatar">
+              <img src="/images/avatar/avatar1.png" height="60" />
+              <strong class="truncate">Allan Alexandre</strong>
+              <span class="truncate">alexandesigner@gmail.com</span>
+            </div>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <a href="{{ pathFor 'tabs.polls' }}" class="item item-icon-right" data-ion-menu-close>
+                <i class="icon-edit"></i>
+                Editar Perfil {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{ pathFor 'tabs.timeline' }}" class="item item-icon-right" data-ion-menu-close>
+                <i class="icon-attention-alt-1"></i>
+                Reportar erro {{> ionIcon icon="ios-arrow-right"}}
+              </a>
 
-  {{> addMessage }}
+            </div>
+          </div>
 
+          <div class="item item-logout" data-ion-menu-close>
+            <i class="icon-logout"></i>
+            Desconectar
+          </div>
+
+        {{/ionSideMenu}}
+
+        {{#ionSideMenu side="right"}}
+          <div class="bar bar-header bar-dark">
+            <h1 class="title">Right Menu</h1>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <div class="item item-icon-left" data-ion-menu-close>
+                {{> ionIcon icon="ios-arrow-left"}} Close Me
+              </div>
+            </div>
+          </div>
+        {{/ionSideMenu}}
+
+      {{/ionSideMenus}}
+
+      {{#ionSideMenuContent}}
+
+        {{> ionNavBar class="bar-positive"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+      {{/ionSideMenuContent}}
+
+    {{/ionSideMenuContainer}}
+
+  {{/ionBody}}
 </template>

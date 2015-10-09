@@ -1,30 +1,21 @@
 # Meteor packages used by this project, one per line.
-# Check this file (and the other files in this directory) into your repository.
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base             # Packages every Meteor app needs to have
-mobile-experience       # Packages for a great mobile UX
-mongo                   # The database Meteor supports right now
-blaze-html-templates    # Compile .html files into Meteor Blaze views
-session                 # Client-side reactive dictionary for your app
-jquery                  # Helpful client-side library
-tracker                 # Meteor's client-side reactive programming library
-
-standard-minifiers      # JS/CSS minifiers run for production mode
-es5-shim                # ECMAScript 5 compatibility for older browsers.
-ecmascript              # Enable ECMAScript2015+ syntax in app code
-
+meteor-platform
+accounts-password
 iron:router
-fourseven:scss
-zimme:active-route
-ejson
+zimme:iron-router-active
+anti:fake
+matb33:collection-hooks
+meteoric:ionic-sass@0.3.0
+meteoric:ionicons-sass@0.1.7
+meteoric:ionic@0.1.19
+meteoric:autoform-ionic
+useraccounts:ionic
 meteorhacks:kadira
-meteorhacks:fast-render
-chrismbeckett:toastr
-particle4dev:cordova-fb
 accounts-ui
-accounts-base
 service-configuration
-jamielob:transitions
+accounts-google
+particle4dev:cordova-fb

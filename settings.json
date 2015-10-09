@@ -5,19 +5,12 @@
   },
   "public": {
     "facebook": {
-        "permissions": [
-            "public_profile",
-            "user_interests",
-            "user_activities",
-            "read_friendlists",
-            "email"
-        ],
-        "profileFields": [
-            "name",
-            "gender",
-            "location",
-            "picture"
-        ]
+      "permissions": [
+        "public_profile",
+        "email",
+        "user_friends",
+        "user_location"
+      ]
     }
   }
 }

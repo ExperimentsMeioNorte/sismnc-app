@@ -1,0 +1,45 @@
+<template name="tabsTimeline">
+  {{#ionView}}
+    {{> _tabsHeader}}
+
+    {{#ionContent class="padding"}}
+
+      <div class="message-item">
+
+        <figure class="left">
+          <a href="#">
+            <img src="/images/avatar/avatar1.png" width="65" height="65" />
+          </a>
+        </figure>
+
+        <div class="message-info">
+          <h4 class="message-author">
+            <a href="#">
+              Allan Alexandre
+            </a>
+          </h4>
+          <div class="message-date">
+            <i class=""></i>
+            <span>1m</span>
+          </div>
+        </div>
+
+        <div class="message-content">
+          <p>
+            Lorem ipsum it dollor summy bussines on the table
+          </p>
+          <!-- {{#if img}} -->
+          <a href="#">
+            <img src="/images/television/img1.png" width="100%" />
+          </a>
+          <!-- {{/if}} -->
+        </div>
+
+      </div>
+
+    {{/ionContent}}
+
+    {{> _tabs}}
+
+  {{/ionView}}
+</template>

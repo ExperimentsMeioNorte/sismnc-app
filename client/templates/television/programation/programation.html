@@ -1,0 +1,21 @@
+<template name="programation">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton icon="android-arrow-back" path="television"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title center">
+      Programação
+    </h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList class="television-programation"}}
+
+        LISTA PROGRAMAÇÃO
+
+      {{/ionList}}
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

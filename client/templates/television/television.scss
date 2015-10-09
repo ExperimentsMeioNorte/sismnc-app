@@ -1,0 +1,175 @@
+.television-page {
+  transition:all .2s ease-in-out;
+
+  .bar {
+    background-color:#798B91!important;
+  }
+
+  .title {
+    img {margin:6px;display:inline-block;}
+  }
+
+  .view {background:#fff;}
+
+
+  .television-programs {
+    .section-program {
+      strong {
+        width: 100%;
+        padding: 10px;
+        background: #f8f8fc;
+        color:#798B91;
+        font-size: 14px;
+        font-weight: 500;
+        display: table;
+      }
+      .item {
+        padding:0!important;margin:0!important;border:0 none;
+        img {}
+        a {
+          display:block;outline:0;
+        }
+      }
+    }
+  }
+
+  .popover {
+    .item {
+      color:#666;margin:0!important;border:0 none!important;
+    }
+    .icon {
+      font-size:22px;
+    }
+  }
+
+
+  .tabs-television {
+    .tabs{top:145px;background:#fff;border-bottom:0 none!important;}
+  }
+
+  .has-tabs-top {
+    top: 195px;
+    background: #f8f8fc;
+    padding:20px 10px 48px 10px;
+  }
+
+
+
+  .message-item {
+    margin-bottom:2rem;
+    figure {
+      margin:0;float:left;
+      img {
+        box-shadow:5px 6px 10px -11px #000!important;
+        -moz-box-shadow:5px 6px 10px -11px #000!important;
+        -webkit-box-shadow:5px 6px 10px -11px #000!important;
+        border-radius:50%;
+      -moz-border-radius:50%;
+      -webkit-border-radius:50%;
+      }
+    }
+    .message-info {
+      padding-left:82px;line-height:38px;height:38px;
+      .message-author {
+        float:left;height:38px;line-height:28px;margin:0;
+        a {font-size:14px;color:#666;line-height:38px!important;height:38px!important;font-weight:600;text-decoration:none;}
+      }
+      .message-date {
+        float:right;color:#c8c8c9;font-size:12px;
+        img {
+          float:left;margin-right:4px;margin-top:11px
+        }
+        span {float:left;}
+      }
+    }
+    .message-content {
+     padding:10px; margin-left:80px!important;background:#fff;box-shadow:2px 2px 4px 0 rgba(0,0,0,.1);clear:right;
+     border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;
+     a {
+      display:block;
+     }
+     p {
+      color:#798B91;margin:0;
+     }
+     img {
+      border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;margin-top:10px;
+     }
+    }
+  }
+
+
+  .info-program {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    z-index: 990;
+    .program-description {
+      color:#9FACB4;font-size:14px;line-height:18px;padding:0 0.75rem;letter-spacing:-0.01em;height: 38px;overflow: hidden;
+    }
+    small {font-size:12px;color:#C8C8C8;width:100%;display:table;}
+    strong {
+      color:#798B91;font-weight:800;font-size:16px;
+    }
+  }
+
+
+  .message-timeline {
+    bottom:0;position:absolute;left:0;width:100%;
+    height:48px;background:#fff;opacity:1;z-index:90;
+
+    box-shadow:0 -2px 10px -4px rgba(0,0,0,0.3);
+
+    -webkit-backface-visibility:hidden;
+
+     transition:all .4s ease-in-out;
+    -webkit-transition:all .4s ease-in-out;
+    -moz-transition:all .4s ease-in-out;
+
+    .input-field {
+      padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
+      input {
+        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;
+      }
+    }
+
+    .send-button {
+      position: absolute;
+      right: 0.75rem;
+      bottom: 5px;
+      padding: 0;
+      width:38px;
+      height: 38px;
+      line-height:38px;
+      border:0!important;
+      z-index:80;
+
+      text-align:center;
+      background:#5796b5;
+      color:#fff;
+
+      border-radius:50%;
+
+      &:hover {
+        background:transparent!important;box-shadow:0 0 0 0!important;
+      }
+    }
+
+
+    .buttons-actions {
+      position:absolute;left:10px;top:12px;z-index:81;
+      a {
+        color:#ccc;font-size:24px;
+      }
+    }
+
+
+  }
+
+
+  .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated
+  {
+    border-color:#5796b5!important;color:#5796b5!important;
+  }
+
+}

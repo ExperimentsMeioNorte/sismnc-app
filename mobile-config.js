@@ -1,5 +1,5 @@
 App.info({
-  name: 'sismnc-app',
+  name: 'SISMNC',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
   version: '0.0.1'
 });
@@ -20,7 +20,6 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
      APP_NAME: 'vtv'
 });
 
-// regras de acesso cross origen
-App.accessRule("*://enginex.kadira.io/simplentp/sync");
-App.accessRule("*://sistemameionorte.com.br/*");
-App.accessRule("*://zapzap.club/*");
+// // regras de acesso cross origen
+App.accessRule("*");
+// //App.accessRule("*://localhost:3010/*");

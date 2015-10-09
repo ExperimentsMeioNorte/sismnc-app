@@ -1,0 +1,65 @@
+// Página inicial (Sistema Meio Norte)
+.home-page {
+
+  transition:all .2s ease-in-out;color:#fff;
+
+  .view {background: #445DA2;}
+
+  .title {
+    overflow:visible!important;top:10px!important;text-align:center!important;
+    img {
+      display:inline-block;
+    }
+  }
+
+  .scroll-content .content {
+    width:100%;top:162px!important;
+  }
+
+  .box-index {
+     position:relative;padding:45px 0 10px 0;background:rgba(0,0,0,0.13);width:48%!important;color:#fff;    float: left;margin: 1%;text-align:center;height:140px;
+     a {
+      color:#fff;text-decoration: none;
+     }
+     img {
+      margin:0 auto;
+     }
+     small {
+      font-weight:bold;position:absolute;left:0;top:0;height:30px;line-height:30px;text-align:center;width:100%;background:rgba(0,0,0, 0.2);
+     }
+     strong {
+      float:left;width:100%;text-align:center;display:none;
+     }
+   }
+
+  .menu-left {
+    position:relative;background:#fff;height:100%;
+    .bar-header {
+      height:80px!important;
+      .item-avatar {
+        strong {
+          margin-top:10px;float:left;
+        }
+        span {
+          color:#999;
+        }
+      }
+    }
+    .content {
+      top:80px;
+      .item {
+        color:#999;border-color:#e5e5e5;
+      }
+    }
+    .item-logout {
+      position:absolute;bottom:0;left:1px;width:100%;border-left:0!important;border-right:0!important;
+    }
+    .item-icon-right {
+      .icon {
+        font-size:22px;
+      }
+    }
+  }
+
+
+}

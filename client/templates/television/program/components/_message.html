@@ -1,0 +1,24 @@
+<template name="_message">
+
+  <div class="message-timeline">
+    <form name="addMessage" id="addMessage">
+
+      <div class="buttons-actions left">
+        <a href="#" id="btn-show-add-image">
+          {{> ionIcon icon='android-camera'}}
+        </a>
+      </div>
+
+      <div class="input-field">
+        <input type="text" name="message" id="message" />
+      </div>
+
+      <button class="send-button btn btn-flat">
+        {{> ionIcon icon='android-send'}}
+      </button>
+
+    </form>
+
+  </div>
+
+</template>

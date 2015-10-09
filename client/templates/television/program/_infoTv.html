@@ -1,0 +1,39 @@
+<template name="_infoTv">
+
+  <!-- {{#if playTvValidate hour_begin hour_end}}
+    <div class="play-tv padding">
+      <iframe src="http://new.livestream.com/accounts/3332377/events/2958396/player?width=640&height=260&autoPlay=false&mute=false" width="100%" height="260" frameborder="0" scrolling="no"> </iframe>
+    </div>
+  {{else}}
+      {{#if buttonValidate}}
+        <span class="btn clear" onclick="Router.go('program', {_id: '{{buttonProgramId}}'});">
+          AO VIVO
+        </span>
+      {{/if}}
+  {{/if}} -->
+
+  <div class="info-program">
+    <div class="row">
+      <div  class="col">
+        <small>DIA(S)</small>
+        <strong id="programDias" class="truncate">
+          Segunda à Sexta
+        </strong>
+      </div>
+      <div class="col">
+        <small>HORÁRIO</small>
+        <strong class="truncate">
+          <span id="programHoraInicial">
+            15:00
+          </span> às
+          <span id="programHoraFinal">
+            16:20
+          </span>
+        </strong>
+      </div>
+    </div>
+    <p class="program-description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at pretium urna, sed viverra libero. Phasellus quis tortor dictum, condimentum tellus pulvinar, venenatis quam. Aliquam in lacus cursus erat fringilla facilisis in at enim. Nunc dapibus iaculis mi
+    </p>
+  </div>
+</template>
