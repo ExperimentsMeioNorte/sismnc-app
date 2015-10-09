@@ -1,17 +1,3 @@
-// Rota
-Router.map(function() {
-  this.route('television', {
-    path: '/rede-meionorte',
-    waitOn: function() {
-      Meteor.remote.subscribe('program');
-      Meteor.remote.subscribe('category');
-    }
-  });
-  this.route('programation', {path: '/rede-meionorte/programacao'});
-  this.route('tabs.timeline', {path: '/rede-meionorte/timeline/:program_id', layoutTemplate: 'tabsInteraction'});
-  this.route('tabs.polls', {path: '/rede-meionorte/enquete', layoutTemplate: 'tabsInteraction'});
-});
-
 // Ao Entrar
 Template.television.rendered = function(){
 

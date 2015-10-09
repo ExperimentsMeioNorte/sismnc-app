@@ -1,14 +1,6 @@
 // Rota
 Router.map(function() {
-  this.route('index', {
-    path: '/'
-   //  onBeforeAction: function(){
-   //    if(!Meteor.remote.userId()){
-   //      Router.go('authentication');
-   //    }
-   //    this.next();
-   // }
-  });
+
 });
 
 // Ao Entrar

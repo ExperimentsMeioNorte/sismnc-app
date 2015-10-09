@@ -1,14 +1,3 @@
-// Rota
-Router.map(function() {
-  this.route('authentication', {
-    path: '/login',
-    waitOn: function() {
-      Meteor.remote.subscribe('user');
-      Meteor.subscribe('users');
-    }
-  });
-});
-
 // Ao Entrar
 Template.authentication.rendered = function(){
 

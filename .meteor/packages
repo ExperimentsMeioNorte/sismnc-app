@@ -19,3 +19,4 @@ accounts-ui
 service-configuration
 accounts-google
 particle4dev:cordova-fb
+meteorhacks:fast-render

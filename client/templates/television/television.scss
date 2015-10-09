@@ -150,8 +150,21 @@
 
       border-radius:50%;
 
+      transition:all .2s ease-in-out;
+
+      i {
+        transition:all .2s ease-in-out;
+      }
+
       &:hover {
         background:transparent!important;box-shadow:0 0 0 0!important;
+      }
+
+      &:focus, &:active {
+        background:transparent!important;color:#5796b5!important;
+        i {
+          font-size:26px!important;
+        }
       }
     }
 
@@ -170,6 +183,16 @@
   .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated
   {
     border-color:#5796b5!important;color:#5796b5!important;
+  }
+
+  .popup {
+    border-radius:10px!important;
+    .button-positive {
+      padding:16px 12px!important;border-radius:50%!important;background:#5796b5!important;border:2px solid #5796b5!important;
+      i {
+        color:#fff!important;font-size:36px!important;
+      }
+    }
   }
 
 }
