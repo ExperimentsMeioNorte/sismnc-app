@@ -17,31 +17,16 @@
   {{#ionView}}
     {{#ionContent}}
       {{#ionList class="television-programs"}}
-
+      {{#each programList}}
         <section class="section-program">
-
-          <strong>POLICIAL</strong>
-
-          {{#ionItem path="tabs.timeline" data-action="goProgram"}}
-            <img src="/images/television/img-ronda.png" width="100%" />
-          {{/ionItem}}
+          {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}
 
           {{#ionItem path="tabs.timeline" data-action="goProgram"}}
-            <img src="/images/television/img-patrulha.png" width="100%" />
+            <img src="{{image_avatar}}" width="100%" />
           {{/ionItem}}
 
         </section>
-
-        <section class="section-program">
-
-          <strong>ESPORTIVIDADE</strong>
-
-          {{#ionItem path="tabs.timeline" data-action="goProgram"}}
-            <img src="/images/television/img-ole.png" width="100%" />
-          {{/ionItem}}
-
-        </section>
-
+      {{/each}}
       {{/ionList}}
 
     {{/ionContent}}
