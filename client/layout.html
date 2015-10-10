@@ -5,7 +5,7 @@
 
       {{#ionSideMenus}}
 
-        {{#ionSideMenu class="home-menu"}}
+        {{#ionSideMenu class="home-menu" side="left"}}
           <div class="bar bar-header">
             <!-- <div class="item-avatar">
               <img src="{{ avatar }}" height="60" />
@@ -37,19 +37,6 @@
             Desconectar
           </div>
 
-        {{/ionSideMenu}}
-
-        {{#ionSideMenu side="right"}}
-          <div class="bar bar-header bar-dark">
-            <h1 class="title">Right Menu</h1>
-          </div>
-          <div class="content has-header">
-            <div class="list">
-              <div class="item item-icon-left" data-ion-menu-close>
-                {{> ionIcon icon="ios-arrow-left"}} Close Me
-              </div>
-            </div>
-          </div>
         {{/ionSideMenu}}
 
       {{/ionSideMenus}}

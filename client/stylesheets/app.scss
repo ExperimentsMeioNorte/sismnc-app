@@ -10,6 +10,16 @@ $loading-font-size: 32px;
   }
 }
 
+.menu-content {
+  padding-top:44px!important;
+}
+
+.view {
+
+  transition:opacity .2s ease-in-out!important;
+
+}
+
 .ionic-body.platform-android {
   font-family: "Roboto", sans-serif;
 
@@ -1403,11 +1413,13 @@ img {display:block;}
 
 
 .loading {
-  background:rgba(255,255,255,0.88)!important;
+  //background:rgba(255,255,255,0.88)!important;
 }
 
-
-
+.spinner {
+  stroke: #fff;
+  fill: #fff;
+}
 
 .backdrop {
   background:rgba(0,0,0,0.88);
@@ -1437,4 +1449,9 @@ img {display:block;}
 
 .tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated {
     font-weight:bold;color:#999;
+  }
+
+
+  .hide-view {
+    opacity:0!important;
   }

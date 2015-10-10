@@ -1,6 +1,9 @@
-Template.tabsTimeline.created = function(){
+Template.tabsTimeline.rendered = function(){
+
+  Session.set('limit', 5);
 
   document.querySelector('body').classList.add('television-page');
+
 
 }
 
@@ -9,12 +12,6 @@ Template.tabsTimeline.destroyed = function(){
   document.querySelector('body').classList.remove('television-page');
 
 }
-
-
-Template.tabsTimeline.created(function(){
-  // limite de visualizacoes na paginacao
-  Session.set('limit', 5);
-});
 
 Template.tabsTimeline.helpers({
   contents: function(){
