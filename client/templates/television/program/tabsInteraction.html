@@ -1,12 +1,13 @@
 <template name="tabsInteraction">
   {{#ionBody}}
     {{#ionView}}
+    {{#each programs}}
       {{> _infoTv}}
       {{> yield}}
       {{> _tabs}}
 
       {{> messageTimeline }}
-
+    {{/each}}
     {{/ionView}}
   {{/ionBody}}
 </template>

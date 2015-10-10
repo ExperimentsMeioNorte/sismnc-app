@@ -17,23 +17,23 @@
       <div  class="col">
         <small>DIA(S)</small>
         <strong id="programDias" class="truncate">
-          Segunda à Sexta
+          {{ day }}
         </strong>
       </div>
       <div class="col">
         <small>HORÁRIO</small>
         <strong class="truncate">
           <span id="programHoraInicial">
-            15:00
+            {{ hour_begin }}
           </span> às
           <span id="programHoraFinal">
-            16:20
+            {{ hour_end }}
           </span>
         </strong>
       </div>
     </div>
     <p class="program-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at pretium urna, sed viverra libero. Phasellus quis tortor dictum, condimentum tellus pulvinar, venenatis quam. Aliquam in lacus cursus erat fringilla facilisis in at enim. Nunc dapibus iaculis mi
+      {{ description }}
     </p>
   </div>
 </template>

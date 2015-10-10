@@ -1,5 +1,12 @@
 // Ao Entrar
 Template.television.rendered = function(){
+  Meteor.remote.subscribe('program');
+  Meteor.remote.subscribe('category');
+  Meteor.remote.subscribe('content');
+  Meteor.remote.subscribe('user');
+  Meteor.remote.subscribe('answer');
+  Meteor.remote.subscribe('poll');
+  Meteor.remote.subscribe('polluser');
 
   document.querySelector('body').classList.add('television-page');
 
@@ -54,6 +61,7 @@ Template.television.helpers({
       for(pID in program){
         if(program[pID].category_id === category[cID]._id){
           programs[pID] = {
+            _id: program[pID]._id,
             program_id: program[pID]._id,
             image_avatar: program[pID].image_avatar,
             category_name: category[cID].description,
