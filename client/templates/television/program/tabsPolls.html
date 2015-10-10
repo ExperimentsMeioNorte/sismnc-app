@@ -3,6 +3,31 @@
 
   {{#ionContent class="padding"}}
   <h1>Enquete</h1>
+
+  <div class="polls-answers">
+    {{#each pollActive}}
+      <strong class="polls-question">
+        <input name="poll_id" type="text" id="poll_id" value="{{ _id }}" style="display:none;"/>
+        <img src="{{ img }}" height="125" />  {{ description }}
+      </strong>
+    {{/each}}
+
+    {{#each answersActive}}
+      <div class="polls-answers-item">
+        <input name="answer" type="radio" id="{{ _id }}" value="{{ _id }}"/>
+        <label for="{{ _id }}">{{ description }}</label>
+      </div>
+    {{/each}}
+    {{#if pollActive}}
+    <div class="poll-answers-footer">
+
+       <button class="btn btn-answer">
+          ENVIAR RESPOSTA
+       </button>
+
+    </div>
+    {{/if}}
+  </div>
   {{/ionContent}}
 
   {{> _tabs}}
