@@ -25,7 +25,10 @@
       }
       .item {
         padding:0!important;margin:0!important;border:0 none;
-        img {}
+        max-height: 120px;
+        height: 120px;
+        background: #f8f8fc;
+        img {display:block;}
         a {
           display:block;outline:0;
         }
@@ -129,7 +132,7 @@
     .input-field {
       padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
       input {
-        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;
+        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;
       }
     }
 
@@ -279,6 +282,9 @@
       img {
         position:absolute;left:0;top:4px;
       }
+      label {
+        color:#666;font-size:14px;font-weight:500;
+      }
       span {
           position: relative;
           padding-left: 0;
@@ -294,13 +300,20 @@
       }
     }
     .poll-answers-footer {
-      position:absolute;bottom:0;left:0;width:100%;
+      position:fixed;bottom:0;left:0;width:100%;
       .btn {
-        width:100%;border-radius:0!important;-webkit-border-radius:0!important;-moz-border-radius:0!important;background:#84D672;font-weight:bold;
+        width:100%;border-radius:0!important;-webkit-border-radius:0!important;-moz-border-radius:0!important;background:#84D672;font-weight:bold;color:#fff!important;padding:0;border:0 none!important;
+        i {font-size:32px;}
       }
     }
   }
 }
 
 
+}
+
+.hide-message {
+  .message-timeline {
+    bottom:-80px!important;
+  }
 }

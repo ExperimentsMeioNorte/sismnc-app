@@ -1,10 +1,8 @@
 <template name="tabsPolls">
   {{> _tabsHeader}}
 
-  {{#ionContent class="padding"}}
-  <h1>Enquete</h1>
-
-  <div class="polls-answers">
+  {{#ionContent class="polls-content padding"}}
+   <div class="polls-answers">
     {{#each pollActive}}
       <strong class="polls-question">
         <input name="poll_id" type="text" id="poll_id" value="{{ _id }}" style="display:none;"/>
@@ -22,7 +20,7 @@
     <div class="poll-answers-footer">
 
        <button class="btn btn-answer">
-          ENVIAR RESPOSTA
+       {{> ionIcon icon='android-checkmark-circle'}}
        </button>
 
     </div>

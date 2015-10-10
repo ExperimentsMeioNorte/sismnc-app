@@ -4,6 +4,10 @@ $loading-font-size: 32px;
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .bar {
   .title {
     font-size:18px!important;
@@ -1454,4 +1458,9 @@ img {display:block;}
 
   .hide-view {
     opacity:0!important;
+  }
+  .modal {
+    .title {
+      top:0!important;
+    }
   }

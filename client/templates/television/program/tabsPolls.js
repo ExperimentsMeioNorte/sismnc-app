@@ -1,12 +1,18 @@
 Template.tabsPolls.rendered = function(){
 
-  document.querySelector('body').classList.add('television-page');
+  bodyTemplate = document.querySelector('body');
+
+  bodyTemplate.classList.add('television-page');
+  bodyTemplate.classList.add('hide-message');
 
 }
 
 Template.tabsPolls.destroyed = function(){
 
-  document.querySelector('body').classList.remove('television-page');
+  bodyTemplate = document.querySelector('body');
+
+  bodyTemplate.classList.remove('television-page');
+  bodyTemplate.classList.remove('hide-message');
 
 }
 

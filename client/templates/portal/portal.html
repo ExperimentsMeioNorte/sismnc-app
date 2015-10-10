@@ -1,4 +1,4 @@
-<template name="layout">
+<template name="portal">
   {{#ionBody}}
 
     {{#ionSideMenuContainer}}
@@ -7,11 +7,6 @@
 
         {{#ionSideMenu class="home-menu" side="left"}}
           <div class="bar bar-header">
-            <!-- <div class="item-avatar">
-              <img src="{{ avatar }}" height="60" />
-              <strong class="truncate">{{ name }}</strong>
-              <span class="truncate">{{ email }}</span>
-            </div> -->
             <div class="item-avatar">
               <img src="/images/avatar/avatar1.png" height="60" />
               <strong class="truncate">Allan Alexandre</strong>
@@ -32,7 +27,7 @@
             </div>
           </div>
 
-          <div class="item item-logout" data-activate="logout" data-ion-menu-close>
+          <div class="item item-logout" data-ion-menu-close>
             <i class="icon-logout"></i>
             Desconectar
           </div>
@@ -43,10 +38,12 @@
 
       {{#ionSideMenuContent}}
 
-        {{> ionNavBar class="bar-positive"}}
+        {{> ionNavBar class="bar-positive header-portal"}}
 
         {{#ionNavView}}
           {{> yield}}
+
+          {{> _tabsPortal}}
         {{/ionNavView}}
 
       {{/ionSideMenuContent}}

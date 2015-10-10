@@ -1,10 +1,24 @@
-Template.messageTimeline.events({
+Template.addMessage.events({
   'click [data-action="addMedia"]': function(event, template) {
     IonPopup.show({
       buttons: [{
         text: '<i class="ion-paperclip"></i>',
         type: 'button-positive',
         onTap: function() {
+          if (Meteor.isCordova) {
+            var cameraOptions = {
+              width: 640,
+              height: 480,
+              quality:70,
+              sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+            };
+
+            MeteorCamera.getPicture(cameraOptions, function (error, data) {
+              Session.set("photo", data);
+            });
+          } else {
+            console.log('Roda apenas no cordova');
+          }
           IonPopup.close();
         }
       },
@@ -12,6 +26,21 @@ Template.messageTimeline.events({
         text: '<i class="ion-android-camera"></i>',
         type: 'button-positive',
         onTap: function() {
+          if (Meteor.isClient) {
+
+              var cameraOptions = {
+                width: 640,
+                height: 480,
+                quality:70
+              };
+
+              MeteorCamera.getPicture(cameraOptions, function (error, data) {
+                Session.set("photo", data);
+              });
+
+            } else {
+              alert('Roda apenas no cordova');
+            }
           IonPopup.close();
         }
       },
