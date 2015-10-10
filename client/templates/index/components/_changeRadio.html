@@ -1,7 +1,13 @@
 <template name="_changeRadio">
   {{#ionModal title="Escolha a rádio"}}
     <div class="padding">
-      aaa
+
+    {{#each radio}}
+        <a href="{{ pathFor this.name _id=this._id}}" class="go-to-{{name}}">
+          <img src="{{image_folder}}" height="150" />
+        </a>
+    {{/each}}
+
     </div>
   {{/ionModal}}
 </template>

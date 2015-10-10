@@ -53,8 +53,6 @@ Template.messageTimeline.events({
                         document.querySelector('#message').value = '';
                         Session.set("photo", '');
                         Session.set("video", '');
-
-                        console.log('Nova Mensagem');
                     }else{
                         console.log('Não deu Nova Mensagem');
                     }
