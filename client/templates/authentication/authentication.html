@@ -9,7 +9,20 @@
   {{#ionView}}
     {{#ionContent}}
 
-      AuthPage
+  <div class="auth-page transitions-content">
+
+    <h1 class="logo-sismnc center-align">
+      <img src="/images/home/logo-sistema.png" alt="" width="260" />
+    </h1>
+
+    <div class="social">
+      {{> loginFacebook}}
+      {{> loginGoogle}}
+
+      <div class="meteor-connect">{{> loginButtons}}</div>
+    </div>
+
+  </div>
 
     {{/ionContent}}
   {{/ionView}}

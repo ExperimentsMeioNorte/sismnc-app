@@ -1,6 +1,7 @@
 // Ao Entrar
 Template.authentication.rendered = function(){
-
+    Meteor.remote.subscribe('user');
+    Meteor.subscribe('users');
   document.querySelector('body').classList.add('authentication-page');
 
 };

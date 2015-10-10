@@ -1,9 +1,6 @@
 Template.tabsTimeline.rendered = function(){
 
-  Session.set('limit', 5);
-
   document.querySelector('body').classList.add('television-page');
-
 
 }
 
