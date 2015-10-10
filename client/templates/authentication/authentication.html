@@ -2,27 +2,20 @@
 
   {{#contentFor "headerTitle"}}
     <h1 class="title">
-      <img src="images/home/logo-white.png" width="204" height="120" />
+      <img src="/images/home/logo-sistema.png" alt="" width="245" />
     </h1>
   {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent}}
 
-  <div class="auth-page transitions-content">
-
-    <h1 class="logo-sismnc center-align">
-      <img src="/images/home/logo-sistema.png" alt="" width="260" />
-    </h1>
-
     <div class="social">
       {{> loginFacebook}}
       {{> loginGoogle}}
 
       <div class="meteor-connect">{{> loginButtons}}</div>
-    </div>
 
-  </div>
+    </div>
 
     {{/ionContent}}
   {{/ionView}}

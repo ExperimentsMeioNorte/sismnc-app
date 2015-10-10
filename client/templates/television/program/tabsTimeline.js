@@ -1,7 +1,6 @@
 Template.tabsTimeline.rendered = function(){
-
+  Session.set('limit', 5);
   document.querySelector('body').classList.add('television-page');
-
 }
 
 Template.tabsTimeline.destroyed = function(){
@@ -69,6 +68,7 @@ Template.tabsTimeline.helpers({
         }
       }
     );
+    console.log('helper1');
   },
 
   // verifica se esta no final do registro e some com o botao mais

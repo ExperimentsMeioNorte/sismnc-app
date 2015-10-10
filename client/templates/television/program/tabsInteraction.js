@@ -1,6 +1,5 @@
 Template.tabsInteraction.rendered = function () {
   Session.set('currentTab', 'tabs.timeline');
-  Session.set('limit', 5);
 };
 
 

@@ -195,4 +195,112 @@
     }
   }
 
+
+
+
+  .poll-result {
+  width:100%;display:table;
+}
+
+.polls-content {
+
+  .vote {
+    span {
+      &:before {position:absolute;left:0;top:-18px;font-size:10px;font-weight:bold;content:"MEU VOTO";color:#62A0BD;}
+    }
+  }
+
+  .results-question {
+
+    .polls-answers-item {
+      padding-left:185px !important;
+
+      strong {
+        position: absolute;
+        left: 12px;
+        top: 6px;
+        font-size: 26px;
+        color:#798B91;
+      }
+
+      img {
+        left:130px !important;
+      }
+      span {color:#9e9e9e;}
+
+      &:before {
+        position: absolute;
+        left: 90px;
+        top: 18px;
+        width: 10px;
+        height: 10px;
+        background: #D8D8D8;
+        content: "";
+        border-radius:50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+      }
+      &:after {
+        position: absolute;
+        left: 94px;
+        top: 18px;
+        width: 2px;
+        height: 55px;
+        background: #D8D8D8;
+        content: "";
+      }
+      &:last-child {
+         &:after {
+          display:none!important;
+         }
+      }
+    }
+
+  }
+
+  .polls-question {
+    font-size: 18px;
+    line-height: 22px;
+    color:#7A8B91;
+    display: table;
+    margin-bottom: 20px;
+    img {
+      width:100%;border-radius:5px;
+    }
+  }
+  .polls-answers {
+    margin:10px 0;
+    [type="checkbox"]:checked + label:before {
+      border-bottom-color:#62A0BD!important;
+      border-right-color:#62A0BD!important;
+    }
+    .polls-answers-item {
+      margin-bottom:5px;display:block;position:relative;padding:12px 0 12px 0;
+      img {
+        position:absolute;left:0;top:4px;
+      }
+      span {
+          position: relative;
+          padding-left: 0;
+          cursor: pointer;
+          display: inline-block;
+          height: 25px;
+          line-height: 25px;
+          font-size: 1rem;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          -ms-user-select: none;
+      }
+    }
+    .poll-answers-footer {
+      position:absolute;bottom:0;left:0;width:100%;
+      .btn {
+        width:100%;border-radius:0!important;-webkit-border-radius:0!important;-moz-border-radius:0!important;background:#84D672;font-weight:bold;
+      }
+    }
+  }
+}
+
+
 }
