@@ -10,6 +10,7 @@ Template.tabsTimeline.destroyed = function(){
 
 }
 
+
 Template.tabsTimeline.created(function(){
   // limite de visualizacoes na paginacao
   Session.set('limit', 5);
@@ -17,7 +18,6 @@ Template.tabsTimeline.created(function(){
 
 Template.tabsTimeline.helpers({
   contents: function(){
-    console.log(222);
     var dateObj = new Date();
     Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
     Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 01:00:00'
