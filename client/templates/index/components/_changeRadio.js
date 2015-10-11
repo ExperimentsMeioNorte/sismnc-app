@@ -1,15 +1,3 @@
-Template.television.rendered = function(){
-  Meteor.remote.subscribe('program');
-  Meteor.remote.subscribe('category');
-  Meteor.remote.subscribe('content');
-  Meteor.remote.subscribe('user');
-  Meteor.remote.subscribe('answer');
-  Meteor.remote.subscribe('poll');
-  Meteor.remote.subscribe('polluser');
-  Meteor.remote.subscribe('vehicle');
-
-};
-
 Template._changeRadio.helpers({
   // gera as url das radios
   radio: function(){

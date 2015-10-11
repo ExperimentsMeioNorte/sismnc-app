@@ -6,5 +6,16 @@
       FM MN
     </h1>
   {{/ionHeaderBar}}
+  {{#ionBody}}
+    {{#ionView}}
+    {{#each programs}}
+      <!-- {{> _infoTv}} -->
+      <!-- {{> yield}} -->
+      {{> _tabs}}
 
+      {{> addMessage }}
+
+    {{/each}}
+    {{/ionView}}
+  {{/ionBody}}
 </template>
