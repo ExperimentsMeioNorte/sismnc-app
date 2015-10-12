@@ -2,7 +2,11 @@
   {{> _tabsHeaderRadio}}
 
   {{#ionContent class="polls-content padding"}}
-   <div class="polls-answers">
+
+  <div class="polls-answers">
+
+    {> resultsPollsRadio }}
+
     {{#each pollActive}}
       <strong class="polls-question">
         <input name="poll_id" type="text" id="poll_id" value="{{ _id }}" style="display:none;"/>
@@ -25,6 +29,9 @@
 
     </div>
     {{/if}}
+
+    {{> notFoundPollsRadio }}
+
   </div>
 
   {{/ionContent}}
