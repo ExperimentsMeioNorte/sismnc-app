@@ -15,7 +15,7 @@ App.icons({
 
   // Android
   'android_ldpi': 'public/icons/android/drawable-ldpi/ic_launcher.png',
-  'android_mdpi': 'public/icons/android/drawable-lmdpi/ic_launcher.png',
+  'android_mdpi': 'public/icons/android/drawable-mdpi/ic_launcher.png',
   'android_hdpi': 'public/icons/android/drawable-hdpi/ic_launcher.png',
   'android_xhdpi': 'public/icons/android/drawable-xhdpi/ic_launcher.png'
 
