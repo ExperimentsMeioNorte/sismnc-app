@@ -3,9 +3,9 @@
     <div class="padding change-radio">
 
     {{#each radio}}
-        <a href="{{ pathFor this.name _id=this._id}}" class="go-to-{{name}}">
+        {{#ionItem path="tabs.timelineRadio" data-action="goProgram"}}
           <img src="{{image_folder}}" height="150" />
-        </a>
+        {{/ionItem}}
     {{/each}}
 
     </div>
