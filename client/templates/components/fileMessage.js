@@ -4,7 +4,8 @@ Meteor.startup(function(){
 
 Template.fileMessage.events({
     'click #btn-cancel-file, focus #btn-cancel-file' : function(){
-      document.querySelector('body').classList.remove('show-file-message-television');
+      document.querySelector('body').classList.remove('show-file-message');
+      document.querySelector('.file-message').classList.add('hide');
 
       Session.setDefault('photo', null);
 

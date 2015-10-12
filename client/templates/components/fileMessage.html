@@ -1,12 +1,12 @@
 <template name="fileMessage">
   <div class="file-message">
-    <strong id="btn-cancel-file">
-      <img src="/images/television/icons/icon-close-white.svg" height="20" />
-    </strong>
+    <a href="#" id="btn-cancel-file">
+      <i class="icon-cancel-1"></i>
+    </a>
 
     {{#if photo}}
-      <div>
-        <img src={{photo}} />
+      <div class="photo-file">
+        <img src="{{photo}}" width="100%" />
       </div>
     {{/if}}
 

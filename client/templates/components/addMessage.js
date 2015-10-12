@@ -19,6 +19,7 @@ Template.addMessage.events({
           } else {
             console.log('Roda apenas no cordova');
           }
+          document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
         }
       },
@@ -54,6 +55,51 @@ Template.addMessage.events({
     });
   },
 
+  'focus #btn-capture-image, click #btn-capture-image': function () {
+    if (Meteor.isClient) {
+
+      var cameraOptions = {
+        width: 640,
+        height: 480,
+        quality:70
+      };
+
+      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+        Session.set("photo", data);
+      });
+
+    } else {
+      alert('Roda apenas no cordova');
+      document.querySelector('body').classList.add('show-file-message');
+    }
+  },
+
+  'focus #btn-upload-image, click #btn-upload-image' : function(){
+    if (Meteor.isCordova) {
+
+      var cameraOptions = {
+        width: 640,
+        height: 480,
+        quality:70,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+      };
+
+      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+        Session.set("photo", data);
+      });
+
+    } else {
+      console.log('Roda apenas no cordova');
+      document.querySelector('body').classList.add('show-file-message');
+    }
+
+
+
+  },
+
+
+  // ENVIO DA MENSAGEM
+
   'click .send-button': function(events){
         events.preventDefault();
         if(!document.querySelector('#message').value){
@@ -82,6 +128,7 @@ Template.addMessage.events({
                         document.querySelector('#message').value = '';
                         Session.set("photo", '');
                         Session.set("video", '');
+                        document.querySelector('body').classList.remove('show-file-message');
                     }else{
                         console.log('Não deu Nova Mensagem');
                     }
@@ -90,43 +137,4 @@ Template.addMessage.events({
         }
     },
 
-    'focus #btn-capture-image, click #btn-capture-image': function () {
-    if (Meteor.isClient) {
-
-      var cameraOptions = {
-        width: 640,
-        height: 480,
-        quality:70
-      };
-
-      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
-        Session.set("photo", data);
-      });
-
-    } else {
-      alert('Roda apenas no cordova');
-    }
-  },
-
-  'focus #btn-upload-image, click #btn-upload-image' : function(){
-    if (Meteor.isCordova) {
-
-      var cameraOptions = {
-        width: 640,
-        height: 480,
-        quality:70,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-      };
-
-      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
-        Session.set("photo", data);
-      });
-    } else {
-      console.log('Roda apenas no cordova');
-    }
-
-    document.querySelector('body').classList.remove('add-image-buttons-television');
-    document.querySelector('body').classList.add('show-file-message-television');
-
-  }
 });

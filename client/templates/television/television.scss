@@ -54,7 +54,7 @@
     .has-header {
       top: 195px!important;
       background: #f8f8fc;
-      padding:20px 10px 48px 10px;
+      padding:20px 20px 48px 20px;
     }
   }
 
@@ -124,70 +124,6 @@
   }
 
 
-  .message-timeline {
-    bottom:0;position:absolute;left:0;width:100%;
-    height:48px;background:#fff;opacity:1;z-index:90;
-
-    box-shadow:0 -2px 10px -4px rgba(0,0,0,0.3);
-
-    -webkit-backface-visibility:hidden;
-
-     transition:all .4s ease-in-out;
-    -webkit-transition:all .4s ease-in-out;
-    -moz-transition:all .4s ease-in-out;
-
-    .input-field {
-      padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
-      input {
-        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:100%;
-      }
-    }
-
-    .send-button {
-      position: absolute;
-      right: 0.75rem;
-      bottom: 5px;
-      padding: 0;
-      width:38px;
-      height: 38px;
-      line-height:38px;
-      border:0!important;
-      z-index:80;
-
-      text-align:center;
-      background:#5796b5;
-      color:#fff;
-
-      border-radius:50%;
-
-      transition:all .2s ease-in-out;
-
-      i {
-        transition:all .2s ease-in-out;
-      }
-
-      &:hover {
-        background:transparent!important;box-shadow:0 0 0 0!important;
-      }
-
-      &:focus, &:active {
-        background:transparent!important;color:#5796b5!important;
-        i {
-          font-size:26px!important;
-        }
-      }
-    }
-
-
-    .buttons-actions {
-      position:absolute;left:10px;top:12px;z-index:81;
-      a {
-        color:#ccc;font-size:24px;
-      }
-    }
-
-
-  }
 
 
   .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated
@@ -290,7 +226,7 @@
         position:absolute;left:0;top:4px;
       }
       label {
-        color:#666;font-size:14px;font-weight:500;
+        color:#666;font-size:14px;font-weight:500;margin-left:20px;display:inline-block;
       }
       span {
           position: relative;
@@ -317,10 +253,4 @@
 }
 
 
-}
-
-.hide-message {
-  .message-timeline {
-    bottom:-80px!important;
-  }
 }
