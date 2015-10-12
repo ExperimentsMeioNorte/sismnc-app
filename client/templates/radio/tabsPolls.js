@@ -1,4 +1,4 @@
-Template.tabsPollsTelevision.rendered = function(){
+Template.tabsPollsRadio.rendered = function(){
 
   bodyTemplate = document.querySelector('body');
 
@@ -8,7 +8,7 @@ Template.tabsPollsTelevision.rendered = function(){
 
 }
 
-Template.tabsPollsTelevision.destroyed = function(){
+Template.tabsPollsRadio.destroyed = function(){
 
   bodyTemplate = document.querySelector('body');
 
@@ -18,7 +18,7 @@ Template.tabsPollsTelevision.destroyed = function(){
 
 }
 
-Template.tabsPollsTelevision.helpers({
+Template.tabsPollsRadio.helpers({
     // mostra a enquete
     pollActive: function(){
         var poll = Poll.find(
@@ -102,7 +102,7 @@ Template.tabsPollsTelevision.helpers({
   }
 });
 
-Template.tabsPollsTelevision.events({
+Template.tabsPollsRadio.events({
     'click .btn-answer': function(event){
         event.preventDefault();
 

@@ -1,0 +1,16 @@
+<template name="program">
+  {{#ionBody}}
+    {{#ionView}}
+    {{#each programs}}
+
+      {{> infoTv}}
+
+      {{> yield}}
+      {{> _tabsTelevision }}
+
+      {{> addMessage }}
+
+    {{/each}}
+    {{/ionView}}
+  {{/ionBody}}
+</template>

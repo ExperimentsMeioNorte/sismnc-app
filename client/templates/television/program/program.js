@@ -1,9 +1,9 @@
-Template.tabsInteraction.rendered = function () {
-  Session.set('currentTab', 'tabs.timeline');
+Template.program.rendered = function () {
+  Session.set('currentTab', 'tabs.timelineTelevision');
   Session.set('limit', 5);
 };
 
-Template.tabsInteraction.helpers({
+Template.program.helpers({
   // gera os dados do programa atual
   programs: function(){
     var categoryId = Category.find(

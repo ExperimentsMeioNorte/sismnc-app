@@ -1,17 +1,17 @@
-Template.tabsTimelineTelevision.rendered = function(){
+Template.tabsTimelineRadio.rendered = function(){
 
   document.querySelector('body').classList.add('television-page');
   document.querySelector('.scroll-content').classList.add('has-tab-program');
 }
 
-Template.tabsTimelineTelevision.destroyed = function(){
+Template.tabsTimelineRadio.destroyed = function(){
 
   document.querySelector('body').classList.remove('television-page');
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
 
 }
 
-Template.tabsTimelineTelevision.helpers({
+Template.tabsTimelineRadio.helpers({
   contents: function(){
     var dateObj = new Date();
     Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
@@ -89,7 +89,7 @@ Template.tabsTimelineTelevision.helpers({
   }
 });
 
-Template.tabsTimelineTelevision.events({
+Template.tabsTimelineRadio.events({
     'click #mais': function(){
         Meteor.incrementLimit();
     }
