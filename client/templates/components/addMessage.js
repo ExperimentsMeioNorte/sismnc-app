@@ -13,7 +13,7 @@ Template.addMessage.events({
               sourceType: Camera.PictureSourceType.PHOTOLIBRARY
             };
 
-            MeteorCamera.getPicture(cameraOptions, function (error, data) {
+            MeteoricCamera.getPicture(cameraOptions, function (error, data) {
               Session.set("photo", data);
             });
           } else {
@@ -34,7 +34,7 @@ Template.addMessage.events({
                 quality:70
               };
 
-              MeteorCamera.getPicture(cameraOptions, function (error, data) {
+              MeteoricCamera.getPicture(cameraOptions, function (error, data) {
                 Session.set("photo", data);
               });
 
@@ -99,7 +99,7 @@ Template.addMessage.events({
         quality:70
       };
 
-      MeteorCamera.getPicture(cameraOptions, function (error, data) {
+      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
         Session.set("photo", data);
       });
 
@@ -110,6 +110,7 @@ Template.addMessage.events({
 
   'focus #btn-upload-image, click #btn-upload-image' : function(){
     if (Meteor.isCordova) {
+
       var cameraOptions = {
         width: 640,
         height: 480,
@@ -117,7 +118,7 @@ Template.addMessage.events({
         sourceType: Camera.PictureSourceType.PHOTOLIBRARY
       };
 
-      MeteorCamera.getPicture(cameraOptions, function (error, data) {
+      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
         Session.set("photo", data);
       });
     } else {
