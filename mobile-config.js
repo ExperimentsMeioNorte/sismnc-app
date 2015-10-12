@@ -1,5 +1,5 @@
 App.info({
-  //id: 'br.sistemameionorte'
+  id: 'br.com.app.sistemameionorte',
   name: 'MNAPPv2',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
   version: '0.0.1'
