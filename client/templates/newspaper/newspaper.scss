@@ -1,0 +1,389 @@
+//0A89D8
+
+.newspaper-page {
+
+  font-family:'Roboto', Helvetica Neue, Helvetica, sans-serif;
+
+  .bar {
+    .title {
+      img {
+        margin:6px auto;
+      }
+    }
+  }
+
+  a {
+    color:#2d2d2d;text-decoration:none;
+  }
+
+
+  .back-to-home {
+    color:#999!important;
+  }
+
+  .newspaperFeatured {
+    .main-list {
+      margin-top:110px;
+    }
+  }
+
+
+  .header-newspaper {
+    color:#fff!important;
+    .button-search {
+      img {margin:4px 0!important;}
+    }
+    .nav-wrapper {
+      background:#2d2d2d!important;
+    }
+    .title {
+      font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif!important;color:#fff;line-height:44px!important;font-weight:bold!important;font-size:22px;
+    }
+    .logo, .title {
+      position:absolute;left:0;top:0;height:48px;line-height:48px;z-index:0;width:100%;font-size:22px;text-align:center;
+      img {
+        margin:9px auto;display:table;
+      }
+    }
+
+  }
+
+  .subscribe-button {
+    position:absolute;right:10px;top:6px;padding:2px 14px;background:green;color:#fff;height: 30px;line-height: 26px;border-radius: 28px;z-index:99990!important;font-size:12px;font-weight:bold;
+  }
+
+  .side-nav {
+
+    .item-nav {
+      &:hover {
+        background:none!important;
+      }
+      &:active, &:focus {
+        background:none!important;
+      }
+    }
+    .collapsible {
+      .collapsible-header {
+        position:relative;
+        i {
+          position: absolute;
+          right: -10px;
+          top: 0px;
+          font-size: 20px;
+          margin: 0 !important;
+        }
+      }
+      .link-nav {
+        padding-left: 0px!important;
+        margin-left: 12px!important;
+      }
+
+      .active {
+        background:none!important;
+        &:hover {
+          background:none!important;
+        }
+      }
+
+      .collapsible-body {
+        a {
+          height:42px!important;line-height:42px!important;margin-left:0!important;
+        }
+      }
+
+    }
+    li {
+      padding:0px 15px 0 5px!important;
+
+      &:active, &:focus {
+        background:none!important;
+      }
+    }
+    .link-nav {
+      height:42px!important;line-height:42px!important;font-size:18px;
+    }
+  }
+
+
+
+
+  .slider-featured {
+    position:relative;overflow:visible!important;max-height:350px;
+
+    .inner-slider {
+      position:relative;overflow:visible!important;
+      &:after {
+       position: absolute;
+        top:184px;
+        left: 2%;
+        background: #fff;
+        height: 165px;
+        width: 96%;
+        padding:4%;
+        content: "";
+        border-bottom:1px solid #e4e4e4;
+        z-index:8;
+      }
+    }
+
+    figure {
+      margin:0!important;
+
+      img {
+        height:240px!important;
+      }
+    }
+
+    .slick-list {
+      overflow:visible!important;
+    }
+
+    .info-featured {
+      position:absolute;left:5%;width:90%;top:196px;
+      z-index:90;
+      .title-featured {
+        margin:0!important;line-height:0!important;max-height:44px;overflow:hidden;
+        a {
+          font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: bold;
+          letter-spacing: -0.03em;
+        }
+      }
+      .description-featured {
+        color:#777;font-size:12px;line-height:16px;
+      }
+
+      .info-featured-bottom {
+        float:left;width:100%;clear:both;display:block;margin-top:10px;height:32px;margin-top:0;
+        .info-author {
+          float:left;font-size:12px;
+          img {
+            float:left;margin-right:5px;
+          }
+          a {
+            line-height:32px;font-weight:bold;
+          }
+
+        }
+        .info-date {
+          float:left;margin-left:5px;
+          span {
+            font-size:12px;color:#777;line-height:32px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .slick-dots {
+    position: absolute;
+    right: 5%;
+    top: 148px;
+    li {
+      float:left;margin-left:5px;
+      button {
+        border:none;background:rgba(255,255,255,0.6);text-indent: -9999px;width:10px;height:10px;padding:0!important;
+
+        border-radius:50%;
+      }
+    }
+  }
+  .slick-active {
+    button {
+      background:#fff!important;
+    }
+  }
+
+
+
+  .side-nav li:hover, .side-nav li.active {
+    background:none!important;
+  }
+
+
+  .tab-container {
+    overflow:hidden;position:relative;height:100%;
+  }
+
+
+  .main-list {
+    margin-top:40px;
+  }
+
+  .post-model {
+    display:table;width:100%;position:relative;padding:15px 0.75rem 15px 15px;
+    .post-image {
+      float:left;margin:0 15px 0 0!important;max-width:75px;
+      img {
+        width:100%;
+
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+      }
+    }
+    .post-title {
+      margin:0!important;line-height:0!important;max-height: 66px;overflow: hidden;
+      a {font-size: 18px;line-height: 22px;font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;font-weight:bold;}
+    }
+    .post-info {
+      .post-info-author {float:left; line-height: 26px;font-weight: bold;font-size:12px;}
+      .post-info-date {float:left;margin-left:5px;font-size: 12px;color: #777;line-height: 26px;}
+    }
+  }
+
+
+
+  .main-list {
+  margin-top:0;
+  }
+  .box-label {
+  height: 42px;
+  text-align: center;
+  background: #f8f8fc;
+  line-height: 42px;
+  color: #666;
+  border-bottom:1px solid #e5e5e5;
+  }
+
+}
+
+
+.show-tabs-newspaper {
+  position:relative;height:100%;
+  #nav-tabs-newspaper {
+    bottom:0!important;opacity:1!important;
+  }
+  .newspaper-page {
+    padding-bottom:50px;
+  }
+  .transitions-container {
+    // padding-bottom:48px;position:relative;z-index:4;
+    -webkit-perspective:none!important;
+    -moz-perspective: none!important;
+    perspective: none!important;
+  }
+}
+
+
+
+.newspaper-tabs-bottom {
+  bottom: -81px;
+  position: fixed;
+  width: 100%;
+  left:0;
+  z-index:8;
+  width:100%;
+  background:#212121;
+  color:#fff!important;
+  opacity:0;
+
+  -webkit-backface-visibility:hidden;
+
+   transition:all .4s ease-in-out;
+  -webkit-transition:all .4s ease-in-out;
+  -moz-transition:all .4s ease-in-out;
+
+
+
+  // &:before {
+  //   position:absolute;width:100%;height:40px;top:-40px;left:0;content:"";
+
+  //   background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  //   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+  //   background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  //   background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  //   background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  //   background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+  // }
+
+
+  .indicator {
+    bottom:auto!important;
+    top:0!important;
+    background-color:#00B7F4!important;
+  }
+  .tabs-items {
+    background:none!important;margin:0;height:50px;
+    .active {
+      box-shadow: 0px 3px 0px 0px #00B7F4 inset;
+    }
+    li {
+      margin:0;padding:0;position:relative;
+
+      // &:before {
+      //   position:absolute;right:0;top:22px;width:5px;height:5px;background:#fff;content:"";border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;
+      // }
+    }
+    a {
+     width:100%;display:block;float:left;color:#fff!important;font-size:14px;font-weight:bold;line-height:50px;height:50px;text-align:center;
+
+      &:hover {
+        color:inherit!important;
+      }
+    }
+  }
+
+  .slick-prev, .slick-next {
+   position:absolute;bottom:0;border:none;color:#fff;height:48px;width:50px;
+   opacity:1;padding:0!important;
+
+   transition:all .2ms ease-in-out;
+   -moz-transition:all .2ms ease-in-out;
+   -webkit-transition:all .2ms ease-in-out;
+
+    i {
+      float:left;font-size:22px;
+    }
+
+  }
+  .slick-disabled {
+    opacity:0;visibility:hidden;display:none;
+  }
+  .slick-prev {
+    left:0;
+    i {
+      float:left;
+    }
+
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;1+0,0+100;White+to+Transparent */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+  }
+  .slick-next {
+    right:0;
+
+    i {
+      float:right;
+    }
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,1+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+  }
+
+
+}
+
+
+
+
