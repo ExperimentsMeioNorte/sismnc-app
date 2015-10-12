@@ -1,5 +1,6 @@
 App.info({
-  name: 'SISMNC',
+  //id: 'br.sistemameionorte'
+  name: 'MNAPPv2',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
   version: '0.0.1'
 });
