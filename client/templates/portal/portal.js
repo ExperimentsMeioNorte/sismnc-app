@@ -1,3 +1,3 @@
 Template.portal.rendered = function () {
-  Session.set('currentTab', 'tabs.index');
+  Session.set('currentTab', 'tabs.indexPortal');
 };

@@ -1,7 +1,7 @@
 Template.tabsInteraction.rendered = function () {
   Session.set('currentTab', 'tabs.timeline');
+  Session.set('limit', 5);
 };
-
 
 Template.tabsInteraction.helpers({
   // gera os dados do programa atual
@@ -40,5 +40,8 @@ Template.tabsInteraction.helpers({
     }else{
         return '';
     }
+  },
+  'isRadio': function(){
+    return true;
   }
 });

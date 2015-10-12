@@ -1,19 +1,15 @@
 <template name="_tabsHeaderPortal">
 
-  {{#ionNavBar class="bar-positive"}}
-    {{#contentFor "headerButtonLeft"}}
-      <button class="button button-clear pull-left" data-ion-menu-toggle="left">
-        <!-- {{#if isAndroid}}
-          {{> ionIcon icon='navicon-round'}}
-        {{else}}
-          {{> ionIcon icon='android-menu'}}
-        {{/if}} -->
-        {{> ionIcon icon='navicon-round'}}
-      </button>
-    {{/contentFor}}
+  {{#ionHeaderBar class="bar-positive"}}
+    {{>ionNavBackButton icon="android-arrow-back" path="index"}}
     <h1 class="title center">
       <img src="/images/portal/marca.png" height="32" alt="" />
     </h1>
-  {{/ionNavBar}}
+    {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-popover="_popoverPortal">
+      {{> ionIcon icon='android-more-vertical'}}
+    </button>
+  {{/contentFor}}
+  {{/ionHeaderBar}}
 
 </template>

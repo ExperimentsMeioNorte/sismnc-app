@@ -50,10 +50,16 @@
     .tabs{top:145px;background:#fff;border-bottom:0 none!important;}
   }
 
+  .has-tab-program {
+    .has-header {
+      top: 195px!important;
+      background: #f8f8fc;
+      padding:20px 10px 48px 10px;
+    }
+  }
+
   .has-tabs-top {
-    top: 195px;
-    background: #f8f8fc;
-    padding:20px 10px 48px 10px;
+    top:44px;
   }
 
 
@@ -106,6 +112,7 @@
     position: absolute;
     left: 0;
     top: 44px;
+    background:#fff;
     z-index: 990;
     .program-description {
       color:#9FACB4;font-size:14px;line-height:18px;padding:0 0.75rem;letter-spacing:-0.01em;height: 38px;overflow: hidden;
@@ -132,7 +139,7 @@
     .input-field {
       padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
       input {
-        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;
+        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:100%;
       }
     }
 

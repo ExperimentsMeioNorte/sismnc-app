@@ -1,5 +1,5 @@
 <template name="portal">
-  {{#ionBody}}
+  <!-- {{#ionBody}}
 
     {{#ionSideMenuContainer}}
 
@@ -50,5 +50,16 @@
 
     {{/ionSideMenuContainer}}
 
+  {{/ionBody}} -->
+
+
+  {{#ionBody}}
+    {{#ionView}}
+
+      {{> yield}}
+      {{> _tabsPortal }}
+
+    {{/ionView}}
   {{/ionBody}}
+
 </template>

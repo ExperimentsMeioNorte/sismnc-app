@@ -1,11 +1,13 @@
 Template.tabsTimeline.rendered = function(){
-  Session.set('limit', 5);
+
   document.querySelector('body').classList.add('television-page');
+  document.querySelector('.scroll-content').classList.add('has-tab-program');
 }
 
 Template.tabsTimeline.destroyed = function(){
 
   document.querySelector('body').classList.remove('television-page');
+  document.querySelector('.scroll-content').classList.remove('has-tab-program');
 
 }
 
