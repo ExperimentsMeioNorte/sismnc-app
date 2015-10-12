@@ -1,5 +1,5 @@
 Template.radio.rendered = function () {
-  Session.set('currentTab', 'tabs.timeline');
+  Session.set('currentTab', 'tabs.timelineRadio');
   Session.set('limit', 5);
 
   IonLoading.show({
@@ -7,9 +7,7 @@ Template.radio.rendered = function () {
     duration: 1000
   });
 
-  var bodyTelevision = document.querySelector('body');
-
-  bodyTelevision.classList.add('radio-page');
+  document.querySelector('body').classList.add('radio-page');
 
 };
 
@@ -21,45 +19,42 @@ Template.radio.destroyed = function(){
 };
 
 
-Template.radio.helpers({
-  // gera os dados do programa atual
-  programs: function(){
-    var categoryId = Category.find(
-      {
-        description: 'Radio'
-      }
-    ).map(
-      function(c){
-        return {
-          _id: c._id
-        }
-      }
-    );
+// Template.radio.helpers({
+//   // gera os dados do programa atual
+//   programs: function(){
+//     var categoryId = Category.find(
+//       {
+//         description: 'Radio'
+//       }
+//     ).map(
+//       function(c){
+//         return {
+//           _id: c._id
+//         }
+//       }
+//     );
 
-    if(categoryId && categoryId[0] !== undefined){
-        return Program.find(
-          {
-            _id: Router.current().params._id,
-            status: 1,
-            category_id: { $not: categoryId[0]._id }
-          }
-        ).map(
-          function(p) {
-            return {
-                _id: p._id,
-              name: p.name,
-              day: p.day,
-              hour_begin: p.hour_begin,
-              hour_end: p.hour_end,
-              description: p.description
-            };
-          }
-        );
-    }else{
-        return '';
-    }
-  },
-  'isRadio': function(){
-    return true;
-  }
-});
+//     if(categoryId && categoryId[0] !== undefined){
+//         return Program.find(
+//           {
+//             _id: Router.current().params._id,
+//             status: 1,
+//             category_id: { $not: categoryId[0]._id }
+//           }
+//         ).map(
+//           function(p) {
+//             return {
+//                 _id: p._id,
+//               name: p.name,
+//               day: p.day,
+//               hour_begin: p.hour_begin,
+//               hour_end: p.hour_end,
+//               description: p.description
+//             };
+//           }
+//         );
+//     }else{
+//         return '';
+//     }
+//   }
+// });

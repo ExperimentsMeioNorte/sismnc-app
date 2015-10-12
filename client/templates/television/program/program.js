@@ -40,8 +40,5 @@ Template.program.helpers({
     }else{
         return '';
     }
-  },
-  'isRadio': function(){
-    return true;
   }
 });

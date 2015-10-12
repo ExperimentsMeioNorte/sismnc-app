@@ -163,7 +163,10 @@
             float:left;margin-right:5px;
           }
           a {
-            line-height:32px;font-weight:bold;
+              line-height: 32px;
+              white-space: nowrap;
+              font-weight: bold;
+              float: left;
           }
 
         }

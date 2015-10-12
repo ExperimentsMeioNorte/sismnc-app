@@ -20,7 +20,6 @@ Template.television.destroyed = function(){
 
 };
 
-
 Template.television.events({
   'click [data-action="goProgram"]' : function(){
     IonNavigation.skipTransitions = false;

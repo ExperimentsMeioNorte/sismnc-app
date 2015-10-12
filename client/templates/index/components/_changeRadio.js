@@ -1,3 +1,11 @@
+Template._changeRadio.events({
+  'click .change-radio .item' : function(){
+    IonModal.close();
+    IonNavigation.skipTransitions = false;
+    return true;
+  }
+});
+
 Template._changeRadio.helpers({
   // gera as url das radios
   radio: function(){
