@@ -4,8 +4,9 @@
     {{> _tabsHeaderTelevision}}
 
     {{#ionContent class="padding"}}
-    {{#if validateContent}}
+
       {{#each contents}}
+        {{#if notFound}}
         <div class="message-item">
 
           <figure class="left">
@@ -38,10 +39,11 @@
           </div>
 
         </div>
+        {{else}}
+          {{> notFoundTimelineTelevision}}
+        {{/if}}
       {{/each}}
-    {{else}}
-      {{> notFoundTimelineTelevision}}
-    {{/if}}
+
     {{/ionContent}}
 
     {{> _tabsTelevision}}
