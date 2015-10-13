@@ -4,40 +4,44 @@
     {{> _tabsHeaderTelevision}}
 
     {{#ionContent class="padding"}}
-    {{#each contents}}
-      <div class="message-item">
+    {{#if validateContent}}
+      {{#each contents}}
+        <div class="message-item">
 
-        <figure class="left">
-          <a href="#">
-            <img src="{{user_avatar}}" width="65" height="65" />
-          </a>
-        </figure>
-
-        <div class="message-info">
-          <h4 class="message-author">
+          <figure class="left">
             <a href="#">
-              {{user_name}}
+              <img src="{{user_avatar}}" width="65" height="65" />
             </a>
-          </h4>
-          <div class="message-date">
-            <i class=""></i>
-            <span>{{msg_time}}</span>
+          </figure>
+
+          <div class="message-info">
+            <h4 class="message-author">
+              <a href="#">
+                {{user_name}}
+              </a>
+            </h4>
+            <div class="message-date">
+              <i class=""></i>
+              <span>{{msg_time}}</span>
+            </div>
           </div>
-        </div>
 
-        <div class="message-content">
-          <p>
-            {{text}}
-          </p>
-          {{#if img}}
-          <a href="#">
-            <img src="{{img}}" width="100%" />
-          </a>
-          {{/if}}
-        </div>
+          <div class="message-content">
+            <p>
+              {{text}}
+            </p>
+            {{#if img}}
+            <a href="#">
+              <img src="{{img}}" width="100%" />
+            </a>
+            {{/if}}
+          </div>
 
-      </div>
-    {{/each}}
+        </div>
+      {{/each}}
+    {{else}}
+      {{> notFoundTimelineTelevision}}
+    {{/if}}
     {{/ionContent}}
 
     {{> _tabsTelevision}}

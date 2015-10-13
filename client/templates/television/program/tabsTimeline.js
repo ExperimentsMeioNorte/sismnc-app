@@ -15,7 +15,7 @@ Template.tabsTimelineTelevision.helpers({
   contents: function(){
     var dateObj = new Date();
     Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
-    Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 01:00:00'
+    Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 01:00:00';
 
     return Content.find(
     {
@@ -70,7 +70,21 @@ Template.tabsTimelineTelevision.helpers({
         }
       }
     );
-    console.log('helper1');
+//console.log(content, content[0]);
+    /*if(content && content[0] !== undefined){
+      console.log('tem');
+      Session.set('getupValidateContent', false);
+      return content;
+    }else{
+      console.log('nao tem');
+      Session.set('getupValidateContent', true);
+      return '';
+    }*/
+  },
+
+  validateContent: function(){
+    var content = Content.findOne({ program_id:Router.current().params._id, status: 1});
+    return (content !== undefined)? true : false;
   },
 
   // verifica se esta no final do registro e some com o botao mais
