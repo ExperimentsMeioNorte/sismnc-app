@@ -1,0 +1,49 @@
+<template name="_reportError">
+
+  {{#ionModal title="Reportar Erro" class="bar-profile"}}
+
+    <section id="modal-error-report" class="modal">
+
+     <span class="alert">
+      Preencha os dados abaixo corretamente
+    </span>
+
+    <div class="form-pattern modal-content">
+
+      <div class="padding">
+
+        <div class="input-field">
+          <label for="reportError">Qual é o erro?</label>
+          <input id="reportError" type="text">
+        </div>
+
+        <div class="file-field input-field">
+
+          <strong class="title-form">Tem imagem?</strong>
+
+          <input class="file-path validate" type="text"/>
+
+          <div class="upload-image-element">
+            <img src="images/home/icons/icon-upload-image.svg" height="48" />
+            <input type="file" />
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+
+       <a class="button button-positive" href="#">
+          ENVIAR
+      </a>
+
+    </div>
+
+  </section>
+
+  {{/ionModal}}
+
+</template>

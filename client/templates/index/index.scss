@@ -77,8 +77,29 @@
 .bar-radio {
   .bar {
     background:#f8f8fc!important;
-    .title, .button {
-      color:#212121!important;
+    .title {
+      color:#666!important;
+    }
+    .button {
+      color:#666!important;
+    }
+  }
+
+  .has-header {
+    background:#fff!important;
+  }
+
+}
+
+
+.bar-profile {
+  .bar {
+    background:#f8f8fc!important;
+    .title {
+      color:#666!important;
+    }
+    .button {
+      color:#666!important;
     }
   }
 
