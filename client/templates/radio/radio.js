@@ -7,13 +7,22 @@ Template.radio.rendered = function () {
     duration: 1000
   });
 
-  document.querySelector('body').classList.add('radio-page');
+  var bodyTemplate = document.querySelector('body');
+
+  if ( Router.current().params._id === 'x6YhQ2Yji2MhyQ67D' ) {
+    bodyTemplate.classList.add('fmmn-page');
+    bodyTemplate.classList.remove('boa-page');
+  }
+  bodyTemplate.classList.add('boafm-page');
+  bodyTemplate.classList.add('radio-page');
 
 };
 
 // Ao sair
 Template.radio.destroyed = function(){
 
+  document.querySelector('body').classList.remove('boafm-page');
+  document.querySelector('body').classList.remove('fmmn-page');
   document.querySelector('body').classList.remove('radio-page');
 
 };

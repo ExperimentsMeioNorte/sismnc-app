@@ -5,6 +5,7 @@
 
     {{#ionContent class="padding"}}
      {{#each contents}}
+      {{#if notFound}}
       <div class="message-item">
 
         <figure class="left">
@@ -37,6 +38,9 @@
         </div>
 
       </div>
+      {{else}}
+        {{> notFoundTimelineRadio}}
+      {{/if}}
     {{/each}}
     {{/ionContent}}
 

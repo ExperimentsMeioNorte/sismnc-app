@@ -18,6 +18,7 @@
   }
 
   .bar {
+    background:#212121!important;
     .title {
       img {
         margin:6px auto;
@@ -402,6 +403,39 @@
 
 
 
+
+
+.newspaperColumn {
+  .column-header {
+    img {
+      width:100%;
+    }
+  }
+
+  .content {
+    top:0!important;padding-bottom:48px;
+  }
+
+  .main-list {
+    margin-top:0!important;
+
+    .post-model {
+      .post-date {
+        font-size:14px;color:#666;margin-bottom:8px;display:table;
+      }
+      .post-description {
+        font-size:14px;line-height:16px;color:#666;
+      }
+      .post-info {
+        width:100%;display:table;margin-top:10px;
+        a {
+          font-size:14px;font-weight:bold;color:#FBC02D;
+        }
+      }
+    }
+  }
+
+}
 
 
 
