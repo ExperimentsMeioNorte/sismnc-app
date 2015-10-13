@@ -3,6 +3,7 @@ Template.authentication.rendered = function(){
   document.querySelector('body').classList.add('authentication-page');
 };
 
+
 // Ao sair
 Template.authentication.destroyed = function(){
 

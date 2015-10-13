@@ -8,9 +8,7 @@ Template.portal.rendered = function(){
     duration: 1000
   });
 
-  var bodyPortal = document.querySelector('body');
-
-  bodyPortal.classList.add('portal-page');
+  document.querySelector('body').classList.add('portal-page');
 
 
 };

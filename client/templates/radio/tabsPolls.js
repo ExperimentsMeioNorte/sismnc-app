@@ -1,18 +1,14 @@
 Template.tabsPollsRadio.rendered = function(){
 
-  bodyTemplate = document.querySelector('body');
-
-  bodyTemplate.classList.add('radio-page');
-  bodyTemplate.classList.add('hide-message');
+  document.querySelector('body').classList.add('radio-page');
+  document.querySelector('body').classList.add('hide-message');
 
 }
 
 Template.tabsPollsRadio.destroyed = function(){
 
-  bodyTemplate = document.querySelector('body');
-
-  bodyTemplate.classList.remove('radio-page');
-  bodyTemplate.classList.remove('hide-message');
+  document.querySelector('body').classList.remove('radio-page');
+  document.querySelector('body').classList.remove('hide-message');
 
 }
 

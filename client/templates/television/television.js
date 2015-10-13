@@ -6,9 +6,7 @@ Template.television.rendered = function(){
     duration: 1000
   });
 
-  var bodyTelevision = document.querySelector('body');
-
-  bodyTelevision.classList.add('television-page');
+  document.querySelector('body').classList.add('television-page');
 
 
 };

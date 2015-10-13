@@ -8,9 +8,7 @@ Template.newspaper.rendered = function(){
     duration: 1000
   });
 
-  var bodyNewspaper = document.querySelector('body');
-
-  bodyNewspaper.classList.add('newspaper-page');
+  document.querySelector('body').classList.add('newspaper-page');
 
 
 };

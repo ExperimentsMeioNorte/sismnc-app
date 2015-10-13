@@ -1,19 +1,15 @@
 Template.tabsPollsTelevision.rendered = function(){
 
-  bodyTemplate = document.querySelector('body');
-
-  bodyTemplate.classList.add('television-page');
-  bodyTemplate.classList.add('hide-message');
+  document.querySelector('body').classList.add('television-page');
+  document.querySelector('body').classList.add('hide-message');
   document.querySelector('.scroll-content').classList.add('has-tab-program');
 
 }
 
 Template.tabsPollsTelevision.destroyed = function(){
 
-  bodyTemplate = document.querySelector('body');
-
-  bodyTemplate.classList.remove('television-page');
-  bodyTemplate.classList.remove('hide-message');
+  document.querySelector('body').classList.remove('television-page');
+  document.querySelector('body').classList.remove('hide-message');
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
 
 }

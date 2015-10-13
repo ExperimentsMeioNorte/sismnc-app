@@ -42,6 +42,7 @@ Template.addMessage.events({
             } else {
               alert('Roda apenas no cordova');
             }
+          document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
         }
       },
