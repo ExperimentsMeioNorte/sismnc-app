@@ -1681,4 +1681,22 @@ img {display:block;}
 }
 
 
+.center-align {
+  text-align:center;
+  img {
+    margin: 0 auto;
+  }
+}
 
+
+
+.message-feedback, .message-feedback2 {
+  width:100%;margin-top:30px;
+
+  strong {display:block;width:100%;font-size:20px;color:#999;margin-toP:15px;}
+  span {padding:0 40px;color:#ccc;display:table;font-size:16px;line-height:20px;margin-top:8px;}
+
+  .button {
+    border-radius:28px;-moz-border-radius:28px;-webkit-border-radius:28px;margin-top:15px;
+  }
+}

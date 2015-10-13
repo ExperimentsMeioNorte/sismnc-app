@@ -1,10 +1,17 @@
 <template name="_tabsHeaderNewspaper">
 
   {{#ionHeaderBar class="bar-dark"}}
+
     {{>ionNavBackButton icon="android-arrow-back" path="index"}}
+
     <h1 class="title center">
       <img src="/images/newspaper/logo-jornal-white.png" height="32" alt="" />
     </h1>
+
+     <button class="button button-clear" data-ion-modal="_modalSearchPortal">
+      {{> ionIcon icon='ios-search-strong'}}
+    </button>
+
   {{/ionHeaderBar}}
 
 </template>

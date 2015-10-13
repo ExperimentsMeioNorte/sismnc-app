@@ -12,7 +12,3 @@ Template.infoTv.helpers({
    return Meteor.playTv.programId;
  }
 });
-
-// Template.infoTv.rendered = function () {
-
-// };

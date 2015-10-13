@@ -33,6 +33,15 @@ $color-whatsapp:#4dc247!important;
 
   font-family:'Roboto', Helvetica Neue, Helvetica, sans-serif;
 
+  .modal {
+  .title {
+    color:#666;text-align:center!important;
+  }
+  .button {
+    color:#666;
+  }
+}
+
   .bar {
     .title {
       img {
@@ -720,5 +729,23 @@ $color-whatsapp:#4dc247!important;
 .show-nav-cidades {
   #nav-cidades {
     left:0;
+  }
+}
+
+
+
+.white-color {
+  .title {
+    color:#fff!important;
+  }
+  .button {
+    color:#fff!important;
+  }
+}
+
+
+.tabs-portal {
+  .tabs {
+    top:-9px!important;
   }
 }

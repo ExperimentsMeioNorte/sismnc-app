@@ -35,6 +35,7 @@ Template.radio.helpers({
               day: p.day,
               hour_begin: p.hour_begin,
               hour_end: p.hour_end,
+              image_avatar: p.image_avatar,
               description: p.description
             };
           }
