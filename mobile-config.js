@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'MNAPPv2',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.0.1'
+  version: '0.0.2'
 });
 
 App.icons({
