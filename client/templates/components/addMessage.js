@@ -45,13 +45,6 @@ Template.addMessage.events({
           document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
         }
-      },
-      {
-        text: '<i class="ion-ios-videocam"></i>',
-        type: 'button-positive',
-        onTap: function() {
-          IonPopup.close();
-        }
       }]
     });
   },
