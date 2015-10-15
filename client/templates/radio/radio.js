@@ -10,7 +10,7 @@ Template.radio.rendered = function () {
 
   var bodyTemplate = document.querySelector('body');
 
-  if ( Router.current().params._id === 'x6YhQ2Yji2MhyQ67D' ) {
+  if ( Router.current().params.name === 'fmmn' ) {
     bodyTemplate.classList.add('fmmn-page');
     bodyTemplate.classList.remove('boa-page');
   }
