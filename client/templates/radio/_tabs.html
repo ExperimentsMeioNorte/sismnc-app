@@ -1,6 +1,6 @@
 <template name="_tabsRadio">
   {{#ionTabs style="android" class="tabs-radio"}}
-    {{> ionTab title="Timeline" path="tabs.timelineRadio" _id=this._id  }}
-    {{> ionTab title="Enquete" path="tabs.pollsRadio" _id=this._id }}
+    {{> ionTab title="Timeline" path="tabs.timelineRadio" _id=this._id name=this.name }}
+    {{> ionTab title="Enquete" path="tabs.pollsRadio" _id=this._id  name=this.name }}
   {{/ionTabs}}
 </template>
