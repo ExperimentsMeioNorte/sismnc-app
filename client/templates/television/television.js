@@ -23,6 +23,9 @@ Template.television.events({
   'click [data-action="goProgram"]' : function(){
     IonNavigation.skipTransitions = false;
     return true;
+  },
+  'click [data-action="no-history"]' : function(){
+    Router.go('index');
   }
 });
 

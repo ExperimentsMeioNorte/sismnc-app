@@ -1,17 +1,4 @@
 <template name="infoTv">
-
-   {{#if playTvValidate hour_begin hour_end}}
-    <div class="play-tv padding">
-      <iframe src="http://new.livestream.com/accounts/3332377/events/2958396/player?width=640&height=260&autoPlay=false&mute=false" width="100%" height="260" frameborder="0" scrolling="no"> </iframe>
-    </div>
-  {{else}}
-      {{#if buttonValidate}}
-        <span class="btn clear" onclick="Router.go('program', {_id: '{{buttonProgramId}}'});">
-          AO VIVO
-        </span>
-      {{/if}}
-  {{/if}}
-
   <div class="info-program">
     <div class="row">
       <div  class="col">

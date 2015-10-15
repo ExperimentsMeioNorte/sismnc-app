@@ -6,6 +6,18 @@ $loading-font-size: 32px;
 //@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons.scss';
 
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  min-height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -1711,4 +1723,7 @@ img {display:block;}
       color:#fff!important;
     }
   }
+}
+.no-history {
+
 }

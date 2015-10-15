@@ -1,6 +1,10 @@
 <template name="_tabsHeaderRadio">
   {{#ionHeaderBar class="bg-assertive"}}
-    {{>ionNavBackButton icon="android-arrow-back" path="index"}}
+
+    <button class="buttons button button-clear back-button pull-left" data-action="no-history">
+      <i class="icon ion-android-arrow-back"></i>
+    </button>
+
     <h1 class="title logo-radio">
       <img src="{{image_avatar}}" height="46" />
       <!-- {{ name }} -->

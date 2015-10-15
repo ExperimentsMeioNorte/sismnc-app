@@ -1,6 +1,7 @@
 var handle = LaunchScreen.hold();
 
 Template.layout.rendered = function(){
+  FastClick.attach(document.body);
   IonSideMenu.snapper.settings({disable: 'right'});
   handle.release();
 };
