@@ -1476,7 +1476,7 @@ img {display:block;}
         margin:10px;
       }
       input {
-        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:96%;clear:both;background:#f8f8fc;border-radius:28px;padding:2%!important;
+        margin-top:10px;margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:96%;clear:both;background:#f8f8fc;border-radius:28px;padding:2%!important;border:0 none!important;
       }
     }
     .modal-footer {
@@ -1698,5 +1698,17 @@ img {display:block;}
 
   .button {
     border-radius:28px;-moz-border-radius:28px;-webkit-border-radius:28px;margin-top:15px;
+  }
+}
+
+
+.ask-music {
+  .bar {
+    .title {
+      color:#fff!important;
+    }
+    .button {
+      color:#fff!important;
+    }
   }
 }
