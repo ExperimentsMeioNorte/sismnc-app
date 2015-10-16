@@ -39,6 +39,7 @@ Template.authentication.events({
             }else{
               localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
               localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+              localStorage.setItem('Meteor.userServerId', userId._id);
               localStorage.setItem('Meteor.userId', userId._id);
               Router.go('index');
             }
@@ -68,6 +69,7 @@ Template.authentication.events({
 
                     localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
                     localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+                    localStorage.setItem('Meteor.userServerId', userId._id);
                     localStorage.setItem('Meteor.userId', userId._id);
                     Router.go('index');
                 }
@@ -100,8 +102,9 @@ Template.authentication.events({
               console.log('Sem autorizacão');
             }else{
 
-              localStorage.setItem('Meteor.facebookId', usersSearch.services.google.id);
+              localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
               localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
+              localStorage.setItem('Meteor.userServerId', userId._id);
               localStorage.setItem('Meteor.userId', userId._id);
               Router.go('index');
             }
@@ -129,8 +132,9 @@ Template.authentication.events({
                       }
                     );
 
-                    localStorage.setItem('Meteor.facebookId', usersSearch.services.google.id);
+                    localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
                     localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
+                    localStorage.setItem('Meteor.userServerId', userId._id);
                     localStorage.setItem('Meteor.userId', userId._id);
                     Router.go('index');
                 }
