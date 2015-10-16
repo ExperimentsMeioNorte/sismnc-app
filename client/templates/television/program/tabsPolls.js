@@ -103,11 +103,11 @@ Template.tabsPollsTelevision.helpers({
 });
 
 Template.tabsPollsTelevision.events({
-    'click .btn-answer': function(event){
+    'touchstart .btn-answer': function(event){
         event.preventDefault();
 
         if(!document.querySelector('input[name="answer"]:checked').value){
-            toastr.warning(
+            toastr.info(
                 "Ops, necessario escolher uma resposta.",
                 '',
                 {
@@ -127,7 +127,7 @@ Template.tabsPollsTelevision.events({
                 ],
                 function(error, result){
                     if(!result){
-                        toastr.warning(
+                        toastr.info(
                             "Ops, algo deu errado.",
                             '',
                             {

@@ -8,7 +8,7 @@ Template.layout.rendered = function(){
 
 
 Template.layout.events({
-  'click [data-activate="logout"]' : function(event){
+  'touchstart [data-activate="logout"]' : function(event){
     event.preventDefault();
     localStorage.clear();
     Meteor.logout();

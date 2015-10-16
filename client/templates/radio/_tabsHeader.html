@@ -1,12 +1,12 @@
 <template name="_tabsHeaderRadio">
   {{#ionHeaderBar class="bg-assertive"}}
 
-    <button class="buttons button button-clear back-button pull-left" data-action="no-history">
+    <a href="{{ pathFor 'index' }}" class="buttons button button-clear back-button pull-left" ontouchstart="IonNavigation.skipTransitions = true; return true;">
       <i class="icon ion-android-arrow-back"></i>
-    </button>
+    </a>
 
     <h1 class="title logo-radio">
-      <img src="{{image_avatar}}" height="46" />
+      <img src="{{image_avatar}}" height="80" />
       <!-- {{ name }} -->
     </h1>
 

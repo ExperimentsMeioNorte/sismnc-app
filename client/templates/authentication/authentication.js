@@ -1,20 +1,20 @@
 // Ao Entrar
 Template.authentication.rendered = function(){
-  document.querySelector('body').classList.add('authentication-page');
+  Session.set('authentication-page');
 };
 
 
 // Ao sair
 Template.authentication.destroyed = function(){
 
-  document.querySelector('body').classList.remove('authentication-page');
+  Session.set('authentication-page', null);
 
 };
 
 
 Template.authentication.events({
     // executa o login da rede social facebook
-    'click .bg-facebook': function (event, tmp) {
+    'touchstart .bg-facebook': function (event, tmp) {
       event.preventDefault();
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
@@ -77,7 +77,7 @@ Template.authentication.events({
         }
       });
     },
-    'click .bg-google': function (event, tmp) {
+    'touchstart .bg-google': function (event, tmp) {
       event.preventDefault();
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social

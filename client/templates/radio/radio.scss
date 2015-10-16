@@ -1,7 +1,7 @@
 .radio-page {
 
   .title {
-    img {margin:0;display:inline-block;}
+    img {margin:-14px 0px 0px;display:inline-block;float:left;}
   }
 
 
@@ -339,6 +339,10 @@
     background:#566CA0!important;
   }
 
+  .back-button {
+    color:#fff!important;
+  }
+
   .popup {
 
     .button-positive {
@@ -354,7 +358,7 @@
   .bar {
     background:#566CA0!important;color:#fff;
     .player {
-      width:30px;height:30px;line-height:30px;background:#fff;color:#566CA0;float:left;margin:8px 0;
+      width:29px;height:29px;line-height:29px;background:transparent!important;box-shadow:0 0 0 2px #fff;color:#fff!important;float:left;margin:8px 0;
 
       border-radius:50%;text-align:center;
       i {color:#566CA0;}
@@ -734,6 +738,13 @@
 
 .fmmn-page {
 
+
+  .title {
+    img {
+      height:64px !important;margin:-5px 0 0 0!important;
+    }
+  }
+
   button.buttons.button.button-clear.back-button.pull-left {
     color:#2077A7!important;
   }
@@ -753,10 +764,10 @@
     background:#FFD401!important;color:#2077A7!important;
 
     .player {
-      width:30px;height:30px;line-height:30px;background:#25668E;color:#fff;float:left;margin:8px 0;
+      width:29px;height:29px;line-height:29px;background:transparent!important;color:#25668E!important;float:left;margin:8px 0;box-shadow:0 0 0 2px #25668E!important;
 
       border-radius:50%;text-align:center;
-      i {color:#FFD401;}
+      i {color:#25668E;}
     }
 
 
