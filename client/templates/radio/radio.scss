@@ -361,7 +361,7 @@
       width:29px;height:29px;line-height:29px;background:transparent!important;box-shadow:0 0 0 2px #fff;color:#fff!important;float:left;margin:8px 0;
 
       border-radius:50%;text-align:center;
-      i {color:#566CA0;}
+      i {color:#fff;}
     }
     .music {
       float:left;margin:0 0.75rem 0 15px;
@@ -738,6 +738,9 @@
 
 .fmmn-page {
 
+  .back-button {
+    color:#25668E!important;
+  }
 
   .title {
     img {

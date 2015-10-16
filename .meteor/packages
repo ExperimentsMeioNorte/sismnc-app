@@ -20,3 +20,4 @@ meteoric:camera
 mobile-status-bar
 launch-screen
 fastclick
+mrt:modernizr-meteor

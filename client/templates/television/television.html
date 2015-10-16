@@ -1,7 +1,7 @@
 <template name="television">
 
   {{#contentFor "headerButtonLeft"}}
-    <a href="{{ pathFor 'index' }}" class="buttons button button-clear back-button pull-left" ontouchstart="IonNavigation.skipTransitions = true; return true;">
+    <a href="{{ pathFor route='index' }}" class="buttons button button-clear back-button pull-left" onClick="IonNavigation.skipTransitions = true;">
       <i class="icon ion-android-arrow-back"></i>
     </a>
   {{/contentFor}}

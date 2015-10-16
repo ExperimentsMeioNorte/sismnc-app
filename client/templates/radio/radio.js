@@ -14,7 +14,6 @@ Template.radio.rendered = function () {
     bodyTemplate.classList.remove('boa-page');
   }
   bodyTemplate.classList.add('boafm-page');
-  bodyTemplate.classList.add('radio-page');
 
 };
 
@@ -29,7 +28,7 @@ Template.radio.destroyed = function(){
 
 
 Template.radio.events({
-  'touchstart .player-button': function(event){
+  'click .player-button, touchstart .player-button': function(event){
         event.preventDefault();
 
         // verifica qual link é da radio atual

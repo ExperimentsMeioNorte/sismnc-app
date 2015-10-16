@@ -107,7 +107,7 @@ Template.tabsTimelineRadio.helpers({
 });
 
 Template.tabsTimelineRadio.events({
-    'touchstart #mais': function(){
+    'click #mais, touchstart #mais': function(){
         Meteor.incrementLimit();
     }
 });

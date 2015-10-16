@@ -19,12 +19,8 @@ Template.television.destroyed = function(){
 };
 
 Template.television.events({
-  'touchstart [data-action="goProgram"]' : function(){
-    IonNavigation.skipTransitions = false;
-    return true;
-  },
-  'touchstart [data-action="no-history"]' : function(){
-    Router.go('index');
+  'click [data-action="goProgram"], touchstart [data-action="goProgram"]' : function(){
+    IonNavigation.skipTransitions = true;
   }
 });
 

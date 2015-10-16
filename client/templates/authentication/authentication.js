@@ -1,20 +1,14 @@
-// Ao Entrar
-Template.authentication.rendered = function(){
-  Session.set('authentication-page');
-};
-
-
 // Ao sair
 Template.authentication.destroyed = function(){
 
-  Session.set('authentication-page', null);
+  document.querySelector('body').classList.remove('authentication-page');
 
 };
 
 
 Template.authentication.events({
     // executa o login da rede social facebook
-    'touchstart .bg-facebook': function (event, tmp) {
+    'click .bg-facebook, touchstart .bg-facebook': function (event, tmp) {
       event.preventDefault();
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
@@ -71,13 +65,14 @@ Template.authentication.events({
                     localStorage.setItem('Meteor.userServerId', userId._id);
                     localStorage.setItem('Meteor.userId', userId._id);
                     Router.go('index');
+
                 }
             );
           }
         }
       });
     },
-    'touchstart .bg-google': function (event, tmp) {
+    'click .bg-google, touchstart .bg-google': function (event, tmp) {
       event.preventDefault();
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
