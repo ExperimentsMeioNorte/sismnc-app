@@ -39,7 +39,7 @@ Template.tabsPollsRadio.helpers({
           {
               status: 1,
               poll_id: poll[0]._id,
-              user_id: Meteor.userId()
+              user_id: localStorage.getItem('Meteor.userId')
           }).map(
             function(pu){
               return {
@@ -120,7 +120,7 @@ Template.tabsPollsRadio.events({
                     111,
                     document.querySelector('#poll_id').value,
                     document.querySelector('input[name="answer"]:checked').value,
-                    Meteor.userId()
+                    localStorage.getItem('Meteor.userId')
                 ],
                 function(error, result){
                     if(!result){

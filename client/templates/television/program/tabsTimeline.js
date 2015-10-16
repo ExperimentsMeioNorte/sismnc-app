@@ -18,7 +18,9 @@ Template.tabsTimelineTelevision.helpers({
   contents: function(){
     var dateObj = new Date();
     Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
-    Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 6:00:00';
+    Meteor.dateNow = dateObj.getDate() + '/' + (dateObj.getMonth()+1) + '/' + dateObj.getFullYear() + ' ' + dateObj.getHours() + ':' +  dateObj.getMinutes() + ':' + dateObj.getSeconds(); //Meteor.remote.call('dateNow'); //(dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 6:00:00';
+
+console.log(Meteor.dateBegin, Meteor.dateNow);
 
     // valida se é para listar as mensagens
     var content = Content.findOne(
@@ -31,7 +33,7 @@ Template.tabsTimelineTelevision.helpers({
         }
       }
     );
-
+console.log(content);
     if(content !== undefined){
 
       // lista as mensagens
