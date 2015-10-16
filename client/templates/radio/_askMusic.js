@@ -9,10 +9,10 @@ Template._askMusic.events({
                 [
                     111,
                     Router.current().params._id,
-                    Meteor.remote.userId(),
+                    Meteor.userId(),
                     document.querySelector('#music').value,
                     document.querySelector('#artist').value,
-                    Meteor.remote.userId()
+                    Meteor.userId()
                 ],
                 function(error, result){
                     if(!error){

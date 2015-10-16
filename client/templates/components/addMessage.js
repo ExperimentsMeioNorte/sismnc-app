@@ -124,7 +124,7 @@ Template.addMessage.events({
                 [
                     111,
                     Router.current().params._id,
-                    Meteor.remote.userId(),
+                    Meteor.userId(),
                     document.querySelector('#message').value, // texto
                     (Session.get("photo"))? Session.get("photo") : '', // imagem
                     '', // video

@@ -37,7 +37,7 @@ Template.resultsPollsRadio.helpers({
         {
           status: 1,
           poll_id: poll[0]._id,
-          user_id: Meteor.remote.userId()
+          user_id: Meteor.userId()
         }
       );
 
@@ -58,7 +58,7 @@ Template.resultsPollsRadio.helpers({
 
         // pega a resposta que o usuario logado respondeu
         for(var x in group){
-          if(group[x]['user_id'] === Meteor.remote.userId()){
+          if(group[x]['user_id'] === Meteor.userId()){
             answerUser = group[x]['answer_id'];
             break;
           }
