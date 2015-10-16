@@ -42,7 +42,7 @@ Template.tabsPollsTelevision.helpers({
           {
               status: 1,
               poll_id: poll[0]._id,
-              user_id: Meteor.remote.userId()
+              user_id: Meteor.userId()
           }).map(
             function(pu){
               return {
@@ -123,7 +123,7 @@ Template.tabsPollsTelevision.events({
                     111,
                     document.querySelector('#poll_id').value,
                     document.querySelector('input[name="answer"]:checked').value,
-                    Meteor.remote.userId()
+                    Meteor.userId()
                 ],
                 function(error, result){
                     if(!result){
