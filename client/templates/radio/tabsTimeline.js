@@ -1,6 +1,5 @@
 Template.tabsTimelineRadio.destroyed = function(){
   document.querySelector('body').classList.remove('radio-page');
-
 }
 
 Template.tabsTimelineRadio.helpers({
@@ -99,7 +98,7 @@ Template.tabsTimelineRadio.helpers({
 });
 
 Template.tabsTimelineRadio.events({
-    'click #mais, touchstart #mais': function(){
+    'touchstart #mais': function(){
         Meteor.incrementLimit();
     }
 });

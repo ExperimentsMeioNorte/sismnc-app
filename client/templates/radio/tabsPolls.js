@@ -1,7 +1,6 @@
 Template.tabsPollsRadio.rendered = function(){
   document.querySelector('body').classList.add('radio-page');
   document.querySelector('body').classList.add('hide-message');
-
 }
 
 Template.tabsPollsRadio.destroyed = function(){

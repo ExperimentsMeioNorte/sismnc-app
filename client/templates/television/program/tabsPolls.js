@@ -1,10 +1,10 @@
 Template.tabsPollsTelevision.rendered = function(){
+  document.querySelector('body').classList.add('television-page');
   document.querySelector('body').classList.add('hide-message');
   document.querySelector('.scroll-content').classList.add('has-tab-program');
 }
 
 Template.tabsPollsTelevision.destroyed = function(){
-  document.querySelector('body').classList.remove('television-page');
   document.querySelector('body').classList.remove('hide-message');
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
 }

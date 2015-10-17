@@ -1,10 +1,10 @@
 Template.tabsTimelineTelevision.rendered = function(){
+  document.querySelector('body').classList.add('television-page');
   document.querySelector('.scroll-content').classList.add('has-tab-program');
 }
 
 Template.tabsTimelineTelevision.destroyed = function(){
 
-  document.querySelector('body').classList.remove('television-page');
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
 
 }
@@ -108,7 +108,7 @@ console.log(content);
 });
 
 Template.tabsTimelineTelevision.events({
-    'click #mais, touchstart #mais': function(){
+    'touchstart #mais': function(){
         Meteor.incrementLimit();
     }
 });

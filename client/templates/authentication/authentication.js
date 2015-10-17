@@ -1,3 +1,4 @@
+
 // Ao sair
 Template.authentication.destroyed = function(){
 
@@ -14,8 +15,6 @@ Template.authentication.events({
     // executa o login da rede social facebook
     'touchstart .bg-facebook': function (event, tmp) {
       event.preventDefault();
-
-      if (Meteor.isCordova) {
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
         Meteor.loginApp(event);
@@ -77,14 +76,9 @@ Template.authentication.events({
             }
           }
         });
-      } else {
-        return console.log("Só no cordova");
-      }
     },
     'touchstart .bg-google': function (event, tmp) {
       event.preventDefault();
-
-      if (Meteor.isCordova) {
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
         Meteor.loginApp(event);
@@ -147,8 +141,5 @@ Template.authentication.events({
             }
           }
         });
-      } else {
-        return console.log("Só no cordova");
-      }
     }
 });
