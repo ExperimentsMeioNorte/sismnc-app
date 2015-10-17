@@ -13,7 +13,7 @@ Template.authentication.events({
 
 
     // executa o login da rede social facebook
-    'touchstart .bg-facebook': function (event, tmp) {
+    'touchstart .bg-facebook, click .bg-facebook': function (event, tmp) {
       event.preventDefault();
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
@@ -77,7 +77,7 @@ Template.authentication.events({
           }
         });
     },
-    'touchstart .bg-google': function (event, tmp) {
+    'touchstart .bg-google, click .bg-google': function (event, tmp) {
       event.preventDefault();
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
