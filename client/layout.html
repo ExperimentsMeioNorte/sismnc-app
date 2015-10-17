@@ -6,6 +6,7 @@
       {{#ionSideMenus}}
 
         {{#ionSideMenu class="home-menu" side="left"}}
+        {{#each user}}
           <div class="bar bar-header">
             <div class="item-avatar">
               <img src="{{ avatar }}" height="60" />
@@ -31,7 +32,7 @@
             <i class="icon-logout"></i>
             Desconectar
           </div>
-
+        {{/each}}
         {{/ionSideMenu}}
 
       {{/ionSideMenus}}
