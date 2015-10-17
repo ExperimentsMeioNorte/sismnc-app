@@ -1,4 +1,8 @@
 {
+  "kadira": {
+    "appId": "Ek7zcnZ3Au8jDdBrM",
+    "appSecret": "05e821e3-7a67-46cb-8b12-accc96e3696c"
+  },
   "facebook": {
     "appId": "638977909535835",
     "secret": "28012ad2d935da4bdbfe26b78c23f77a"

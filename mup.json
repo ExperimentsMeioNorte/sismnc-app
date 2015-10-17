@@ -31,7 +31,7 @@
 
   // Location of app (DIRETORIO LOCAL)
   // obs.: Obrigatorio o caminho absolutos
-  "app": "/Users/juis/Projetos/Mobile/sismnc-app", // localizacao local do Alisson
+  "app": ".", // localizacao local do Alisson
   //"app": "/Users/alexandesigner/Documents/Projects/sismnc-app", // localizacao local do Allan
 
   // Configure environment
