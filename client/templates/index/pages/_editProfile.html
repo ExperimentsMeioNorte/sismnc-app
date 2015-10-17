@@ -3,11 +3,11 @@
   {{#ionModal title="Editar Perfil" class="bar-profile"}}
 
     <section id="modal-edit-profile">
-
+    {{#each user}}
     <div class="form-pattern modal-content">
 
       <div class="upload-image center-align">
-        <img src="/images/avatar/avatar1.png" width="80" />
+        <img src="{{ avatar }}" width="80" />
       </div>
 
       <div class="padding">
@@ -16,14 +16,14 @@
 
         <div class="input-field">
 
-          <label for="name">Nome</label>
+          <label for="name">Nome *</label>
           <input id="name" type="text" value="{{ name }}">
 
         </div>
 
         <div class="input-field">
 
-          <label for="mail">E-mail</label>
+          <label for="mail">E-mail *</label>
           <input id="mail" type="text" value="{{ email }}">
 
         </div>
@@ -115,9 +115,9 @@
       </div>
 
     </div>
-
+    {{/each}}
     <div class="modal-footer">
-      <a class="button button-positive" href="#">
+      <a class="button button-positive" data-activate="update-perfil" href="#">
         SALVAR
       </a>
     </div>
