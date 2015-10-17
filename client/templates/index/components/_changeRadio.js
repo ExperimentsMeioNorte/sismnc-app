@@ -1,6 +1,6 @@
 Template._changeRadio.events({
   'touchstart .change-radio .item' : function(){
-    IonModal.close();
+    IonModal.hide();
     IonNavigation.skipTransitions = false;
     return true;
   }

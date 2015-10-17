@@ -1,5 +1,5 @@
 Template.tabsTimelineRadio.destroyed = function(){
-  document.querySelector('body').classList.remove('radio-page');
+  //document.querySelector('body').classList.remove('radio-page');
 }
 
 Template.tabsTimelineRadio.helpers({

@@ -4,10 +4,7 @@ Template.tabsPollsRadio.rendered = function(){
 }
 
 Template.tabsPollsRadio.destroyed = function(){
-
-  document.querySelector('body').classList.remove('radio-page');
   document.querySelector('body').classList.remove('hide-message');
-
 }
 
 Template.tabsPollsRadio.helpers({
