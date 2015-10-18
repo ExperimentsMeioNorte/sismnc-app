@@ -1,8 +1,17 @@
+Template.authentication.rendered = function(){
+
+  $('.pane').css('transform', 'translate3d(0, 0, 0)');
+  document.querySelector('body').classList.remove('snapjs-left');
+
+  console.log('Login');
+
+}
 
 // Ao sair
 Template.authentication.destroyed = function(){
 
   document.querySelector('body').classList.remove('authentication-page');
+
 
 };
 

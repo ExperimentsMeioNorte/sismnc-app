@@ -21,13 +21,11 @@ Template.layout.rendered = function(){
 
 
 Template.layout.events({
-  'touchstart [data-activate="logout"]' : function(event){
-    event.preventDefault();
-    localStorage.clear();
+  'touchstart [data-activate="logout"], click [data-activate="logout"]' : function(){
     Meteor.logout();
-    document.querySelector('body').classList.remove('snapjs-left');
-    document.querySelector('.menu-content').style.transform = 'translate3d(0, 0, 0)';
+    localStorage.clear();
     Router.go('authentication');
+    console.log('Desconectar');
   }
 });
 
