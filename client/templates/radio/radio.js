@@ -11,6 +11,12 @@ Template.radio.rendered = function () {
   bodyTemplate.classList.add('boafm-page');
 
   IonModal.close();
+
+  if(Router.current().params.name !== Meteor.audRadio){
+    document.querySelector('.icon-pause').classList.add('hide');
+    document.querySelector('.icon-play').classList.remove('hide');
+  }
+
 };
 
 // Ao sair
@@ -50,6 +56,7 @@ Template.radio.events({
             IonLoading.hide();
           }
       }
+      Meteor.audRadio = Router.current().params.name;
     }
 });
 
