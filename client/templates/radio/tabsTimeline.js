@@ -1,7 +1,3 @@
-var dateObj = new Date();
-Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 0:0:0';
-Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 0:0:1';
-
 Template.tabsTimelineRadio.destroyed = function(){
   //document.querySelector('body').classList.remove('radio-page');
 }
