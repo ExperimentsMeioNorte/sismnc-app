@@ -4,31 +4,27 @@ Template.tabsTimelineRadio.destroyed = function(){
 
 Template.tabsTimelineRadio.helpers({
   contents: function(){
-    var dateObj = new Date();
-    Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
-    Meteor.dateNow = (dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 6:00:00';
-
+    IonLoading.show();
     // valida se é para listar as mensagens
     var content = Content.findOne(
       {
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gt: Meteor.dateBegin,
-          $lt: Meteor.dateNow
+          $gte: Meteor.dateBegin,
+          $lte: Meteor.dateNow
         }
       }
     );
 
     if(content !== undefined){
-
-      return Content.find(
+      content = Content.find(
       {
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gt: Meteor.dateBegin,
-          $lt: Meteor.dateNow
+          $gte: Meteor.dateBegin,
+          $lte: Meteor.dateNow
         }
       },
       {
@@ -76,29 +72,35 @@ Template.tabsTimelineRadio.helpers({
           }
         }
       );
+      IonLoading.hide();
+      return content;
     }else{
+      IonLoading.hide();
       return [{notFound: false}];
     }
   },
 
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
+    IonLoading.show();
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
       status: 1,
       date_record: {
-        $gt: Meteor.dateBegin,
-        $lt: Meteor.dateNow
+        $gte: Meteor.dateBegin,
+        $lte: Meteor.dateNow
       }
     }).count();
-
-    return (Session.get('limit') >= contentCount)? 'display:none' : 'display:block';
+    IonLoading.hide();
+    return (Session.get('limit') >= contentCount)? false : true;
   }
 });
 
 Template.tabsTimelineRadio.events({
     'touchstart #mais': function(){
+        IonLoading.show();
         Meteor.incrementLimit();
+        IonLoading.hide();
     }
 });

@@ -4,35 +4,26 @@ Template.tabsTimelineTelevision.rendered = function(){
 }
 
 Template.tabsTimelineTelevision.destroyed = function(){
-
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
-
 }
 
 Template.tabsTimelineTelevision.helpers({
   contents: function(){
-    var dateObj = new Date();
-    Meteor.dateBegin = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 00:00:00';
-    Meteor.dateNow = dateObj.getDate() + '/' + (dateObj.getMonth()+1) + '/' + dateObj.getFullYear() + ' ' + dateObj.getHours() + ':' +  dateObj.getMinutes() + ':' + dateObj.getSeconds(); //Meteor.remote.call('dateNow'); //(dateObj.getDate() + 1) + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear() + ' 6:00:00';
-
-console.log(Meteor.dateBegin, Meteor.dateNow);
-
+    IonLoading.show();
     // valida se é para listar as mensagens
     var content = Content.findOne(
       {
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gt: Meteor.dateBegin,
-          $lt: Meteor.dateNow
+          $gte: Meteor.dateBegin,
+          $lte: Meteor.dateNow
         }
       }
     );
-console.log(content);
-    if(content !== undefined){
 
-      // lista as mensagens
-      return Content.find(
+    if(content !== undefined){
+      content = Content.find(
       {
         program_id:Router.current().params._id,
         status: 1,
@@ -86,29 +77,35 @@ console.log(content);
           }
         }
       );
+      IonLoading.hide();
+      return content;
     }else{
+      IonLoading.hide();
       return [{notFound: false}];
     }
   },
 
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
+    IonLoading.show();
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
       status: 1,
       date_record: {
-        $gt: Meteor.dateBegin,
-        $lt: Meteor.dateNow
+        $gte: Meteor.dateBegin,
+        $lte: Meteor.dateNow
       }
     }).count();
-
-    return (Session.get('limit') >= contentCount)? 'display:none' : 'display:block';
+    IonLoading.hide();
+    return (Session.get('limit') >= contentCount)? false : true;
   }
 });
 
 Template.tabsTimelineTelevision.events({
     'touchstart #mais': function(){
-        Meteor.incrementLimit();
+      IonLoading.show();
+      Meteor.incrementLimit();
+      IonLoading.hide();
     }
 });

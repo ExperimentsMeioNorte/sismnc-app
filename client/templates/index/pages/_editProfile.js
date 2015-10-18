@@ -1,8 +1,8 @@
 Template._editProfile.events({
-  'touchstart [data-activate="update-perfil"]' : function(event){
-    event.preventDefault();
-    var name = document.querySelector(".name");
-    var email = document.querySelector(".mail");
+  'touchstart .update-perfil' : function(form){
+    form.preventDefault();
+    var name = document.querySelector("#name").value;
+    var email = document.querySelector("#mail").value;
     if(!name || !email){
         console.log('necessario preencher os campos obrigatorios');
     }else{
