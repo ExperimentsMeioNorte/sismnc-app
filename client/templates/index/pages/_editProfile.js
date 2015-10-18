@@ -1,7 +1,6 @@
 Template._editProfile.events({
   'touchstart .update-perfil' : function(form){
     form.preventDefault();
-    console.log(form);
     var name = document.querySelector("#name").value;
     var email = document.querySelector("#mail").value;
     if(!name || !email){
