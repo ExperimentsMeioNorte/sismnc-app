@@ -25,7 +25,8 @@ Template.layout.events({
     event.preventDefault();
     localStorage.clear();
     Meteor.logout();
-    //document.querySelector('.menu-content').style.transform = 'translate3d(0, 0, 0)';
+    document.querySelector('body').classList.remove('snapjs-left');
+    document.querySelector('.menu-content').style.transform = 'translate3d(0, 0, 0)';
     Router.go('authentication');
   }
 });
