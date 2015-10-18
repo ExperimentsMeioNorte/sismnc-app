@@ -1,6 +1,5 @@
 Template.addMessage.events({
   'touchstart [data-action="addMedia"]': function(event, template) {
-    IonLoading.show();
     IonPopup.show({
       buttons: [{
         text: '<i class="ion-paperclip"></i>',
@@ -16,7 +15,7 @@ Template.addMessage.events({
 
             MeteoricCamera.getPicture(cameraOptions, function (error, data) {
               Session.set("photo", data);
-              IonLoading.show();
+
             });
           } else {
             console.log('Roda apenas no cordova');
@@ -39,7 +38,7 @@ Template.addMessage.events({
 
               MeteoricCamera.getPicture(cameraOptions, function (error, data) {
                 Session.set("photo", data);
-                IonLoading.show();
+
               });
 
             } else {
@@ -50,11 +49,9 @@ Template.addMessage.events({
         }
       }]
     });
-    IonLoading.hide();
   },
 
   'touchstart #btn-capture-image': function () {
-    IonLoading.show();
     if (Meteor.isClient) {
 
       var cameraOptions = {
@@ -65,19 +62,19 @@ Template.addMessage.events({
 
       MeteoricCamera.getPicture(cameraOptions, function (error, data) {
         Session.set("photo", data);
-        IonLoading.show();
+
       });
 
     } else {
       alert('Roda apenas no cordova');
       document.querySelector('body').classList.add('show-file-message');
     }
-    IonLoading.hide();
+
   },
 
   'touchstart #btn-upload-image' : function(){
     if (Meteor.isCordova) {
-      IonLoading.show();
+
       var cameraOptions = {
         width: 640,
         height: 480,
@@ -87,9 +84,8 @@ Template.addMessage.events({
 
       MeteoricCamera.getPicture(cameraOptions, function (error, data) {
         Session.set("photo", data);
-        IonLoading.show();
+
       });
-      IonLoading.hide();
     } else {
       console.log('Roda apenas no cordova');
       document.querySelector('body').classList.add('show-file-message');
@@ -101,7 +97,7 @@ Template.addMessage.events({
 
   // ENVIO DA MENSAGEM
   'touchstart .send-button': function(events){
-        IonLoading.show();
+
         events.preventDefault();
         if(!document.querySelector('#message').value){
             console.log('Precisa de um texto');
@@ -133,7 +129,6 @@ Template.addMessage.events({
                 }
             );
         }
-        IonLoading.hide();
     },
 
 });

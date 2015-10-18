@@ -335,6 +335,18 @@
 
 .boafm-page {
 
+  #mais {
+      border-radius: 5px;
+    padding: 2px 12px;
+    width: 100%;
+    display: table;
+    margin: 20px auto;
+    color: #fff;
+    font-weight: bold;
+    background: #566CA0;
+    font-size: 14px;
+}
+
   .send-button {
     background:#566CA0!important;
   }
@@ -737,6 +749,18 @@
 
 
 .fmmn-page {
+
+    #mais {
+      border-radius: 5px;
+      padding: 2px 12px;
+      width: 100%;
+      display: table;
+      margin: 20px auto;
+      color: #2077A7;
+      font-weight: bold;
+      background: #FFD401;
+      font-size: 14px;
+  }
 
   .back-button {
     color:#25668E!important;
@@ -1168,4 +1192,6 @@
 .side-right {
   float:right;right:0;
 }
+
+
 
