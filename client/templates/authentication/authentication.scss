@@ -2,10 +2,10 @@
 
   color:#fff!important;
 
-  .view {background: #fff!important;}
+  .view {background: #f8f8fc!important;}
 
   .bar {
-    background:#fff!important;border:0 none!important;
+    background:#f8f8fc!important;border:0 none!important;
     .title {
       overflow:visible!important;top:58px!important;text-align:center!important;
       img {
@@ -38,6 +38,7 @@
       border-radius: 28px;
       text-transform: uppercase;
       font-weight: bold;
+      box-shadow:0 2px 10px -3px rgba(0,0,0,.6);
         i {
               font-size: 16px;
         float: left;
