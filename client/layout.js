@@ -25,12 +25,15 @@ Template.layout.events({
     Meteor.logout();
     localStorage.clear();
     Router.go('authentication');
-    console.log('Desconectar');
   }
 });
 
 Template.layout.helpers({
     user: function(){
+      if(localStorage.getItem('Meteor.userId')){
         return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
+      }else{
+        return '';
+      }
     }
 });
