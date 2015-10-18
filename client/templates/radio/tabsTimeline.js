@@ -1,5 +1,13 @@
-Template.tabsTimelineRadio.destroyed = function(){
-  //document.querySelector('body').classList.remove('radio-page');
+Template.tabsTimelineRadio.rendered = function(){
+  if(Meteor.audControl !== undefined){
+    if(Meteor.audControl === 'play'){
+        document.querySelector('.icon-pause').classList.add('hide');
+        document.querySelector('.icon-play').classList.remove('hide');
+    }else{
+        document.querySelector('.icon-pause').classList.remove('hide');
+        document.querySelector('.icon-play').classList.add('hide');
+    }
+  }
 }
 
 Template.tabsTimelineRadio.helpers({

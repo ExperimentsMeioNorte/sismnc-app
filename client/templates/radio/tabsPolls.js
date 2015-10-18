@@ -1,6 +1,16 @@
 Template.tabsPollsRadio.rendered = function(){
   document.querySelector('body').classList.add('radio-page');
   document.querySelector('body').classList.add('hide-message');
+
+  if(Meteor.audControl !== undefined){
+    if(Meteor.audControl === 'play'){
+        document.querySelector('.icon-pause').classList.add('hide');
+        document.querySelector('.icon-play').classList.remove('hide');
+    }else{
+        document.querySelector('.icon-pause').classList.remove('hide');
+        document.querySelector('.icon-play').classList.add('hide');
+    }
+  }
 }
 
 Template.tabsPollsRadio.destroyed = function(){
