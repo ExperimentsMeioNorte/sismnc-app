@@ -27,6 +27,10 @@ Template._editProfile.events({
 
 Template._editProfile.helpers({
     user: function(){
-        return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
+        if(localStorage.getItem('Meteor.userId')){
+            return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
+        }else{
+            return '';
+        }
     }
 });
