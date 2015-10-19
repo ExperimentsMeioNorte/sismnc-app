@@ -15,9 +15,7 @@ Template.layout.rendered = function(){
   FastClick.attach('.ionic-body');
   IonSideMenu.snapper.settings({disable: 'left'});
   IonSideMenu.snapper.settings({disable: 'right'});
-  console.log(Meteor.users.findOne({_id:Meteor.userId()}));
 };
-
 
 Template.layout.events({
   'touchstart [data-activate="logout"], click [data-activate="logout"]' : function(){
