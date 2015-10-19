@@ -30,8 +30,8 @@ Template.layout.events({
 
 Template.layout.helpers({
     user: function(){
-      if(localStorage.getItem('Meteor.userId')){
-        return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
+      if(Meteor.userId()){
+        return [User.findOne({_id:localStorage.getItem('Meteor.userServerId'), status:1})];
       }else{
         return '';
       }
