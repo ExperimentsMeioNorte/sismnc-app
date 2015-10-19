@@ -8,9 +8,9 @@ Template.radio.rendered = function () {
 
   if ( Router.current().params.name === 'fmmn' ) {
     bodyTemplate.classList.add('fmmn-page');
-    bodyTemplate.classList.remove('boa-page');
+    bodyTemplate.classList.remove('boafm-page');
   } else if ( Router.current().params.name === 'boafm' ) {
-    bodyTemplate.classList.add('boa-page');
+    bodyTemplate.classList.add('boafm-page');
     bodyTemplate.classList.remove('fmmn-page');
   }
 };
