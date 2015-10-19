@@ -500,19 +500,19 @@
     }
   }
   .message-info {
-    padding-left:82px;line-height:38px;height:38px;
-    .message-author {
-      float:left;height:38px;line-height:28px;margin:0;
-      a {font-size:14px;color:#666;line-height:38px!important;height:38px!important;font-weight:600;}
-    }
-    .message-date {
-      float:right;color:#c8c8c9;font-size:12px;
-      img {
-        float:left;margin-right:4px;margin-top:11px
+      padding-left:82px;line-height:38px;height:38px;position:relative;
+      .message-author {
+        float:left;height:38px;line-height:28px;margin:0;padding-right:80px;overflow:hidden;width:100%;
+        a {font-size:14px;color:#666;line-height:38px!important;height:38px!important;font-weight:600;text-decoration:none;white-space: nowrap;}
       }
-      span {float:left;}
+      .message-date {
+        float:right;color:#c8c8c9;font-size:12px;    position: absolute;right: 15px;top: 0;
+        img {
+          float:left;margin-right:4px;margin-top:11px
+        }
+        span {float:left;white-space: nowrap;}
+      }
     }
-  }
   .message-content {
    padding:10px; margin-left:80px!important;background:#fff;box-shadow:2px 2px 4px 0 rgba(0,0,0,.1);clear:right;
    border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;
