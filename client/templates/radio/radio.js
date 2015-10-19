@@ -13,21 +13,13 @@ Template.radio.rendered = function () {
     bodyTemplate.classList.add('boa-page');
     bodyTemplate.classList.remove('fmmn-page');
   }
-
-  if(Router.current().params.name !== Meteor.audRadio){
-    document.querySelector('.icon-pause').classList.add('hide');
-    document.querySelector('.icon-play').classList.remove('hide');
-  }
-
 };
 
 // Ao sair
 Template.radio.destroyed = function(){
-
   document.querySelector('body').classList.remove('boafm-page');
   document.querySelector('body').classList.remove('fmmn-page');
   document.querySelector('body').classList.remove('radio-page');
-
 };
 
 Template.radio.events({
@@ -58,7 +50,6 @@ Template.radio.events({
             IonLoading.hide();
           }
       }
-      Meteor.audRadio = Router.current().params.name;
     }
 });
 

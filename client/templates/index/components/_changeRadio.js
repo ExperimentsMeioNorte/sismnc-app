@@ -1,3 +1,7 @@
+Template._changeRadio.rendered = function () {
+    Meteor.aud = Meteor.audControl = undefined; // remove o controle do botao play da radio
+};
+
 Template._changeRadio.events({
   'touchstart .change-radio .item' : function(){
     IonModal.close();
