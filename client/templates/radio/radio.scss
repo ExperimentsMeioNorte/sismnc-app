@@ -1,7 +1,12 @@
 .radio-page {
 
   .title {
-    img {margin:-14px 0px 0px;display:inline-block;float:left;}
+    img {
+      margin: 2px 0px 0px;
+      display: inline-block;
+      float: left;
+      height: 48px;
+    }
   }
 
 
@@ -768,7 +773,7 @@
 
   .title {
     img {
-      height:64px !important;margin:-5px 0 0 0!important;
+      height:50px !important;margin:0!important;
     }
   }
 

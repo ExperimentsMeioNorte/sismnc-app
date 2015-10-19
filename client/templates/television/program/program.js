@@ -61,7 +61,7 @@ Template.program.helpers({
             days = days.substr(1, (days.length - 2));
 
             return {
-                _id: p._id,
+              _id: p._id,
               name: p.name,
               day: days,
               hour_begin: p.hour_begin,

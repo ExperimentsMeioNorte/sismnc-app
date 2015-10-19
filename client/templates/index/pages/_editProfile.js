@@ -6,7 +6,7 @@ Template._editProfile.events({
     if(!name || !email){
         console.log('necessario preencher os campos obrigatorios');
     }else{
-        Meteor.remote.call('updatePerfil',
+      Meteor.remote.call('updatePerfil',
             [
                 222,
                 name,
@@ -21,7 +21,7 @@ Template._editProfile.events({
                 }
             }
         );
-    }
+      }
   }
 });
 

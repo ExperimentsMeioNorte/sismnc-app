@@ -1,5 +1,3 @@
-var handle = LaunchScreen.hold();
-
 Tracker.autorun(function() {
     Meteor.remote.subscribe('program');
     Meteor.remote.subscribe('category');
@@ -14,9 +12,10 @@ Tracker.autorun(function() {
 
 
 Template.layout.rendered = function(){
-  FastClick.attach(document.body);
-  IonSideMenu.snapper.settings({disable: 'none'});
-  handle.release();
+  FastClick.attach('.ionic-body');
+  IonSideMenu.snapper.settings({disable: 'left'});
+  IonSideMenu.snapper.settings({disable: 'right'});
+  console.log(Meteor.users.findOne({_id:Meteor.userId()}));
 };
 
 
@@ -29,7 +28,7 @@ Template.layout.events({
 });
 
 Template.layout.helpers({
-    user: function(){
+    userMenu: function(){
       if(localStorage.getItem('Meteor.userId')){
         return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
       }else{

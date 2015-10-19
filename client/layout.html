@@ -6,14 +6,15 @@
       {{#ionSideMenus}}
 
         {{#ionSideMenu class="home-menu" side="left"}}
-        {{#each user}}
-          <div class="bar bar-header">
-            <div class="item-avatar">
-              <img src="{{ avatar }}" height="60" />
-              <strong>{{ name }}</strong>
-              <span>{{ email }}</span>
+          <!-- {{#each userMenu}} -->
+            <div class="bar bar-header">
+              <div class="item-avatar">
+                <img src="{{ avatar }}" height="60" />
+                <strong>{{ name }}</strong>
+                <span>{{ email }}</span>
+              </div>
             </div>
-          </div>
+          <!-- {{/each}} -->
           <div class="content has-header">
             <div class="list">
               <a href="#" class="item item-icon-right modal-trigger" data-ion-modal="_editProfile" data-ion-menu-close>
@@ -32,7 +33,7 @@
             <i class="icon-logout"></i>
             Desconectar
           </a>
-        {{/each}}
+
         {{/ionSideMenu}}
 
       {{/ionSideMenus}}

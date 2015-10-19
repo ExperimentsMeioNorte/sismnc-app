@@ -2,15 +2,17 @@ Template.radio.rendered = function () {
   Session.set('currentTab', 'tabs.timelineRadio');
   Session.set('limit', 5);
 
+  IonModal.close();
+
   var bodyTemplate = document.querySelector('body');
 
   if ( Router.current().params.name === 'fmmn' ) {
     bodyTemplate.classList.add('fmmn-page');
     bodyTemplate.classList.remove('boa-page');
+  } else if ( Router.current().params.name === 'boafm' ) {
+    bodyTemplate.classList.add('boa-page');
+    bodyTemplate.classList.remove('fmmn-page');
   }
-  bodyTemplate.classList.add('boafm-page');
-
-  IonModal.close();
 
   if(Router.current().params.name !== Meteor.audRadio){
     document.querySelector('.icon-pause').classList.add('hide');
