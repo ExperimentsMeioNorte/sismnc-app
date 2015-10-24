@@ -10,7 +10,6 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
-
 Template.layout.rendered = function(){
   FastClick.attach('.ionic-body');
   IonSideMenu.snapper.settings({disable: 'left'});

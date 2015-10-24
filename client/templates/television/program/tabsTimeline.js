@@ -17,7 +17,7 @@ Template.tabsTimelineTelevision.helpers({
         status: 1,
         date_record: {
           $gte: Meteor.dateBegin,
-          $lte: Meteor.dateNow
+          $lte: Meteor.dateEnd
         }
       }
     );
@@ -29,11 +29,11 @@ Template.tabsTimelineTelevision.helpers({
         status: 1,
         date_record: {
           $gt: Meteor.dateBegin,
-          $lt: Meteor.dateNow
+          $lt: Meteor.dateEnd
         }
       },
       {
-        sort: {date_record:"desc"},
+        sort: {date_record: -1},
         limit: Session.get('limit')
       }).map(
         function(c) {
@@ -94,7 +94,7 @@ Template.tabsTimelineTelevision.helpers({
       status: 1,
       date_record: {
         $gte: Meteor.dateBegin,
-        $lte: Meteor.dateNow
+        $lte: Meteor.dateEnd
       }
     }).count();
     IonLoading.hide();

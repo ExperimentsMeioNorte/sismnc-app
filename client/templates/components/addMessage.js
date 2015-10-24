@@ -96,8 +96,7 @@ Template.addMessage.events({
   },
 
   // ENVIO DA MENSAGEM
-  'touchstart .send-button': function(events){
-
+  'touchstart .send-button, click .send-button': function(events){
         events.preventDefault();
         if(!document.querySelector('#message').value){
             console.log('Precisa de um texto');

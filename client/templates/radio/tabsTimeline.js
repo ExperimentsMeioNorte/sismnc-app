@@ -20,7 +20,7 @@ Template.tabsTimelineRadio.helpers({
         status: 1,
         date_record: {
           $gte: Meteor.dateBegin,
-          $lte: Meteor.dateNow
+          $lte: Meteor.dateEnd
         }
       }
     );
@@ -32,7 +32,7 @@ Template.tabsTimelineRadio.helpers({
         status: 1,
         date_record: {
           $gte: Meteor.dateBegin,
-          $lte: Meteor.dateNow
+          $lte: Meteor.dateEnd
         }
       },
       {
@@ -97,7 +97,7 @@ Template.tabsTimelineRadio.helpers({
       status: 1,
       date_record: {
         $gte: Meteor.dateBegin,
-        $lte: Meteor.dateNow
+        $lte: Meteor.dateEnd
       }
     }).count();
     IonLoading.hide();
