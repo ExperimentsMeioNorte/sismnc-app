@@ -10,14 +10,14 @@
   .view {background: #445DA2;}
 
   .title {
-    overflow:visible!important;top:10px!important;text-align:center!important;
+    overflow:visible!important;top:44px!important;text-align:center!important;
     img {
       display:inline-block;
     }
   }
 
   .scroll-content .content {
-    width:100%;top:162px!important;
+    width:100%;top:200px!important;
   }
 
   .box-index {
@@ -67,6 +67,13 @@
 
 
   .change-radio {
+    height:100%;width:100%;
+    .item {
+      height:50%;
+      width:100%;
+      vertical-align: middle;
+      display: table-cell;
+    }
     a {
       display:block;border:0 none!important;
     }

@@ -11,15 +11,12 @@
     </h1>
   {{/contentFor}}
 
-   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" data-ion-popover="_popoverTelevision">
-      {{> ionIcon icon='android-more-vertical'}}
-    </button>
-  {{/contentFor}}
-
   {{#ionView}}
     {{#ionContent}}
       {{#ionList class="television-programs"}}
+
+      {{> _liveTV }}
+
       {{#each programList}}
         <section class="section-program">
           {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}

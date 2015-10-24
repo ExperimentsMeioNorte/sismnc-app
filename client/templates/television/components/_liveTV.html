@@ -1,16 +1,11 @@
 <template name="_liveTV">
-  {{#ionModal title="Assista ao vivo" class="live-tv"}}
-    <div class="live-tv-content padding">
+    <div class="live-tv-content">
 
       <main class="play-tv">
 
         <iframe src="http://new.livestream.com/accounts/3332377/events/2958396/player?width=640&height=580&autoPlay=true&mute=false" width="100%" height="100%" frameborder="0" scrolling="no"> </iframe>
+
       </main>
 
-      <a href="{{ pathFor 'program' _id=this.id }}" title="" class="program-interact">
-        Interagir com o programa
-      </a>
-
     </div>
-  {{/ionModal}}
 </template>

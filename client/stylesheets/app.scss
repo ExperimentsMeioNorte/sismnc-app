@@ -1631,8 +1631,19 @@ img {display:block;}
   // Padrão de formulário
 .form-pattern  {
   display:table;width:100%;
+  .icon-edit {
+        padding: 7px 5px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        left: 55%;
+        bottom: 16px;
+        font-size: 18px;
+        border-radius: 50%;
+  }
   .upload-image {
-    padding:15px 0;background:#f8f8fc;width:100%;margin-bottom:15px;
+    padding:15px 0;background:#f8f8fc;width:100%;margin-bottom:15px;position:relative;
     img {
       border-radius:50%;
       -webkit-border-radius:50%;
@@ -1718,7 +1729,10 @@ img {display:block;}
   }
 }
 .live-tv {
-  color:#fff!important;
+  color:#fff!important;margin:0!important;
+  iframe {
+    display:block;
+  }
 }
 
 
