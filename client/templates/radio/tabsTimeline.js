@@ -1,3 +1,7 @@
+Template.tabsTimelineRadio.created = function(){
+  Meteor.getDateHour();
+}
+
 Template.tabsTimelineRadio.rendered = function(){
   if(Meteor.audControl !== undefined){
     if(Meteor.audControl === 'play'){
@@ -19,8 +23,8 @@ Template.tabsTimelineRadio.helpers({
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gte: Meteor.dateBegin,
-          $lte: Meteor.dateEnd
+          $gte: Session.get('getupDateBegin'),
+          $lte: Session.get('getupDateEnd')
         }
       }
     );
@@ -31,8 +35,8 @@ Template.tabsTimelineRadio.helpers({
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gte: Meteor.dateBegin,
-          $lte: Meteor.dateEnd
+          $gte: Session.get('getupDateBegin'),
+          $lte: Session.get('getupDateEnd')
         }
       },
       {
@@ -90,14 +94,15 @@ Template.tabsTimelineRadio.helpers({
 
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
+    Meteor.getDateHour();
     IonLoading.show();
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
       status: 1,
       date_record: {
-        $gte: Meteor.dateBegin,
-        $lte: Meteor.dateEnd
+        $gte: Session.get('getupDateBegin'),
+        $lte: Session.get('getupDateEnd')
       }
     }).count();
     IonLoading.hide();

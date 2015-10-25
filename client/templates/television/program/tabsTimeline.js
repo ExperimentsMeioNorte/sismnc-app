@@ -1,3 +1,7 @@
+Template.tabsTimelineTelevision.created = function(){
+  Meteor.getDateHour();
+}
+
 Template.tabsTimelineTelevision.rendered = function(){
   document.querySelector('body').classList.add('television-page');
   document.querySelector('.scroll-content').classList.add('has-tab-program');
@@ -16,8 +20,8 @@ Template.tabsTimelineTelevision.helpers({
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gte: Meteor.dateBegin,
-          $lte: Meteor.dateEnd
+          $gte: Session.get('getupDateBegin'),
+          $lte: Session.get('getupDateEnd')
         }
       }
     );
@@ -28,8 +32,8 @@ Template.tabsTimelineTelevision.helpers({
         program_id:Router.current().params._id,
         status: 1,
         date_record: {
-          $gt: Meteor.dateBegin,
-          $lt: Meteor.dateEnd
+          $gt: Session.get('getupDateBegin'),
+          $lt: Session.get('getupDateEnd')
         }
       },
       {
@@ -87,14 +91,15 @@ Template.tabsTimelineTelevision.helpers({
 
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
+    Meteor.getDateHour();
     IonLoading.show();
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
       status: 1,
       date_record: {
-        $gte: Meteor.dateBegin,
-        $lte: Meteor.dateEnd
+        $gte: Session.get('getupDateBegin'),
+        $lte: Session.get('getupDateEnd')
       }
     }).count();
     IonLoading.hide();
