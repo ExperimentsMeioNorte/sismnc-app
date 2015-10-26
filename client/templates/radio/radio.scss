@@ -208,9 +208,9 @@
 
 
     .buttons-actions {
-      position:absolute;left:10px;top:12px;z-index:81;
+      position:absolute;left:10px;top:10px;z-index:81;
       a {
-        color:#ccc;font-size:24px;
+        color:#ccc;font-size:30px;
       }
     }
 
@@ -366,6 +366,17 @@
 
 
 .boafm-page {
+
+  .modal {
+    .bar {
+      .title {
+        color:#fff!important;
+      }
+      .button {
+        color:#fff!important;
+      }
+    }
+  }
 
   .player {
       background:transparent!important;box-shadow:0 0 0 2px #fff!important;color:#fff!important;;

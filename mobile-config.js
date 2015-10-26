@@ -33,14 +33,14 @@ App.launchScreens({
   // 'ipad_landscape_2x': 'public/images/splash/splash-1024x768@2x.png',
 
   // Android
-  'android_ldpi_portrait': 'public/splash/android/android_ldpi_portrait.png',
-  'android_ldpi_landscape': 'public/splash/android/android_ldpi_landscape.png',
-  'android_mdpi_portrait': 'public/splash/android/android_mdpi_portrait.png',
-  'android_mdpi_landscape': 'public/splash/android/android_mdpi_landscape.png',
-  'android_hdpi_portrait': 'public/splash/android/android_hdpi_portrait.png',
-  'android_hdpi_landscape': 'public/splash/android/android_hdpi_landscape.png',
-  'android_xhdpi_portrait': 'public/splash/android/android_xhdpi_portrait.png',
-  'android_xhdpi_landscape': 'public/splash/android/android_xhdpi_landscape.png'
+  'android_ldpi_portrait': 'public/splash/android/drawable-ldpi/screen.png',
+  'android_ldpi_landscape': 'public/splash/android/drawable-land-ldpi/screen.png',
+  'android_mdpi_portrait': 'public/splash/android/drawable-mdpi/screen.png',
+  'android_mdpi_landscape': 'public/splash/android/drawable-land-mdpi/screen.png',
+  'android_hdpi_portrait': 'public/splash/android/adrawable-hdpi/screen.png',
+  'android_hdpi_landscape': 'public/splash/android/drawable-land-hdpi/screen.png',
+  'android_xhdpi_portrait': 'public/splash/android/drawable-xhdpi/screen.png',
+  'android_xhdpi_landscape': 'public/splash/android/drawable-land-xhdpi/screen.png'
 });
 
 App.setPreference('BackgroundColor', '0xffffffff');
