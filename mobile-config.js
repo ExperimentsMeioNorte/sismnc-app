@@ -37,7 +37,7 @@ App.launchScreens({
   'android_ldpi_landscape': 'public/splash/android/drawable-land-ldpi/screen.png',
   'android_mdpi_portrait': 'public/splash/android/drawable-mdpi/screen.png',
   'android_mdpi_landscape': 'public/splash/android/drawable-land-mdpi/screen.png',
-  'android_hdpi_portrait': 'public/splash/android/adrawable-hdpi/screen.png',
+  'android_hdpi_portrait': 'public/splash/android/drawable-hdpi/screen.png',
   'android_hdpi_landscape': 'public/splash/android/drawable-land-hdpi/screen.png',
   'android_xhdpi_portrait': 'public/splash/android/drawable-xhdpi/screen.png',
   'android_xhdpi_landscape': 'public/splash/android/drawable-land-xhdpi/screen.png'
@@ -47,6 +47,7 @@ App.setPreference('BackgroundColor', '0xffffffff');
 App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
+App.setPreference("SplashScreenDelay", 90000);
 
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {

@@ -10,7 +10,10 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
+var handle = LaunchScreen.hold();
+
 Template.layout.rendered = function(){
+
   FastClick.attach('.ionic-body');
   IonSideMenu.snapper.settings({disable: 'left'});
   IonSideMenu.snapper.settings({disable: 'right'});
