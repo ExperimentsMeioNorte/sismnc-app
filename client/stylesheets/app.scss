@@ -1780,3 +1780,38 @@ img {display:block;}
 .pg-loading-screen .pg-loading-logo-header img {
   height:120px!important;
 }
+
+.change-radio, .change-television {
+    height:100%;width:100%;
+    .item {
+      height: 50%;
+      width: 100%;
+      vertical-align: middle;
+      display: table-cell;
+      clear: both;
+      float: left;
+    }
+    a {
+      display:block;border:0 none!important;
+    }
+    img {
+      margin:30px auto;
+    }
+  }
+
+  .bar-radio, .bar-television {
+  .bar {
+    background:#f8f8fc!important;
+    .title {
+      color:#666!important;
+    }
+    .button {
+      color:#666!important;
+    }
+  }
+
+  .has-header {
+    background:#fff!important;
+  }
+
+}
