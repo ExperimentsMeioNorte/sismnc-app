@@ -6,6 +6,12 @@ $loading-font-size: 32px;
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
 //@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons.scss';
 
+// * {
+//     -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+//     -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+//     -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+//     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+// }
 
 html {
   -webkit-text-size-adjust: none;
@@ -13,6 +19,9 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+
+   -webkit-tap-highlight-color: rgba(0,0,0,0.01);
+
 }
 
 .bar {
@@ -1541,7 +1550,7 @@ img {display:block;}
     .input-field {
       padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
       input {
-        margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:100%;
+        margin-bottom:0!important;height:48px!important;line-height:42px!important;color:#c8c8c8;font-weight:500;width:100%;font-size:20px;text-deocration:none!important;
       }
     }
 
@@ -1555,6 +1564,7 @@ img {display:block;}
       line-height:38px;
       border:0!important;
       z-index:80;
+      font-size:22px;
 
       text-align:center;
       background:#5796b5;
@@ -1582,9 +1592,9 @@ img {display:block;}
 
 
     .buttons-actions {
-      position:absolute;left:10px;top:12px;z-index:81;
+      position:absolute;left:10px;top:10px;z-index:81;
       a {
-        color:#ccc;font-size:24px;
+        color:#ccc;font-size:32px;
       }
     }
 

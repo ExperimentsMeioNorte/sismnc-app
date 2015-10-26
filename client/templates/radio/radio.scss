@@ -9,9 +9,19 @@
     }
   }
 
+  .radioHeader {
+      background: #f8f8fc;
+      z-index:5;
+      position: absolute;
+      left: 0;
+      top: 44px;
+      width: 100%;
+      height: 208px;
+  }
+
 
   .player {
-      width:50px;height:50px;line-height:50px;background:transparent!important;color:#25668E!important;font-size:24px;margin:8px auto;box-shadow:0 0 0 2px #25668E!important;
+      width:50px;height:50px;line-height:50px;background:transparent!important;color:#25668E;font-size:24px;margin:8px auto;box-shadow:0 0 0 2px #25668E;
 
       border-radius:50%;text-align:center;
       i {color:#25668E;}
@@ -357,6 +367,11 @@
 
 .boafm-page {
 
+  .player {
+      background:transparent!important;box-shadow:0 0 0 2px #fff!important;color:#fff!important;;
+      i {color:#fff;}
+    }
+
   .radioHeader {
     background:#566CA0!important;
   }
@@ -395,12 +410,7 @@
 
   .bar {
     background:#566CA0!important;color:#fff;
-    .player {
-      width:29px;height:29px;line-height:29px;background:transparent!important;box-shadow:0 0 0 2px #fff;color:#fff!important;float:left;margin:8px 0;
 
-      border-radius:50%;text-align:center;
-      i {color:#fff;}
-    }
     .music {
       float:left;margin:0 0.75rem 0 15px;
 
@@ -1212,15 +1222,7 @@
   }
 }
 
-.radioHeader {
-    background: #f8f8fc;
-    z-index:5;
-    position: absolute;
-    left: 0;
-    top: 44px;
-    width: 100%;
-    height: 208px;
-}
+
 
 
 }
