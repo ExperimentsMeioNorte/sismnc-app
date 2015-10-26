@@ -37,7 +37,7 @@ Template.tabsTimelineTelevision.helpers({
         }
       },
       {
-        sort: {date_record: -1},
+        sort: {sequence_id: -1},
         limit: Session.get('limit')
       }).map(
         function(c) {

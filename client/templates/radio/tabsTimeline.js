@@ -40,7 +40,7 @@ Template.tabsTimelineRadio.helpers({
         }
       },
       {
-        sort: {date_record:"desc"},
+        sort: {sequence_id: -1},
         limit: Session.get('limit')
       }).map(
         function(c) {
