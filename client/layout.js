@@ -10,7 +10,7 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
-var handle = LaunchScreen.hold();
+// var handle = LaunchScreen.hold();
 
 Template.layout.rendered = function(){
 

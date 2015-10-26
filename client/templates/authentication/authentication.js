@@ -1,8 +1,11 @@
 Template.authentication.rendered = function(){
   $('.pane').css('transform', 'translate3d(0, 0, 0)');
   document.querySelector('body').classList.remove('snapjs-left');
+  Session.set('splashLoaded', true);
 
-  handle.release();
+  Meteor.setTimeout(function () {
+    document.querySelector('.auth-box').classList.remove('auth-hide');
+  }, 2000);
 
 }
 

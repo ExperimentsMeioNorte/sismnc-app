@@ -1745,6 +1745,10 @@ img {display:block;}
   }
 }
 
+.auth-hide {
+  display:none;
+}
+
 
 .item-avatar {
   strong {
@@ -1753,4 +1757,18 @@ img {display:block;}
   span {
     white-space: nowrap;
   }
+}
+
+
+  .loading-message {
+    color:#999;
+  }
+
+  .spinner-spiral {
+     stroke: #999;
+    fill: #999;
+  }
+
+.pg-loading-screen .pg-loading-logo-header img {
+  height:120px!important;
 }

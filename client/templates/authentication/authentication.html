@@ -1,5 +1,7 @@
 <template name="authentication">
 
+  <div class="auth-box auth-hide">
+
   {{#contentFor "headerTitle"}}
     <h1 class="title">
       <img src="/images/home/logo-sistema.png" alt="" width="245" />
@@ -16,5 +18,9 @@
 
     {{/ionContent}}
   {{/ionView}}
+
+  </div>
+
+  {{> loading }}
 
 </template>
