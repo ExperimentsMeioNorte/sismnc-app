@@ -1,6 +1,6 @@
 // Ao sair
 Template.index.rendered = function(){
-  Session.set('splashLoaded', true);
+  //Session.set('splashLoaded', true);
 }
 
 Template.index.destroyed = function(){

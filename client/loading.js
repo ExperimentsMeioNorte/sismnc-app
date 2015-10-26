@@ -1,7 +1,7 @@
 Template.loading.rendered = function () {
   if ( ! Session.get('loadingSplash') ) {
     this.loading = window.pleaseWait({
-      logo: '/images/home/logo-sistema.png',
+      // logo: '/images/home/logo-sistema.png',
       backgroundColor: '#ffffff',
       loadingHtml: spinner + message
     });
