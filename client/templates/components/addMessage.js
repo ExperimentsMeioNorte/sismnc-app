@@ -47,6 +47,33 @@ Template.addMessage.events({
           document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
         }
+      },
+      {
+        text: '<i class="ion-ios-videocam"></i>',
+        type: 'button-positive',
+        onTap: function() {
+          if (Meteor.isCordova){
+
+            navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:1, duration: 7});
+
+              var captureError = function(error) {
+                navigator.notification.alert('OPS!' + error.message, null, "Deu um probleminha");
+              }
+
+              var captureSuccess = function(mediaFiles) {
+                var i, path, len;
+                for (i=0, len = mediaFiles.length; i < len; i += 1) {
+                  path = mediaFiles[i].fullPath;
+                  // do something with this file... upload to S3 ?
+                  console.log("path = " + path);
+                }
+              }
+
+          } else {
+            // do the standard mdg:camera thing here ??
+            // because we're in a browser.....
+          }
+        }
       }]
     });
   },
