@@ -1815,3 +1815,49 @@ img {display:block;}
   }
 
 }
+
+
+.backdrop {
+  background:rgba(255,255,255,0.89);
+}
+.popup-head {
+  background:#f8f8fc;
+}
+.popup-title {
+  font-size:20px;color:#666;
+}
+.popup-buttons, .popup-body  {
+  background:#fff;
+}
+.popup-buttons {
+  .button {
+    border:0 none!important;
+  }
+}
+.popup-body  {
+ .popup-prompt-text {
+  display:none;
+ }
+  input {
+    color:#999;
+    text-align:center;
+    background: #f8f8fc;
+    border-radius: 28px;
+    font-size:14px;
+    height: 42px;
+    margin-top: 10px;
+  }
+}
+.popup-container.active .popup {
+  border-radius:5px;
+
+  .button {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.button-default {
+  display:none;
+}
+
