@@ -1,17 +1,21 @@
 $positive: #445DA2;
 $loading-font-size: 32px;
 
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic.scss';
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons.scss';
 
-// * {
-//     -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
-//     -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
-//     -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-//     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-// }
+// Allan
+//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
+//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
+
+// Alisson
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic.scss';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons.scss';
+
+* {
+    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
 
 html {
   -webkit-text-size-adjust: none;
@@ -19,8 +23,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-
-   -webkit-tap-highlight-color: rgba(0,0,0,0.01);
 
 }
 
@@ -1849,7 +1851,7 @@ img {display:block;}
   }
 }
 .popup-container.active .popup {
-  border-radius:5px;
+  border-radius:5px;box-shadow:0 0 20px -6px rgba(0,0,0,.5);
 
   .button {
     font-size: 14px;
@@ -1857,7 +1859,10 @@ img {display:block;}
   }
 }
 
-.button-default {
-  display:none;
+.popup {
+
+  .button-default {
+    display:none!important;
+  }
 }
 

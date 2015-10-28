@@ -1,6 +1,5 @@
 // Ao sair
 Template.index.rendered = function(){
-  //Session.set('splashLoaded', true);
   IonPopup.prompt({
     title: 'Qual seu telefone?',
     okText: 'Salvar',
