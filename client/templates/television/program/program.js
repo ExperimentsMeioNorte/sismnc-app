@@ -62,6 +62,7 @@ Template.program.helpers({
 
             return {
               _id: p._id,
+              _idTv: p.city_id,
               name: p.name,
               day: days,
               hour_begin: p.hour_begin,

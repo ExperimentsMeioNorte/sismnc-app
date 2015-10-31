@@ -17,7 +17,7 @@ Template.television.helpers({
     var programs = [];
 
     var category = Category.find(
-      {description: { $not: 'Radio' }},
+      { description: { $not: 'Radio' } },
       {sort: {description:"asc"}}
     ).map(
       function(c) {
@@ -29,12 +29,16 @@ Template.television.helpers({
     );
 
     var program = Program.find(
-      {status:1},
+      {
+        city_id: Router.current().params._idTv,
+        status:1
+      },
       {sort: {category_id:"asc"}}
     ).map(
       function(p) {
         return {
           _id: p._id,
+          _idTv: p.city_id,
           image_avatar: p.image_avatar,
           category_id: p.category_id
         };

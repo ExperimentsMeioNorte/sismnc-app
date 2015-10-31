@@ -19,7 +19,7 @@ Template._changeTelevision.helpers({
       ).map(
         function(c) {
           return {
-            _id: c._id,
+            _idTv: c._id,
             name: c.name
           };
         }
