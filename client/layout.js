@@ -7,6 +7,7 @@ Tracker.autorun(function() {
     Meteor.remote.subscribe('polluser');
     Meteor.remote.subscribe('vehicle');
     Meteor.remote.subscribe('user');
+    Meteor.remote.subscribe('city');
     Meteor.subscribe('users');
 });
 
