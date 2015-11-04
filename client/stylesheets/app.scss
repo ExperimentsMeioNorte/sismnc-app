@@ -1,26 +1,26 @@
 $positive: #445DA2;
 $loading-font-size: 32px;
 
+// Allan
 //@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic.scss';
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons.scss';
+//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
 
-// * {
-//     -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
-//     -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
-//     -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-//     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-// }
+// Alisson
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic.scss';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons.scss';
 
+* {
+    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
 html {
   -webkit-text-size-adjust: none;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-
-   -webkit-tap-highlight-color: rgba(0,0,0,0.01);
 
 }
 
@@ -1852,15 +1852,14 @@ img {display:block;}
   }
 }
 .popup-container.active .popup {
-  border-radius:5px;box-shadow:0 0 14px -5px #000;border-radius:5px;
+
+  border-radius:5px;box-shadow:0 0 20px -6px rgba(0,0,0,.5);
 
   .button {
     font-size: 14px;
     text-transform: uppercase;
   }
 
-
-}
 
 
 

@@ -2,11 +2,11 @@
   {{#ionModal title="Escolha a tv" class="bar-television"}}
     <div class="padding change-television">
 
-    <!-- {{#each television}} -->
+     {{#each television}}
         {{#ionItem path="television"}}
-          <img src="/images/television/logo-large.png" height="150" />
+          <img src="/images/television/logo-large.png" height="150" />{{name}}
         {{/ionItem}}
-    <!-- {{/each}} -->
+     {{/each}}
 
     </div>
   {{/ionModal}}

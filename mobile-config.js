@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.7'
+  version: '0.1.23'
 });
 
 App.icons({
@@ -47,7 +47,7 @@ App.setPreference('BackgroundColor', '0xffffffff');
 App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
-App.setPreference("SplashScreenDelay", 90000);
+App.setPreference("SplashScreenDelay", 20000);
 
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {
@@ -57,4 +57,5 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 
 // // regras de acesso cross origen
 App.accessRule("*");
+App.accessRule("*://*.meteor.com");
 // //App.accessRule("*://localhost:3010/*");

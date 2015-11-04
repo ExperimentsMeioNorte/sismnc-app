@@ -1,5 +1,5 @@
 Template._askMusic.events({
-    'touchstart .btn-askmusic': function(event){
+    'touchstart .btn-askmusic, click .btn-askmusic': function(event){
         event.preventDefault();
         if(document.querySelector('#music').value === ''){
             console.log('Precisa de uma musica');
@@ -16,8 +16,6 @@ Template._askMusic.events({
                 ],
                 function(error, result){
                     if(!error){
-                        IonLoading.show();
-
                         //remove os dados dos campos do form para evitar a duplicidade do registro
                         document.querySelector('#music').value = document.querySelector('#artist').value = '';
                         IonModal.close();

@@ -10,6 +10,19 @@ Template._changeTelevision.events({
   }
 });
 
-// Template._changeTelevision.helpers({
-
-// });
+Template._changeTelevision.helpers({
+  television: function(){
+      return City.find(
+        {
+          status: 1
+        }
+      ).map(
+        function(c) {
+          return {
+            _idTv: c._id,
+            name: c.name
+          };
+        }
+      );
+ }
+});
