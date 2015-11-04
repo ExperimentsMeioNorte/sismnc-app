@@ -2,7 +2,7 @@
 
   {{#contentFor "headerButtonLeft"}}
     <button class="button button-clear pull-left" data-ion-menu-toggle="left">
-      {{> ionIcon icon='navicon-round'}}
+      {{> ionIcon icon='navicon'}}
     </button>
   {{/contentFor}}
 
@@ -10,6 +10,12 @@
     <h1 class="title">
       <img src="/images/home/logo-white.png" width="204" height="120" />
     </h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right" data-ion-menu-toggle="right">
+      {{> ionIcon icon='ios-bell-outline'}}
+    </button>
   {{/contentFor}}
 
   {{#ionView}}

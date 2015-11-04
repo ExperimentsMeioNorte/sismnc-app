@@ -1,8 +1,8 @@
 $positive: #445DA2;
 $loading-font-size: 32px;
 
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic.scss';
+//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic.scss';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
 //@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons.scss';
 
@@ -1490,7 +1490,7 @@ img {display:block;}
         margin:10px;
       }
       input {
-        margin-top:10px;margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:96%;clear:both;background:#f8f8fc;border-radius:28px;padding:2%!important;border:0 none!important;
+        margin-top:10px;margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:96%;clear:both;background:#f8f8fc;border-radius:28px;padding:2%!important;border:0 none!important;box-shadow:0 2px 0 0 #f1f1f1;
       }
     }
     .modal-footer {
@@ -1550,7 +1550,7 @@ img {display:block;}
     .input-field {
       padding-left:42px;margin-top:0!important;padding-right:50px;position:relative;z-index:2;
       input {
-        margin-bottom:0!important;height:48px!important;line-height:42px!important;color:#c8c8c8;font-weight:500;width:100%;font-size:20px;text-deocration:none!important;
+        margin-bottom:0!important;height:48px!important;line-height:42px!important;color:#c8c8c8;font-weight:500;width:100%;font-size:20px;text-decoration:none!important;box-shadow:0 2px 0 0 #f1f1f1;
       }
     }
 
@@ -1642,14 +1642,14 @@ img {display:block;}
 .form-pattern  {
   display:table;width:100%;
   .icon-edit {
-        padding: 7px 5px;
+        padding:4px;
         background: rgba(0, 0, 0, 0.8);
         color: #fff;
         border-radius: 5px;
         position: absolute;
-        left: 55%;
-        bottom: 16px;
-        font-size: 18px;
+        left: 52%;
+        bottom: 14px;
+        font-size: 16px;
         border-radius: 50%;
   }
   .upload-image {
@@ -1833,6 +1833,9 @@ img {display:block;}
   .button {
     border:0 none!important;
   }
+  .button-default {
+    display:none!important;
+  }
 }
 .popup-body  {
  .popup-prompt-text {
@@ -1849,15 +1852,15 @@ img {display:block;}
   }
 }
 .popup-container.active .popup {
-  border-radius:5px;
+  border-radius:5px;box-shadow:0 0 14px -5px #000;border-radius:5px;
 
   .button {
     font-size: 14px;
     text-transform: uppercase;
   }
+
+
 }
 
-.button-default {
-  display:none;
-}
+
 
