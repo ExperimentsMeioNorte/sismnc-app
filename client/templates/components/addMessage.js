@@ -29,21 +29,20 @@ Template.addMessage.events({
         type: 'button-positive',
         onTap: function() {
           if (Meteor.isClient) {
+            var cameraOptions = {
+              width: 640,
+              height: 480,
+              quality:70
+            };
 
-              var cameraOptions = {
-                width: 640,
-                height: 480,
-                quality:70
-              };
+            MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+              Session.set("photo", data);
+            });
 
-              MeteoricCamera.getPicture(cameraOptions, function (error, data) {
-                Session.set("photo", data);
+          } else {
+            console.log('Roda apenas no cordova');
+          }
 
-              });
-
-            } else {
-              alert('Roda apenas no cordova');
-            }
           document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
         }
@@ -53,26 +52,21 @@ Template.addMessage.events({
         type: 'button-positive',
         onTap: function() {
           if (Meteor.isCordova){
-
-            navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:1, duration: 7});
-
               var captureError = function(error) {
                 navigator.notification.alert('OPS!' + error.message, null, "Deu um probleminha");
               }
 
               var captureSuccess = function(mediaFiles) {
-                var i, path, len;
-                for (i=0, len = mediaFiles.length; i < len; i += 1) {
-                  path = mediaFiles[i].fullPath;
-                  // do something with this file... upload to S3 ?
-                  console.log("path = " + path);
-                }
+                Session.set("videoUrl", mediaFiles[0].fullPath);
               }
 
+              navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:1, duration: 5});
           } else {
-            // do the standard mdg:camera thing here ??
-            // because we're in a browser.....
+            console.log('Roda apenas no cordova');
           }
+
+          document.querySelector('body').classList.add('show-file-message');
+          IonPopup.close();
         }
       }]
     });
@@ -96,7 +90,6 @@ Template.addMessage.events({
       alert('Roda apenas no cordova');
       document.querySelector('body').classList.add('show-file-message');
     }
-
   },
 
   'touchstart #btn-upload-image' : function(){
@@ -117,9 +110,6 @@ Template.addMessage.events({
       console.log('Roda apenas no cordova');
       document.querySelector('body').classList.add('show-file-message');
     }
-
-
-
   },
 
   // ENVIO DA MENSAGEM
@@ -128,6 +118,25 @@ Template.addMessage.events({
         if(!document.querySelector('#message').value){
             console.log('Precisa de um texto');
         }else{
+            var videoData = null;
+            if(Session.get("videoUrl")){
+              // create a canvas element
+              var canvas = document.createElement('canvas'),     // canvas
+                  ctx = canvas.getContext('2d'),                 // context
+                  video = document.getElementById('video-file');  // get video element somehow
+
+              // setup canvas dimension
+              canvas.width = video.videoWidth || video.width;
+              canvas.height = video.videoHeight || video.height;
+
+              // draw in current video frame
+              ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+              // extract data-uri
+              videoData = canvas.toDataURL();  // PNG is default, use image/jpeg for JPEG
+              Session.setDefault("videoUrl", null);
+            }
+
             Meteor.remote.call(
                 'insertContent',
                 [
@@ -136,7 +145,7 @@ Template.addMessage.events({
                     localStorage.getItem('Meteor.userId'),
                     document.querySelector('#message').value, // texto
                     (Session.get("photo"))? Session.get("photo") : '', // imagem
-                    '', // video
+                    (videoData !== null)? videoData : '', // video
                     1
                 ],
                 function(error, result){
