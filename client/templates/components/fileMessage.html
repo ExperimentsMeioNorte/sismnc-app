@@ -10,6 +10,13 @@
       </div>
     {{/if}}
 
+    {{#if video}}
+      <div class="video-file" id="video-file">
+        <video width="100%" controls>
+          <source src="{{video}}" type="video/mp4">
+        </video>
+      </div>
+    {{/if}}
 
   </div>
 </template>
