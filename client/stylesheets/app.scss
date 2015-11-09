@@ -2,12 +2,12 @@ $positive: #445DA2;
 $loading-font-size: 32px;
 
 // Allan
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
-//@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/packages/meteoric_ionic-sass/_ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/packages/meteoric_ionicons-sass/_ionicons';
 
 // Alisson
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic.scss';
-@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons.scss';
+// @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic.scss';
+// @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons.scss';
 
 * {
     -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
@@ -25,7 +25,7 @@ body {
 }
 
 .bar {
-  border:0 none!important;
+  border:0 none!important;border-color: transparent !important;border-bottom-width:0!important;
   .title {
     font-size:18px!important;
   }
@@ -1755,7 +1755,7 @@ img {display:block;}
     white-space: nowrap;
   }
   span {
-    white-space: nowrap;
+    white-space: nowrap;font-size:12px
   }
 }
 
@@ -1821,20 +1821,17 @@ img {display:block;}
   background:rgba(255,255,255,0.89);
 }
 .popup-head {
-  background:#f8f8fc;
+  background:transparent;
 }
 .popup-title {
   font-size:20px;color:#666;
 }
 .popup-buttons, .popup-body  {
-  background:#fff;
+  background:transparent;
 }
 .popup-buttons {
   .button {
     border:0 none!important;
-  }
-  .button-default {
-    display:none!important;
   }
 }
 .popup-body  {
@@ -1842,24 +1839,42 @@ img {display:block;}
   display:none;
  }
   input {
-    color:#999;
+    color:#666;
     text-align:center;
-    background: #f8f8fc;
+    background: #f4f4f4;
     border-radius: 28px;
     font-size:14px;
     height: 42px;
     margin-top: 10px;
   }
 }
-.popup-container.active .popup {
+.popup-container {
+  .popup {
+    box-shadow:0 0 20px -6px rgba(0,0,0,.5);
 
-  border-radius:5px;box-shadow:0 0 20px -6px rgba(0,0,0,.5);
+    border-radius:5px!important;
+    -webkit-border-radius:5px!important;
+    -moz-border-radius:5px!important;
 
-  .button {
-    font-size: 14px;
-    text-transform: uppercase;
+    .button {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .button-default {
+      background:transparent!important;color:#999!important;
+    }
   }
 
+}
 
 
+.menu-right {
+  overflow:hidden!important;background:#f8f8fc!important;
+  .title {
+    top:0!important;
+  }
+}
 
+.menu-left {
+  overflow:hidden!important;
+}

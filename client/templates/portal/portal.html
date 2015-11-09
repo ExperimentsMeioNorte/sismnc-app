@@ -1,20 +1,12 @@
 <template name="indexPortal">
-  {{#contentFor "headerButtonLeft"}}
-    <a href="{{ pathFor 'index' }}" class="buttons button button-clear back-button pull-left">
-      <i class="icon ion-android-arrow-back"></i>
-    </a>
-  {{/contentFor}}
-
-  {{#contentFor "headerTitle"}}
-    <h1 class="title">
-      Portal meionorte.com
-    </h1>
-  {{/contentFor}}
-
   {{#ionView}}
     {{#ionContent}}
 
-      <iframe src="http://meionorte.com/" width="100%"></iframe>
+      <iframe src="http://www.meionorte.com/mobi" width="100%" height="100%"></iframe>
+
+      <a href="{{ pathFor 'index' }}" class="button button-clear back-button button-flat">
+        <i class="icon ion-android-arrow-back"></i>
+      </a>
 
     {{/ionContent}}
   {{/ionView}}

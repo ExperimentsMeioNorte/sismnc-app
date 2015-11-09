@@ -3,6 +3,7 @@ Template.index.rendered = function(){
   IonPopup.prompt({
     title: 'Qual seu telefone?',
     okText: 'Salvar',
+    cancelText: 'Cancelar',
     inputType: 'text',
     inputPlaceholder: 'Digite aqui'
   });

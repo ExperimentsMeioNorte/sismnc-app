@@ -1,0 +1,22 @@
+.portal-page {
+  .menu-content {
+    .bar {
+      display:none!important;
+    }
+  }
+  .content {
+    top:0!important;
+  }
+
+  .button-flat {
+    position: fixed !important;
+    left: 20px;
+    bottom: 20px;
+    background: #058de8 !important;
+    border-radius: 50% !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    box-shadow: 2px 2px 10px -4px #000 !important;
+  }
+
+}
