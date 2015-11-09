@@ -1,0 +1,144 @@
+<template name="_editProfile">
+
+  {{#ionModal title="Editar Perfil" class="bar-profile"}}
+
+    <section id="modal-edit-profile">
+    {{#each user}}
+    <div class="form-pattern modal-content">
+
+      <div class="upload-image center-align">
+        <img src="{{ avatar }}" width="80" />
+        <i class="icon-edit"></i>
+      </div>
+
+      <div class="padding">
+
+        <strong class="title-form">Informações Básicas</strong>
+
+        <div class="input-field">
+
+          <label for="name">Nome *</label>
+          <input id="name" type="text" value="{{ name }}">
+
+        </div>
+
+        <div class="input-field">
+
+          <label for="mail">E-mail *</label>
+          <input id="mail" type="text" value="{{ email }}">
+
+        </div>
+
+        <div class="input-field">
+
+          <label for="phone">Celular</label>
+          <input id="phone" type="text" value="{{ phone }}">
+
+        </div>
+<!--
+        <div class="input-field">
+
+          <label for="phone">Receber notificações</label>
+          Sim / Não
+
+        </div> -->
+
+        <!-- <div class="input-field col s12">
+          <input id="phone" type="text">
+          <label for="phone" class="">Telefone</label>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="location" type="text">
+          <label for="location" class="">Localização</label>
+        </div>
+
+        <strong class="title-form" style="margin-top:20px;">Notificações</strong>
+
+        <div class="checkbox-field col s12">
+
+          <span class="left">Ativar notificações</span>
+
+          <div class="right">
+            <div class="switch">
+              <label>
+                <input type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+
+        <strong class="title-form" style="margin-bottom:15px;">Redes sociais</strong>
+
+        <div class="checkbox-field social-checkbox col s12">
+
+          <span class="left">
+            <i class="icon-facebook-rect txt-facebook"></i>
+            Facebook
+          </span>
+
+          <div class="right">
+            <div class="switch">
+              <label>
+                <input type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="checkbox-field social-checkbox col s12">
+
+          <span class="left">
+            <i class="icon-twitter-bird txt-twitter"></i>
+            Twitter
+          </span>
+
+          <div class="right">
+            <div class="switch">
+              <label>
+                <input type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="checkbox-field social-checkbox col s12">
+
+          <span class="left">
+            <i class="icon-googleplus-rect txt-google"></i>
+            Google
+          </span>
+
+          <div class="right">
+            <div class="switch">
+              <label>
+                <input type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+
+    </div>
+    {{/each}}
+    <div class="modal-footer">
+      <a class="button button-positive update-perfil" href="#">
+        SALVAR
+      </a>
+    </div>
+
+  </section>
+
+  {{/ionModal}}
+
+</template>
