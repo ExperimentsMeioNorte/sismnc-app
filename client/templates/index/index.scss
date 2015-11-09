@@ -52,11 +52,11 @@
     .content {
       top:80px;
       .item {
-        color:#999;border-color:#e5e5e5;
+        color:#999;border-color:#e5e5e5;font-size:14px;text-transform:uppercase;
       }
     }
     .item-logout {
-      position:absolute;bottom:0;left:1px;width:100%;border-left:0!important;border-right:0!important;cursor:pointer;color:#999;
+      position:absolute;bottom:0;left:1px;width:100%;border-left:0!important;border-right:0!important;cursor:pointer;color:#999;font-size:14px;text-transform:uppercase;
     }
     .item-icon-right {
       .icon {

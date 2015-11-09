@@ -1,5 +1,5 @@
 Meteor.startup(function(){
-  //Session.get('photo');
+  Session.get('photo');
 });
 
 Template.fileMessage.events({
@@ -8,16 +8,16 @@ Template.fileMessage.events({
       document.querySelector('.file-message').classList.add('hide');
 
       Session.setDefault('photo', null);
-      Session.setDefault('videoUrl', null);
+      //Session.setDefault('videoUrl', null);
     }
 });
 
 Template.fileMessage.helpers({
   'photo': function() {
     return Session.get('photo');
-  },
-
-  'video': function() {
-    return Session.get('videoUrl');
   }
+
+  // 'video': function() {
+  //   return Session.get('videoUrl');
+  // }
 });

@@ -5,7 +5,10 @@ Template.index.rendered = function(){
     okText: 'Salvar',
     cancelText: 'Cancelar',
     inputType: 'text',
-    inputPlaceholder: 'Digite aqui'
+    inputPlaceholder: 'Digite aqui',
+    onOk: function() {
+      console.log('Salvo');
+    }
   });
 }
 
