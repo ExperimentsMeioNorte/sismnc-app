@@ -22,6 +22,10 @@ Template._editProfile.events({
             }
         );
       }
+  },
+  'touchstart [data-dismiss="modal"], click [data-dismiss="modal"]' : function (){
+    IonModal.close();
+    Router.go('index');
   }
 });
 

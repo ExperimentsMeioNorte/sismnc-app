@@ -5,7 +5,7 @@ Template.index.rendered = function(){
     okText: 'Salvar',
     cancelText: 'Cancelar',
     inputType: 'text',
-    inputPlaceholder: 'Digite aqui',
+    inputPlaceholder: 'Digite seu número',
     onOk: function() {
       console.log('Salvo');
     }
