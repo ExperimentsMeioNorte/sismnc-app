@@ -1922,3 +1922,21 @@ img {display:block;}
 .back-button {
   top:-2px;
 }
+
+.button-notify {
+  span {
+    padding: 2px 5px;
+    background: #fff;
+    color: #445DA2;
+    border-radius: 50%;
+    position: absolute;
+    left: -2px;
+    line-height: 12px;
+    width: 16px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 4px;
+    box-shadow: 2px 2px 5px -4px #000;
+  }
+}

@@ -7,9 +7,9 @@
   .bar {
     background:#fff!important;border:0 none!important;
     .title {
-      overflow:visible!important;top:58px!important;text-align:center!important;
+      overflow:visible!important;top:58px!important;text-align:center!important;width: 100%!important;margin: 0!important;
       img {
-        display:inline-block!important;margin-top:40px;
+       display: block;margin: 40px auto;
       }
     }
   }
