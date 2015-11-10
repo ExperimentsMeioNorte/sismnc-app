@@ -26,7 +26,6 @@ Template._editProfile.events({
                                     console.log('algo deu errado.');
                                 }else{
                                     console.log('atualizado com sucesso.');
-                                    ionModal.close();
                                 }
                             }
                         );
@@ -37,8 +36,6 @@ Template._editProfile.events({
               } else {
                 console.log('Roda apenas no cordova');
               }
-              document.querySelector('body').classList.add('show-file-message');
-              IonPopup.close();
             }
           },
           {
@@ -65,7 +62,6 @@ Template._editProfile.events({
                                     console.log('algo deu errado.');
                                 }else{
                                     console.log('atualizado com sucesso.');
-                                    ionModal.close();
                                 }
                             }
                         );
@@ -77,20 +73,17 @@ Template._editProfile.events({
               } else {
                 console.log('Roda apenas no cordova');
               }
-
-              document.querySelector('body').classList.add('show-file-message');
-              IonPopup.close();
             }
           }]
         });
     },
 
-  'touchstart .update-perfil' : function(form){
-    form.preventDefault();
-    var name = document.querySelector("#name").value;
-    var email = document.querySelector("#mail").value;
-    var phone = document.querySelector("#phone").value;
-    var phone = (phone)? phone : null;
+  'touchstart .update-perfil, click .update-perfil' : function(){
+    //form.preventDefault();
+    var name = document.querySelector('#name').value;
+    var email = document.querySelector('#mail').value;
+    var phone = document.querySelector('#phone').value;
+    var phone = (phone !== '')? phone : null;
     if(!name || !email){
         console.log('necessario preencher os campos obrigatorios');
     }else{
@@ -107,11 +100,13 @@ Template._editProfile.events({
                     console.log('algo deu errado.');
                 }else{
                     console.log('atualizado com sucesso.');
-                    ionModal.close();
                 }
             }
         );
       }
+
+      IonModal.close();
+      Router.go('index');
   },
   'touchstart [data-dismiss="modal"], click [data-dismiss="modal"]' : function (){
     IonModal.close();
