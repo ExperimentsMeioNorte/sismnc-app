@@ -1490,7 +1490,20 @@ img {display:block;}
         margin:10px;
       }
       input {
-        margin-top:10px;margin-bottom:0!important;height:48px!important;line-height:48px!important;color:#c8c8c8;font-weight:500;width:96%;clear:both;background:#f8f8fc;border-radius:28px;padding:2%!important;border:0 none!important;box-shadow:0 2px 0 0 #f1f1f1;
+        margin-top: 10px;
+        margin-bottom: 0 !important;
+        height: 48px !important;
+        line-height: 48px !important;
+        color: #c8c8c8;
+        font-weight: 500;
+        width: 100%;
+        clear: both;
+        background: #f8f8fc;
+        border-radius: 28px;
+        padding: 2% !important;
+        border: 0 none !important;
+        box-shadow: 0 2px 0 0 #f1f1f1;
+        text-align: center;
       }
     }
     .modal-footer {
@@ -1869,9 +1882,11 @@ img {display:block;}
 
 
 .menu-right {
-  overflow:hidden!important;background:#f8f8fc!important;
+  background:#f8f8fc!important;
+
+  //overflow:hidden!important;
   .title {
-    top:0!important;
+    top:0!important;color:#445DA2;
   }
 }
 
@@ -1938,5 +1953,59 @@ img {display:block;}
     font-weight: bold;
     bottom: 4px;
     box-shadow: 2px 2px 5px -4px #000;
+  }
+}
+
+
+.notify-day {
+  header {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+    strong {
+    padding: 6px 12px;
+    background: #fff;
+    box-shadow: 2px 2px 10px -8px #000;
+    color: #666;
+    border-radius: 28px;
+    }
+  }
+}
+
+.notify-item {
+  width:100%;border-bottom:1px solid #e5e5e5;
+
+  &:last-child {
+    border-bottom:0 none!important;
+  }
+  .notify-item-info {
+    padding:15px;position:relative;display:block;clear:both;text-decoration:none;
+    strong {
+      color:#212121;font-size:14px;width:100%;
+    }
+    p {
+      color: #666;
+      font-size: 14px;
+      line-height: 18px;
+      width: 100%;
+      clear: both;
+      margin-top: 8px;
+    }
+    small {
+      position:absolute;right:15px;top:15px;color:#666;font-size:12px;
+    }
+
+    &:hover {
+      background:#fff;
+    }
+    &:active {
+      background:#fff;
+    }
+    &:focus {
+      background:#fff;
+    }
   }
 }
