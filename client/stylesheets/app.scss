@@ -1842,7 +1842,7 @@ img {display:block;}
     color:#666;
     text-align:center;
     background: #f4f4f4;
-    border-radius: 28px;
+    border-radius: 4px;
     font-size:14px;
     height: 42px;
     margin-top: 10px;
@@ -1877,4 +1877,48 @@ img {display:block;}
 
 .menu-left {
   overflow:hidden!important;
+}
+
+
+
+
+.button-update {
+  span {
+    padding: 5px;
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    line-height: 14px;
+    font-size: 12px;
+    width: 24px;
+    font-weight: 800;
+    text-align: center;
+  }
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  background: #fff;
+  color: #999;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 28px;
+  margin-left: -90px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 2px 2px 8px -6px #000;
+
+  &:active {
+    background:#f8f8fc;
+  }
+  &:focus {
+    background:#f8f8fc;
+  }
+}
+
+
+.back-button {
+  top:-2px;
 }
