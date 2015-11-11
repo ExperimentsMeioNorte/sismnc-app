@@ -152,7 +152,7 @@ Template.addMessage.events({
                     localStorage.getItem('Meteor.userId'),
                     document.querySelector('#message').value, // texto
                     (Session.get("photo"))? Session.get("photo") : '', // imagem
-                    // (videoData !== null)? videoData : '', // video
+                    null, // (videoData !== null)? videoData : '', // video
                     1
                 ],
                 function(error, result){
