@@ -8,7 +8,9 @@
     background:#fff!important;border:0 none!important;
 
   }
-
+ .scroll-content .content {
+    width:100%;top:0!important;
+  }
   .logo {
       overflow:visible!important;text-align:center!important;width: 100%!important;
       img {
@@ -144,6 +146,6 @@
 
 .modal {
   .button {
-    min-height:42px!important;height:42px!important;border-radius:28px!important;
+    min-height:42px!important;height:42px!important;border-radius:5px!important;
   }
 }

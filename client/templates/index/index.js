@@ -7,7 +7,7 @@ Template.index.helpers({
           title: 'Qual seu telefone?',
           okText: 'Salvar',
           cancelText: 'Cancelar',
-          inputType: 'text',
+          inputType: 'number',
           inputPlaceholder: 'Digite aqui',
           onOk: function() {
             var phone = document.querySelector('input[name=prompt]').value;

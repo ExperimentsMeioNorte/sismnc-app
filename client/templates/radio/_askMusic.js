@@ -2,7 +2,15 @@ Template._askMusic.events({
     'touchstart .btn-askmusic, click .btn-askmusic': function(event){
         event.preventDefault();
         if(document.querySelector('#music').value === ''){
-            console.log('Precisa de uma musica');
+            toastr.info(
+              "Precisa pedir a música",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
         }else{
             Meteor.remote.call(
                 'insertMusic',
@@ -21,7 +29,15 @@ Template._askMusic.events({
                         IonModal.close();
                         IonNavigation.skipTransitions = false;
                     }else{
-                        console.log('Não deu Nova Mensagem');
+                        toastr.info(
+                          "Não deu, tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
                     }
                 }
             );

@@ -13,7 +13,9 @@ Template.tabsTimelineTelevision.destroyed = function(){
 
 Template.tabsTimelineTelevision.helpers({
   contents: function(){
-    IonLoading.show();
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
     // valida se é para listar as mensagens
     var content = Content.findOne(
       {
@@ -92,7 +94,9 @@ Template.tabsTimelineTelevision.helpers({
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
     Meteor.getDateHour();
-    IonLoading.show();
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
@@ -109,7 +113,9 @@ Template.tabsTimelineTelevision.helpers({
 
 Template.tabsTimelineTelevision.events({
     'touchstart #mais': function(){
-      IonLoading.show();
+      IonLoading.show({
+        customTemplate: 'Aguarde...'
+      });
       Meteor.incrementLimit();
       IonLoading.hide();
     }

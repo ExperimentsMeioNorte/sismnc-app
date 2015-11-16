@@ -16,7 +16,9 @@ Template.tabsTimelineRadio.rendered = function(){
 
 Template.tabsTimelineRadio.helpers({
   contents: function(){
-    IonLoading.show();
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
     // valida se é para listar as mensagens
     var content = Content.findOne(
       {
@@ -95,7 +97,9 @@ Template.tabsTimelineRadio.helpers({
   // verifica se esta no final do registro e some com o botao mais
   mais: function(){
     Meteor.getDateHour();
-    IonLoading.show();
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
@@ -112,7 +116,9 @@ Template.tabsTimelineRadio.helpers({
 
 Template.tabsTimelineRadio.events({
     'touchstart #mais': function(){
-        IonLoading.show();
+        IonLoading.show({
+          customTemplate: 'Aguarde...'
+        });
         Meteor.incrementLimit();
         IonLoading.hide();
     }

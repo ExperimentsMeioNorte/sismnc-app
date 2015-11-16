@@ -306,9 +306,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
     line-height: 22px;
     color:#7A8B91;
     display: table;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     img {
-      width:100%;border-radius:5px;margin-bottom:15px;
+      position:absolute;width:100%;border-radius:5px;top:0;left:0;width:100%;border-radius:0;
     }
   }
   .polls-answers {
@@ -318,7 +318,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
       border-right-color:#62A0BD!important;
     }
     .polls-answers-item {
-      margin-bottom:5px;display:block;position:relative;padding:12px 0 12px 0;
+      margin-bottom:5px;display:block;position:relative;padding:5px 0;
       img {
         position:absolute;left:0;top:4px;
       }
@@ -1213,7 +1213,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
     .polls-answers-item {
       margin-bottom:5px;display:block;position:relative;padding:12px 0 12px 60px;
       img {
-        position:absolute;left:0;top:4px;
+        position:absolute;left:0;top:0; border-radius: 0;
       }
       span {
           position: relative;

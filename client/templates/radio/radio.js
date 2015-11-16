@@ -24,7 +24,10 @@ Template.radio.destroyed = function(){
 
 Template.radio.events({
   'click .player-button, touchstart .player-button': function(event){
-      IonLoading.show();
+      IonLoading.show({
+        customTemplate: 'Aguarde...',
+        duration: 9000
+      });
       event.preventDefault();
 
       // verifica qual link é da radio atual
@@ -55,7 +58,9 @@ Template.radio.events({
 
 Template.radio.helpers({
     programs: function(){
-      IonLoading.show();
+      IonLoading.show({
+        customTemplate: 'Aguarde...'
+      });
       var program = Program.find(
         {
           _id: Router.current().params._id,

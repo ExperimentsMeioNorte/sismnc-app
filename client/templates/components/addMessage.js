@@ -18,7 +18,15 @@ Template.addMessage.events({
 
             });
           } else {
-            console.log('Roda apenas no cordova');
+            toastr.info(
+              "Veish, não deu certo",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
           }
           document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
@@ -40,7 +48,15 @@ Template.addMessage.events({
             });
 
           } else {
-            console.log('Roda apenas no cordova');
+            toastr.info(
+              "Opa, não deu certo",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 2000
+              }
+            );
           }
 
           document.querySelector('body').classList.add('show-file-message');
@@ -94,7 +110,15 @@ Template.addMessage.events({
       });
 
     } else {
-      alert('Roda apenas no cordova');
+      toastr.info(
+        "Eita, não deu certo",
+        '',
+        {
+          "positionClass": "toast-top-center",
+          "tapToDismiss": true,
+          "timeOut": 3000
+        }
+      );
       document.querySelector('body').classList.add('show-file-message');
     }
   },
@@ -114,7 +138,15 @@ Template.addMessage.events({
 
       });
     } else {
-      console.log('Roda apenas no cordova');
+      toastr.info(
+        "Ixi, não deu certo",
+        '',
+        {
+          "positionClass": "toast-top-center",
+          "tapToDismiss": true,
+          "timeOut": 3000
+        }
+      );
       document.querySelector('body').classList.add('show-file-message');
     }
   },
@@ -123,15 +155,15 @@ Template.addMessage.events({
   'touchstart .send-button, click .send-button': function(events){
         events.preventDefault();
         if(!document.querySelector('#message').value){
-            toastr.info(
-                "Você precisa digitar uma mensagem.",
-                '',
-                {
-                    "progressBar": true,
-                    "positionClass": "toast-top-center",
-                    "showDuration": "100"
-                }
-            );
+          toastr.info(
+            "Precisa digitar uma mensagem",
+            '',
+            {
+              "positionClass": "toast-top-center",
+              "tapToDismiss": true,
+              "timeOut": 3000
+            }
+          );
         }else{
             // var videoData = null;
             // if(Session.get("videoUrl")){
@@ -176,13 +208,13 @@ Template.addMessage.events({
                         document.querySelector('body').classList.remove('show-file-message');
                     }else{
                         toastr.info(
-                            "Ocorreu um problema, tente novamente.",
-                            '',
-                            {
-                                "progressBar": true,
-                                "positionClass": "toast-top-center",
-                                "showDuration": "100"
-                            }
+                          "Algo deu errado, tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
                         );
                     }
                 }

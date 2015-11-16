@@ -99,13 +99,13 @@ Template.tabsPollsTelevision.events({
 
         if(!document.querySelector('input[name="answer"]:checked').value){
             toastr.info(
-                "Ops, necessario escolher uma resposta.",
-                '',
-                {
-                    "progressBar": true,
-                    "positionClass": "toast-top-center",
-                    "showDuration": "100"
-                }
+              "Escolha uma resposta",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
             );
         }else{
             Meteor.remote.call(
@@ -119,16 +119,18 @@ Template.tabsPollsTelevision.events({
                 function(error, result){
                     if(!result){
                         toastr.info(
-                            "Ops, algo deu errado.",
-                            '',
-                            {
-                                "progressBar": true,
-                                "positionClass": "toast-top-center",
-                                "showDuration": "100"
-                            }
+                          "Veish, algo deu errado.. tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
                         );
                     }else{
-                        IonLoading.show();
+                        IonLoading.show({
+                          customTemplate: 'Aguarde...'
+                        });
                         document.querySelector('.polls-answers').classList.add('hide');
                         document.querySelector('.results-question').classList.remove('hide');
                     }

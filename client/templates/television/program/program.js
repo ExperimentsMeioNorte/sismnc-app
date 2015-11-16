@@ -6,7 +6,9 @@ Template.program.rendered = function () {
 Template.program.helpers({
   // gera os dados do programa atual
   programs: function(){
-    IonLoading.show();
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
     var categoryId = Category.find(
       {
         description: 'Radio'

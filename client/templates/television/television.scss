@@ -217,21 +217,21 @@
     line-height: 22px;
     color:#7A8B91;
     display: table;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     img {
-      width:100%;border-radius:5px;margin-bottom:15px;
+      position:absolute;width:100%;border-radius:5px;top:0;left:0;width:100%;border-radius:0;
     }
   }
   .polls-answers {
-    margin:10px 0;
+    margin:10px 0;padding-top:105px;
     [type="checkbox"]:checked + label:before {
       border-bottom-color:#62A0BD!important;
       border-right-color:#62A0BD!important;
     }
     .polls-answers-item {
-      margin-bottom:5px;display:block;position:relative;padding:12px 0 12px 0;
+      margin-bottom:5px;display:block;position:relative;padding:5px 0;
       img {
-        position:absolute;left:0;top:4px;
+        position:absolute;width:100%;border-radius:5px;top:0;left:0;width:100%;border-radius:0;
       }
       label {
         color:#666;font-size:14px;font-weight:400;margin-left:5px;display:inline;
