@@ -2,7 +2,7 @@ Template.index.helpers({
   phone: function(){
     var userPhone = [User.findOne({_id:localStorage.getItem('Meteor.userServerId'), status:1})];
     if(userPhone[0] !== undefined){
-      if(userPhone[0].phone === undefined || userPhone[0].phone === null){
+      if((userPhone[0].confirmphone === undefined || userPhone[0].confirmphone !== true) && (userPhone[0].phone === undefined || userPhone[0].phone === null)){
         IonPopup.prompt({
           title: 'Qual seu telefone?',
           okText: 'Salvar',
@@ -16,6 +16,7 @@ Template.index.helpers({
                 [
                     222,
                     phone,
+                    true,
                     localStorage.getItem('Meteor.userId')
                 ],
                 function(error, result){
@@ -27,6 +28,22 @@ Template.index.helpers({
                 }
               );
             }
+          },
+          onCancel: function(){
+            Meteor.remote.call('updatePerfilConfirmPhone',
+              [
+                  222,
+                  true,
+                  localStorage.getItem('Meteor.userId')
+              ],
+              function(error, result){
+                  if(!result){
+                      console.log('algo deu errado.', error);
+                  }else{
+                      console.log('atualizado com sucesso.');
+                  }
+              }
+            );
           }
         });
       }
