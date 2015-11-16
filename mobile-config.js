@@ -51,8 +51,8 @@ App.setPreference("SplashScreenDelay", 20000);
 
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-     APP_ID: '638977909535835',
-     APP_NAME: 'vtv'
+     APP_ID: '580730978674615',
+     APP_NAME: 'sistemamn'
 });
 
 // // regras de acesso cross origen
