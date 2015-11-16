@@ -6,13 +6,15 @@
 
   .bar {
     background:#fff!important;border:0 none!important;
-    .title {
-      overflow:visible!important;top:58px!important;text-align:center!important;width: 100%!important;margin: 0!important;left:0!important;
+
+  }
+
+  .logo {
+      overflow:visible!important;text-align:center!important;width: 100%!important;
       img {
-       display: block;margin: 40px auto;
+       display: block;margin: 80px auto 30px auto;
       }
     }
-  }
 
   .meteor-connect {
     a {
@@ -22,7 +24,7 @@
 
   // Login
   .social {
-    display:table;margin:230px auto 0 auto;
+    display:table;margin:20px auto 0 auto;
       small {
         width:100%;display:block;margin-bottom:5px;color:#666;text-align: center;
       }

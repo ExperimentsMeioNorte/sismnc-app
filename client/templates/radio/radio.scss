@@ -10,7 +10,12 @@
   }
 
   .radioHeader {
-      background: #f8f8fc;
+      background: rgb(86,108,160);
+background: -moz-linear-gradient(-45deg,  rgba(86,108,160,1) 0%, rgba(179,192,252,1) 100%);
+background: -webkit-linear-gradient(-45deg,  rgba(86,108,160,1) 0%,rgba(179,192,252,1) 100%);
+background: linear-gradient(135deg,  rgba(86,108,160,1) 0%,rgba(179,192,252,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', endColorstr='#b3c0fc',GradientType=1 );
+
       z-index:5;
       position: absolute;
       left: 0;
@@ -318,7 +323,7 @@
         position:absolute;left:0;top:4px;
       }
       label {
-        color:#666;font-size:14px;font-weight:500;margin-left:20px;display:inline-block;
+        color:#666;font-size:14px;font-weight:400;margin-left:5px;display:inline;
       }
       span {
           position: relative;
@@ -370,10 +375,10 @@
   .modal {
     .bar {
       .title {
-        color:#fff!important;
+        color:#566CA0!important;
       }
       .button {
-        color:#fff!important;
+        color:#566CA0!important;top:2px;
       }
     }
   }
@@ -807,7 +812,7 @@
         color:#2077A7!important;
       }
       .button {
-        color:#2077A7!important;
+        color:#2077A7!important;top:2px;
       }
     }
   }

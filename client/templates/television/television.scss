@@ -1,6 +1,13 @@
 .television-page {
   .bar {
-    background-color:#798B91!important;
+    //background-color:#798B91;
+
+    background: rgb(121,139,145)!important;
+    background: -moz-linear-gradient(-45deg,  rgba(121,139,145,1) 0%, rgba(171,188,188,1) 100%)!important;
+    background: -webkit-linear-gradient(-45deg,  rgba(121,139,145,1) 0%,rgba(171,188,188,1) 100%)!important;
+    background: linear-gradient(135deg,  rgba(121,139,145,1) 0%,rgba(171,188,188,1) 100%)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#798b91', endColorstr='#abbcbc',GradientType=1 )!important;
+
   }
 
   .title {
@@ -135,7 +142,7 @@
   .popup {
     border-radius:10px!important;
     .button-positive {
-      padding:16px 12px!important;border-radius:50%!important;background:#5796b5!important;border:2px solid #5796b5!important;
+      border-radius:50%!important;background:#5796b5!important;border:2px solid #5796b5!important;height:105px;
       i {
         color:#fff!important;font-size:36px!important;
       }
@@ -153,7 +160,7 @@
 
   .vote {
     span {
-      &:before {position:absolute;left:0;top:-18px;font-size:10px;font-weight:bold;content:"MEU VOTO";color:#62A0BD;}
+      &:before {position:absolute;left:0;top:-20px;font-size:10px;font-weight:bold;content:"MEU VOTO";color:#62A0BD;}
     }
   }
 
@@ -177,8 +184,8 @@
 
       &:before {
         position: absolute;
-        left: 90px;
-        top: 18px;
+        left: 145px;
+        top: 13px;
         width: 10px;
         height: 10px;
         background: #D8D8D8;
@@ -227,7 +234,7 @@
         position:absolute;left:0;top:4px;
       }
       label {
-        color:#666;font-size:14px;font-weight:500;margin-left:20px;display:inline-block;
+        color:#666;font-size:14px;font-weight:400;margin-left:5px;display:inline;
       }
       span {
           position: relative;
@@ -294,3 +301,4 @@
     background: #798B91;
     font-size: 14px;
 }
+

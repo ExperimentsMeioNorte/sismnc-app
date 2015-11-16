@@ -1493,12 +1493,13 @@ img {display:block;}
         margin-top: 10px;
         margin-bottom: 0 !important;
         height: 48px !important;
-        line-height: 48px !important;
+        line-height: 34px !important;
         color: #c8c8c8;
         font-weight: 500;
         width: 100%;
         clear: both;
         background: #f8f8fc;
+        font-size:18px;
         border-radius: 28px;
         padding: 2% !important;
         border: 0 none !important;
@@ -1898,6 +1899,7 @@ img {display:block;}
 
 
 .button-update {
+  display:none;
   span {
     padding: 5px;
     border-radius: 50%;
@@ -2008,4 +2010,8 @@ img {display:block;}
       background:#fff;
     }
   }
+}
+
+.bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
+  top:0!important;
 }

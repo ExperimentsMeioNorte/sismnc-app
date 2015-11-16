@@ -123,7 +123,15 @@ Template.addMessage.events({
   'touchstart .send-button, click .send-button': function(events){
         events.preventDefault();
         if(!document.querySelector('#message').value){
-            console.log('Precisa de um texto');
+            toastr.info(
+                "Você precisa digitar uma mensagem.",
+                '',
+                {
+                    "progressBar": true,
+                    "positionClass": "toast-top-center",
+                    "showDuration": "100"
+                }
+            );
         }else{
             // var videoData = null;
             // if(Session.get("videoUrl")){
@@ -157,6 +165,7 @@ Template.addMessage.events({
                 ],
                 function(error, result){
                     if(!error){
+
                         // remove o foco
                         document.querySelector('#message').blur();
 
@@ -166,7 +175,15 @@ Template.addMessage.events({
                         //Session.set("video", '');
                         document.querySelector('body').classList.remove('show-file-message');
                     }else{
-                        console.log('Não deu Nova Mensagem');
+                        toastr.info(
+                            "Ocorreu um problema, tente novamente.",
+                            '',
+                            {
+                                "progressBar": true,
+                                "positionClass": "toast-top-center",
+                                "showDuration": "100"
+                            }
+                        );
                     }
                 }
             );

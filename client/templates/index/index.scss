@@ -81,7 +81,7 @@
       color:#666!important;
     }
     .button {
-      color:#666!important;
+      color:#666!important;top:0!important;
     }
   }
 
@@ -91,3 +91,14 @@
 
 }
 
+
+.change-television {
+  .item {
+    &:active {
+      background:#f8f8f8;
+    }
+    &:focus {
+      background:#f8f8f8;
+    }
+  }
+}
