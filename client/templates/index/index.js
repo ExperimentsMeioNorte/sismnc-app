@@ -21,9 +21,25 @@ Template.index.helpers({
                 ],
                 function(error, result){
                     if(!result){
-                        console.log('algo deu errado.');
+                        toastr.info(
+                          "Opa, algo deu errado.. tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
                     }else{
-                        console.log('atualizado com sucesso.');
+                        toastr.info(
+                          "Telefone cadastrado",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
                     }
                 }
               );

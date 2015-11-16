@@ -23,18 +23,50 @@ Template._editProfile.events({
                             ],
                             function(error, result){
                                 if(!result){
-                                    console.log('algo deu errado.');
+                                    toastr.info(
+                                      "Opa, algo deu errado.. tente novamente",
+                                      '',
+                                      {
+                                        "positionClass": "toast-top-center",
+                                        "tapToDismiss": true,
+                                        "timeOut": 3000
+                                      }
+                                    );
                                 }else{
-                                    console.log('atualizado com sucesso.');
+                                  toastr.info(
+                                    "Foto atualizada",
+                                    '',
+                                    {
+                                      "positionClass": "toast-top-center",
+                                      "tapToDismiss": true,
+                                      "timeOut": 3000
+                                    }
+                                  );
                                 }
                             }
                         );
                     }else{
-                        console.log('Deu erro a tirar uma foto.');
+                        toastr.info(
+                          "Ocorreu algum problema ao tirar a foto, tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
                     }
                 });
               } else {
-                console.log('Roda apenas no cordova');
+                toastr.info(
+                  "Você está em um celular?",
+                  '',
+                  {
+                    "positionClass": "toast-top-center",
+                    "tapToDismiss": true,
+                    "timeOut": 3000
+                  }
+                );
               }
             }
           },
@@ -59,19 +91,51 @@ Template._editProfile.events({
                             ],
                             function(error, result){
                                 if(!result){
-                                    console.log('algo deu errado.');
+                                   toastr.info(
+                                      "Opa, algo deu errado.. tente novamente",
+                                      '',
+                                      {
+                                        "positionClass": "toast-top-center",
+                                        "tapToDismiss": true,
+                                        "timeOut": 3000
+                                      }
+                                    );
                                 }else{
-                                    console.log('atualizado com sucesso.');
+                                   toastr.info(
+                                    "Foto atualizada",
+                                    '',
+                                    {
+                                      "positionClass": "toast-top-center",
+                                      "tapToDismiss": true,
+                                      "timeOut": 3000
+                                    }
+                                  );
                                 }
                             }
                         );
                     }else{
-                        console.log('Deu erro a pegar uma foto.');
+                        toastr.info(
+                          "Ocorreu algum problema ao tirar a foto, tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
                     }
                 });
 
               } else {
-                console.log('Roda apenas no cordova');
+                toastr.info(
+                  "Você está em um celular?",
+                  '',
+                  {
+                    "positionClass": "toast-top-center",
+                    "tapToDismiss": true,
+                    "timeOut": 3000
+                  }
+                );
               }
             }
           }]

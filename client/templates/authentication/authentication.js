@@ -24,7 +24,15 @@ Template.authentication.events({
         // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
         Meteor.loginAppService(Meteor.loginAppOptions, function(err){
           if (err){
-            console.log('Não deu certo, tenta novamente mais tarde');
+            toastr.info(
+              "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
           }else{
             var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
             var userId = User.findOne(
@@ -36,7 +44,15 @@ Template.authentication.events({
 
             if(userId !== undefined){
               if(userId.status === 0){
-                console.log('Sem autorizacão');
+                toastr.info(
+                  "Você não tem autorização, precisa de um login",
+                  '',
+                  {
+                    "positionClass": "toast-top-center",
+                    "tapToDismiss": true,
+                    "timeOut": 3000
+                  }
+                );
               }else{
                 localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
                 localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
@@ -88,7 +104,15 @@ Template.authentication.events({
         // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
         Meteor.loginAppService(Meteor.loginAppOptions, function(err){
           if (err){
-            console.log('Não deu certo, tenta novamente mais tarde');
+            toastr.info(
+              "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
           }else{
             var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
             var userId = User.findOne(
@@ -100,7 +124,15 @@ Template.authentication.events({
 
             if(userId !== undefined){
               if(userId.status === 0){
-                console.log('Sem autorizacão');
+                toastr.info(
+                  "Você não tem autorização, precisa de um login",
+                  '',
+                  {
+                    "positionClass": "toast-top-center",
+                    "tapToDismiss": true,
+                    "timeOut": 3000
+                  }
+                );
               }else{
 
                 localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
