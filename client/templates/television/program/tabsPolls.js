@@ -128,9 +128,7 @@ Template.tabsPollsTelevision.events({
                           }
                         );
                     }else{
-                        IonLoading.show({
-                          customTemplate: 'Aguarde...'
-                        });
+                        IonLoading.hide();
                         document.querySelector('.polls-answers').classList.add('hide');
                         document.querySelector('.results-question').classList.remove('hide');
                     }
