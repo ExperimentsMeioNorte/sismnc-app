@@ -22,7 +22,7 @@ Template.index.helpers({
                 function(error, result){
                     if(!result){
                         toastr.info(
-                          "Opa, algo deu errado.. tente novamente",
+                          error,
                           '',
                           {
                             "positionClass": "toast-top-center",
@@ -32,7 +32,7 @@ Template.index.helpers({
                         );
                     }else{
                         toastr.info(
-                          "Telefone cadastrado",
+                          result,
                           '',
                           {
                             "positionClass": "toast-top-center",
@@ -54,9 +54,25 @@ Template.index.helpers({
               ],
               function(error, result){
                   if(!result){
-                      console.log('algo deu errado.', error);
+                      toastr.info(
+                        error,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
                   }else{
-                      console.log('atualizado com sucesso.');
+                      toastr.info(
+                        result,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
                   }
               }
             );
