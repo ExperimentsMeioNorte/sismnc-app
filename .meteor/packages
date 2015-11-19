@@ -13,6 +13,7 @@ meteorhacks:kadira
 accounts-ui
 service-configuration
 accounts-google
+accounts-facebook
 meteorhacks:fast-render
 chrismbeckett:toastr
 meteoric:camera
@@ -21,5 +22,5 @@ launch-screen
 fastclick
 mrt:modernizr-meteor
 pcel:loading
-particle4dev:cordova-fb
+#particle4dev:cordova-fb
 fourseven:scss
