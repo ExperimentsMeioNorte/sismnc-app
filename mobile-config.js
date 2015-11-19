@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.35'
+  version: '0.1.39'
 });
 
 App.icons({
@@ -50,10 +50,15 @@ App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference("SplashScreenDelay", 20000);
 
 // cordova plugin facebook
-App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+/*App.configurePlugin('com.phonegap.plugins.facebookconnect', {
      APP_ID: '580730978674615',
      APP_NAME: 'sistemamn'
-});
+});*/
+
+/*App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+     APP_ID: '638977909535835',
+     APP_NAME: 'vtv'
+});*/
 
 // // regras de acesso cross origen
 App.accessRule("*");
