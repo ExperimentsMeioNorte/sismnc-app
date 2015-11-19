@@ -16,3 +16,5 @@ Meteor.startup(function () {
    }
 
  });
+
+process.env.ROOT_URL = 'http://45.33.72.64:3001';
