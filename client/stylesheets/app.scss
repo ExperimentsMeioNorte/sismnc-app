@@ -1499,12 +1499,12 @@ img {display:block;}
         width: 100%;
         clear: both;
         background: #f8f8fc;
-        font-size:18px;
+        font-size:16px;
         border-radius: 28px;
-        padding: 2% !important;
+        padding: 2% 4%!important;
         border: 0 none !important;
         box-shadow: 0 2px 0 0 #f1f1f1;
-        text-align: center;
+        text-align: left;
       }
     }
     .modal-footer {
@@ -1667,7 +1667,7 @@ img {display:block;}
         border-radius: 50%;
   }
   .upload-image {
-    padding:15px 0;background:#f8f8fc;width:100%;margin-bottom:15px;position:relative;
+    padding:15px 0;background:#f8f8fc;width:100%;margin-bottom:15px;position:relative;min-height:110px;
     img {
       border-radius:50%;
       -webkit-border-radius:50%;
@@ -2224,5 +2224,22 @@ button.toast-close-button {
 .loading-container {
   .loading {
     font-size:20px!important;
+  }
+}
+
+#modal-change-radio {
+  small {
+    font-size: 12px;
+    font-weight: 400;
+    display: table;
+    color:#999;
+    margin: 15px 0 25px 0;
+    width: 100%;
+  }
+  a {
+    display:block;
+  }
+  .go-to-fmmn {
+    padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #e5e5e5;
   }
 }

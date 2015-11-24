@@ -1,0 +1,32 @@
+<template name="_enterEmail">
+  {{#ionModal title="Entre com email" class="bar-light"}}
+
+    <div class="log-in form-pattern padding">
+
+      <div class="input-field">
+
+        <label for="mail">Email</label>
+        <input id="mail" name="mail" type="text" value="Digite seu email">
+
+      </div>
+
+      <div class="input-field">
+
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="text" value="Digite sua senha">
+
+      </div>
+
+      <span class="reset-password">
+        Não lembro minha senha. <a class="btn-reset-pass" href="#" title="">Recuperar</a>
+      </span>
+
+      <button type="submit" class="button button-block button-submit">
+        <i class="icon-ok"></i>
+      </button>
+    </div>
+
+    {{> _resetPassword }}
+
+  {{/ionModal}}
+</template>
