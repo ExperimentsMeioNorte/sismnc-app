@@ -94,7 +94,7 @@ Template.authentication.events({
             }
           }
         });
-    },
+    }/*,
     'touchstart .bg-google, click .bg-google': function (event, tmp) {
       event.preventDefault();
 
@@ -175,5 +175,5 @@ Template.authentication.events({
             }
           }
         });
-    }
+    }*/
 });

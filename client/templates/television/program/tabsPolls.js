@@ -119,7 +119,7 @@ Template.tabsPollsTelevision.events({
                 function(error, result){
                     if(!result){
                         toastr.info(
-                          "Veish, algo deu errado.. tente novamente",
+                          error,
                           '',
                           {
                             "positionClass": "toast-top-center",
@@ -128,6 +128,16 @@ Template.tabsPollsTelevision.events({
                           }
                         );
                     }else{
+                        toastr.info(
+                          result,
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
+
                         IonLoading.hide();
                         document.querySelector('.polls-answers').classList.add('hide');
                         document.querySelector('.results-question').classList.remove('hide');

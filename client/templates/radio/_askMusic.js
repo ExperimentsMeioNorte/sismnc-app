@@ -24,13 +24,23 @@ Template._askMusic.events({
                 ],
                 function(error, result){
                     if(!error){
+                        toastr.info(
+                          result,
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
+
                         //remove os dados dos campos do form para evitar a duplicidade do registro
                         document.querySelector('#music').value = document.querySelector('#artist').value = '';
                         IonModal.close();
                         IonNavigation.skipTransitions = false;
                     }else{
                         toastr.info(
-                          "Não deu, tente novamente",
+                          error,
                           '',
                           {
                             "positionClass": "toast-top-center",
