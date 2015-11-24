@@ -7,12 +7,17 @@
 
     .popup {
         border-radius:10px!important;
-        .button-positive {
-          border-radius:50%!important;background:#445DA2!important;border:2px solid #445DA2!important;height:105px;
+        .button {
           i {
-            color:#fff!important;font-size:36px!important;
+            font-size:28px;
           }
         }
+        // .button-positive {
+        //   border-radius:50%!important;background:#445DA2!important;border:2px solid #445DA2!important;height:105px;
+        //   i {
+        //     color:#fff!important;font-size:36px!important;
+        //   }
+        // }
       }
 
   .bar {
@@ -122,6 +127,26 @@
 
 
 .change-television {
+
+  ul {
+    list-style:none!important;
+    li {
+      float: left;
+      margin: 15px 1%;
+      width: 31.3%;
+      a {
+        display:block;
+      }
+      img {
+        border-radius:50%;
+        -webkit-border-radius:50%;
+        display:block;
+        margin:0 auto!important;
+      }
+    }
+  }
+
+
   .item {
     &:active {
       background:#f8f8f8;
