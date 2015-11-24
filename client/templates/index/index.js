@@ -67,6 +67,11 @@ Template.index.helpers({
   }
 });
 
+
+Template.index.rendered = function(){
+  document.querySelector('body').classList.remove('popup-open');
+};
+
 Template.index.destroyed = function(){
 
   document.querySelector('body').classList.remove('home-page');
