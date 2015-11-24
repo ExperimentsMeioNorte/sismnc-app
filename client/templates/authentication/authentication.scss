@@ -174,15 +174,14 @@
     display:none;
   }
 
-  .show-reset-password {
-    .new-password {
-      display:table;
-    }
-    .log-in {
-      display:none;
-    }
   }
 
 
-
+.show-reset-password {
+  .new-password {
+    display:table!important;
   }
+  .log-in {
+    display:none!important;
+  }
+}
