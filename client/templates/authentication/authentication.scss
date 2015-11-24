@@ -79,10 +79,29 @@
       // border-bottom-right-radius: 28px;
 
     }
-  }
 
-  .ou {
-    position:relative;width:100%;text-align: center;display:table;margin:15px 0;color:#999;font-size:16px;
+    .modal {
+      .bar {
+        background:#f8f8f8!important;
+      }
+      .button {
+        min-height:42px!important;height:42px!important;border-radius:5px;color:#666;
+        .icon {
+          color:#666;
+        }
+      }
+    }
+
+    .ou {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: table;
+    margin: 15px auto;
+    color: #999;
+    font-size: 10px;
+    font-weight: bold;
+    width: 204px;
     &:before {
          width: 45%;
         left: 0;
@@ -103,49 +122,67 @@
     }
   }
 
-  .reset-password {
-    color: #999;
-    margin-left: 0.75rem;
-    display: table;
-    margin-top: 1rem;
-    float: left;
-    a {
-      text-decoration:underline;margin-left:10px;font-weight:800;color:#666;
-    }
-  }
-
   .sign-in {
     position:absolute;bottom:0;left:0;width:100%;
 
     span {
-      width:100%;text-align: center;margin-bottom:5px;float:left;color:#405590;
+      width:100%;text-align: center;margin-bottom:5px;float:left;color:#405590;font-size:14px;
     }
     .btn {
-      width:100%;border-radius:0 0 0 0!important;font-size:18px;font-weight:800;line-height:62px;height:62px;
+      width:100%;border-radius:0 0 0 0!important;font-size:18px;font-weight:800;line-height:62px;height:62px;text-decoration: none;color:#445DA2;
+    }
+  }
+
+  .reset-password {
+    float:left;color:#999;margin:22px 0;
+    a {
+      color:#999!important;font-weight:bold;text-decoration: none;
     }
   }
 
 
-#modal-change-radio {
-  small {
-    font-size: 12px;
-    font-weight: 400;
-    display: table;
-    color:#999;
-    margin: 15px 0 25px 0;
-    width: 100%;
+  .login {
+    display:table;margin:20px auto 0 auto;
+
+    .btn-login {
+      display: table;
+      width: 100%;
+      text-align: center;
+      width:204px;
+      color: #445DA2;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 12px;
+      border-radius: 28px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border:2px solid #445DA2;
+    }
+
   }
-  a {
-    display:block;
+
+  .button-submit {
+    position:absolute;bottom:0;left:0;width:100%;color:#fff!important;margin-bottom:0!important;border-radius:0!important;border:0!important;background:#45CA58!important;font-size:26px;
   }
-  .go-to-fmmn {
-    padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #e5e5e5;
-  }
-}
 
 
-.modal {
-  .button {
-    min-height:42px!important;height:42px!important;border-radius:5px!important;
+
+  .log-in {
+    display:table;
   }
-}
+  .new-password {
+    display:none;
+  }
+
+  .show-reset-password {
+    .new-password {
+      display:table;
+    }
+    .log-in {
+      display:none;
+    }
+  }
+
+
+
+  }

@@ -5,14 +5,35 @@
   {{#ionView}}
     {{#ionContent}}
 
-    <h1 class="logo">
-      <img src="/images/home/logo-sistema.png" alt="" height="140" />
-    </h1>
+        <h1 class="logo">
+          <img src="/images/home/logo-sistema.png" alt="" height="140" />
+        </h1>
 
-    <div class="social">
-      {{> loginFacebook}}
-      {{> loginGoogle}}
-    </div>
+        <div class="social">
+          {{> loginFacebook}}
+          {{> loginGoogle}}
+        </div>
+
+        <span class="ou">OU</span>
+
+        <div class="login">
+          <a href="#" class="btn-login" data-ion-modal="_enterEmail">
+            Entrar com email
+          </a>
+        </div>
+
+        <div class="sign-in">
+          <span>
+
+            Não tem conta?
+            <a href="#" class="btn" data-ion-modal="_enterRegister">
+              Cadastre-se
+            </a>
+
+          </span>
+
+        </div>
+
 
     {{/ionContent}}
   {{/ionView}}
