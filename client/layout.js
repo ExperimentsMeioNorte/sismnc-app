@@ -13,16 +13,25 @@ Tracker.autorun(function() {
 
 Template.layout.events({
   'touchstart [data-activate="logout"], click [data-activate="logout"]' : function(){
+    IonLoading.show({
+      customTemplate: 'Aguarde...'
+    });
+
     Meteor.logout();
     localStorage.clear();
     Router.go('authentication');
+
+    IonLoading.hide();
   }
 });
 
 Template.layout.helpers({
     user: function(){
-      if(Meteor.userId()){
-        return [User.findOne({_id:localStorage.getItem('Meteor.userServerId'), status:1})];
+      if(Meteor.userId() && localStorage.getItem('Meteor.userServerId')){
+        var user = User.findOne({_id:localStorage.getItem('Meteor.userServerId'), status:1});
+        if(user !== undefined){
+          return [user];
+        }
       }else{
         return '';
       }

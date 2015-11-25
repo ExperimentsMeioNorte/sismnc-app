@@ -6,6 +6,7 @@
       {{#ionSideMenus}}
 
         {{#ionSideMenu class="home-menu" side="left"}}
+        {{#if user}}
           {{#each user}}
             <div class="bar bar-header">
               <div class="item-avatar">
@@ -39,7 +40,9 @@
           </a>
 
           {{/each}}
-
+        {{else}}
+          {{> loading }}
+        {{/if}}
         {{/ionSideMenu}}
 
         <!-- {{#ionSideMenu side="right"}}
