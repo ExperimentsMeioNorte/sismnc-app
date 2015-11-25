@@ -16,7 +16,13 @@ Template.authentication.destroyed = function(){
 Template.authentication.events({
     // executa o login da rede social facebook
     'touchstart .bg-facebook, click .bg-facebook': function (event, tmp) {
+      IonLoading.show({
+        customTemplate: 'Aguarde...'
+      });
+
       event.preventDefault();
+
+      Session.set('getupRemoveLoading', false);
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
         Meteor.loginApp(event);
@@ -24,6 +30,7 @@ Template.authentication.events({
         // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
         Meteor.loginAppService(Meteor.loginAppOptions, function(err){
           if (err){
+            IonLoading.hide();
             toastr.info(
               "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
               '',
@@ -44,6 +51,7 @@ Template.authentication.events({
 
             if(userId !== undefined){
               if(userId.status === 0){
+                IonLoading.hide();
                 toastr.info(
                   "Você não tem autorização, precisa de um login",
                   '',
@@ -58,6 +66,8 @@ Template.authentication.events({
                 localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
                 localStorage.setItem('Meteor.userServerId', userId._id);
                 localStorage.setItem('Meteor.userId', userId._id);
+
+                IonLoading.hide();
                 Router.go('index');
               }
             }else{
@@ -67,7 +77,7 @@ Template.authentication.events({
                     111,
                     '0',
                     usersSearch.services.facebook.name,
-                    'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=large',
+                    'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=small',
                     usersSearch.services.facebook.email,
                     null,
                     usersSearch.services.facebook.id,
@@ -87,8 +97,9 @@ Template.authentication.events({
                       localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
                       localStorage.setItem('Meteor.userServerId', userId._id);
                       localStorage.setItem('Meteor.userId', userId._id);
-                      Router.go('index');
 
+                      IonLoading.hide();
+                      Router.go('index');
                   }
               );
             }
