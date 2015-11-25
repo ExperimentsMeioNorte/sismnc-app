@@ -1,0 +1,19 @@
+<template name="_changeProgram">
+  {{#ionModal title="Escolha a atração" class="bar-television"}}
+    <div class="padding change-television">
+    {{#if program}}
+      {{#each program}}
+      <ul class="no-style">
+        <li>
+          {{#ionItem path="tabs.timelineTelevision" data-action="goProgram"}}
+            <img src="{{ image_folder }}" width="80" height="80" />
+          {{/ionItem}}
+        </li>
+      </ul>
+    {{/each}}
+  {{else}}
+    {{> loading }}
+  {{/if}}
+    </div>
+  {{/ionModal}}
+</template>
