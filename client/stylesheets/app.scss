@@ -1657,14 +1657,15 @@ img {display:block;}
   display:table;width:100%;
   .icon-edit {
         padding:4px;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
+        background: #fff;
+        color: #666;
         border-radius: 5px;
         position: absolute;
         left: 52%;
         bottom: 14px;
         font-size: 14px;
         border-radius: 50%;
+        box-shadow:0 2px 5px -2px rgba(0,0,0,.5);
   }
   .upload-image {
     padding:15px 0;background:#f8f8fc;width:100%;margin-bottom:15px;position:relative;min-height:110px;

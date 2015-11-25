@@ -16,7 +16,14 @@ Template.authentication.destroyed = function(){
 Template.authentication.events({
     // executa o login da rede social facebook
     'touchstart .bg-facebook, click .bg-facebook': function (event, tmp) {
+      IonLoading.show({
+        customTemplate: '<i class="spinner spinner-spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none" transform="rotate(196.349 32 32)"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></i>',
+        backdrop: true
+      });
+
       event.preventDefault();
+
+      Session.set('getupRemoveLoading', false);
 
         // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
         Meteor.loginApp(event);
@@ -24,6 +31,7 @@ Template.authentication.events({
         // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
         Meteor.loginAppService(Meteor.loginAppOptions, function(err){
           if (err){
+            IonLoading.hide();
             toastr.info(
               "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
               '',
@@ -44,6 +52,7 @@ Template.authentication.events({
 
             if(userId !== undefined){
               if(userId.status === 0){
+                IonLoading.hide();
                 toastr.info(
                   "Você não tem autorização, precisa de um login",
                   '',
@@ -58,6 +67,8 @@ Template.authentication.events({
                 localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
                 localStorage.setItem('Meteor.userServerId', userId._id);
                 localStorage.setItem('Meteor.userId', userId._id);
+
+                IonLoading.hide();
                 Router.go('index');
               }
             }else{
@@ -67,7 +78,7 @@ Template.authentication.events({
                     111,
                     '0',
                     usersSearch.services.facebook.name,
-                    'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=large',
+                    'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=small',
                     usersSearch.services.facebook.email,
                     null,
                     usersSearch.services.facebook.id,
@@ -87,8 +98,9 @@ Template.authentication.events({
                       localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
                       localStorage.setItem('Meteor.userServerId', userId._id);
                       localStorage.setItem('Meteor.userId', userId._id);
-                      Router.go('index');
 
+                      IonLoading.hide();
+                      Router.go('index');
                   }
               );
             }
