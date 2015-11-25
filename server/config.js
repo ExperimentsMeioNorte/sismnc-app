@@ -1,4 +1,5 @@
 Meteor.startup(function () {
+  process.env.DDP_DEFAULT_CONNECTION_URL='http://admin.sistemameionorte.com.br:3002';
 
    // PERMISSIONS
    for(var i in collections){
@@ -16,5 +17,3 @@ Meteor.startup(function () {
    }
 
  });
-
-process.env.ROOT_URL = 'http://45.33.72.64:3001';
