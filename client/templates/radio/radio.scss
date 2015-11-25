@@ -98,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
 
 
   .message-item {
-    margin-bottom:2rem;
+    margin-bottom:3rem;
     figure {
       margin:0;float:left;
       img {
@@ -394,7 +394,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
 
   #mais {
       border-radius: 5px;
-    padding: 2px 12px;
+    padding: 12px;
+      text-align:center;
     width: 100%;
     display: table;
     margin: 20px auto;
@@ -532,7 +533,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
 
 
 .message-item {
-  padding:0 0.75rem;margin-bottom:2rem;
+  padding:0 0.75rem;margin-bottom:3rem;
   figure {
     margin:0 0 0 0;
 
@@ -819,7 +820,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
 
       #mais {
       border-radius: 5px;
-      padding: 2px 12px;
+      padding: 12px;
+      text-align:center;
       width: 100%;
       display: table;
       margin: 20px auto;
