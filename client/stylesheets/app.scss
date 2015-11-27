@@ -1795,22 +1795,27 @@ img {display:block;}
 .pg-loading-screen .pg-loading-logo-header img {
   height:120px!important;
 }
+.change-radio {
+  .item {
+    margin:20px 0!important;
+  }
+}
 
 .change-radio, .change-television {
     height:100%;width:100%;
     .item {
-      height: 50%;
       width: 100%;
       vertical-align: middle;
       display: table-cell;
       clear: both;
       float: left;
+      padding:0;
     }
     a {
       display:block;border:0 none!important;
     }
     img {
-      margin:30px auto;
+      margin:0 auto;
     }
   }
 
@@ -2243,4 +2248,8 @@ button.toast-close-button {
   .go-to-fmmn {
     padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #e5e5e5;
   }
+}
+
+.bar-tv {
+  color:#fff!important;
 }
