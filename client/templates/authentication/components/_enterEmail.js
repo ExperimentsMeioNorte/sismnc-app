@@ -5,7 +5,6 @@ Template._enterEmail.events({
 
     'touchstart .close-reset-password, click .close-reset-password': function () {
         document.querySelector('body').classList.add('show-reset-password');
-
     },
 
     'touchstart .bg-password, click .bg-password': function (event, tmp) {

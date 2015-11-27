@@ -22,36 +22,31 @@ Template._enterRegister.events({
 
             // verifica se o usuario já foi cadastrado
             if(userId === undefined){
-                Session.set('getupResetUserData', [name, email, password]);
-                Session.set('getupCodeReset', Random.secret([5]));
+                Session.set(
+                    'getupConfirmUserData',
+                    [
+                        Random.secret([5]),
+                        "O codigo para confirmação foi enviado para o email: " + email,
+                        name,
+                        email,
+                        password
+                    ]
+                );
 
                 // envia o codigo de registro para o email do usuario, e abre a tela para ele adcionar o codigo para confirmacao
                 Meteor.remote.call(
                     'sendEmail',
-                    [email,
-                    Meteor.smtpServerUsername,
-                    'Código de confirmação app Sistema Meio Norte',
-                    'Este é o seu código para confirmar o registro no app Sistema Meio Norte: <b>' + Session.get('getupCodeReset') + '</b>']
+                    [
+                        email,
+                        Meteor.smtpServerUsername,
+                        'Código de confirmação app Sistema Meio Norte',
+                        'Este é o seu código para confirmar o registro no app Sistema Meio Norte: <b>' + Session.get('getupConfirmUserData')[0] + '</b>'
+                    ]
                 );
-                /*Meteor.remote.call(
-                  'sendEmail',
-                  email,
-                  Meteor.smtpServerUsername,
-                  'Código de confirmação app Sistema Meio Norte',
-                  'Este é o seu código para confirmar o registro no app Sistema Meio Norte: ' + Session.get('getupCodeReset')
-                );*/
 
                 IonLoading.hide();
-                toastr.info(
-                  "O codigo para confirmação foi enviado para o email: " + email,
-                  '',
-                  {
-                    "positionClass": "toast-top-center",
-                    "tapToDismiss": true,
-                    "timeOut": 3000
-                  }
-                );
-
+                document.querySelector('body').classList.remove('entertRegister');
+                document.querySelector('body').classList.add('entertConfirm');
             }else{
                 IonLoading.hide();
                 toastr.info(
