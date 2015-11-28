@@ -11,6 +11,10 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
+Template.layout.rendered = function () {
+  Meteor.verifyLogin();
+};
+
 Template.layout.events({
   'touchstart [data-activate="logout"], click [data-activate="logout"]' : function(){
     IonLoading.show({
