@@ -11,10 +11,6 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
-Template.layout.rendered = function () {
-  Meteor.verifyLogin();
-};
-
 Template.layout.events({
   'touchstart [data-activate="logout"], click [data-activate="logout"]' : function(){
     IonLoading.show({
@@ -31,14 +27,8 @@ Template.layout.events({
 
 Template.layout.helpers({
     user: function(){
-      if(Meteor.userId()
-        && localStorage.getItem('Meteor.userServerId')
-        && (localStorage.getItem('Meteor.facebookId') || localStorage.getItem('Meteor.googleId'))
-        || (localStorage.getItem('Meteor.userServerId') === localStorage.getItem('Meteor.userId'))){
-        var user = User.findOne({_id:localStorage.getItem('Meteor.userServerId'), status:1});
-        if(user !== undefined){
-          return [user];
-        }
+      if(Session.get('getupUserData')){
+        return Session.get('getupUserData');
       }else{
         return '';
       }
