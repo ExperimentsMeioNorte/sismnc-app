@@ -142,7 +142,7 @@ Template._editProfile.events({
         });
     },
 
-  'touchstart .update-perfil, click .update-perfil' : function(){
+  'touchstart .update-perfil' : function(){
     //form.preventDefault();
     var name = document.querySelector('#name').value;
     var email = document.querySelector('#mail').value;
@@ -188,7 +188,7 @@ Template._editProfile.events({
       IonModal.close();
       Router.go('index');
   },
-  'touchstart [data-dismiss="modal"], click [data-dismiss="modal"]' : function (){
+  'touchstart [data-dismiss="modal"]' : function (){
     IonModal.close();
     Router.go('index');
   }
