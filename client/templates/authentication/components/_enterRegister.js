@@ -18,7 +18,6 @@ Template._enterRegister.events({
 
         // valida se todos os campos obrigatorios estao preenchidos
         if(name !== '' && email !== '' && password !== ''){
-            password = CryptoJS.MD5(password).toString();
             var userId = User.findOne({
                 name: name,
                 email: email,
