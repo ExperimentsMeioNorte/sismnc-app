@@ -22,7 +22,6 @@ Template._enterRegister.events({
             var userId = User.findOne({
                 name: name,
                 email: email,
-                password: password,
                 facebook_id: null,
                 google_id: null
             });
