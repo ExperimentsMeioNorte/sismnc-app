@@ -2,11 +2,12 @@
 Template.television.destroyed = function(){
 
   document.querySelector('body').classList.remove('television-page');
+  document.querySelector('body').classList.remove('show-hide-image');
 
 };
 
 Template.television.events({
-  'touchstart [data-action="goProgram"]' : function(){
+  'click [data-action="goProgram"]' : function(){
     IonNavigation.skipTransitions = true;
   }
 });

@@ -1,5 +1,5 @@
 Template.addMessage.events({
-  'touchstart [data-action="addMedia"]': function(event, template) {
+  'click [data-action="addMedia"]': function(event, template) {
     IonPopup.show({
       buttons: [{
         text: '<i class="ion-paperclip"></i>',
@@ -95,7 +95,7 @@ Template.addMessage.events({
     });
   },
 
-  'touchstart #btn-capture-image': function () {
+  'click #btn-capture-image': function () {
     if (Meteor.isCordova) {
 
       var cameraOptions = {
@@ -123,7 +123,7 @@ Template.addMessage.events({
     }
   },
 
-  'touchstart #btn-upload-image' : function(){
+  'click #btn-upload-image' : function(){
     if (Meteor.isCordova) {
 
       var cameraOptions = {
@@ -152,7 +152,7 @@ Template.addMessage.events({
   },
 
   // ENVIO DA MENSAGEM
-  'touchstart .send-button, click .send-button': function(events){
+  'click .send-button, click .send-button': function(events){
         events.preventDefault();
         if(!document.querySelector('#message').value){
           toastr.info(

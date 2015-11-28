@@ -102,7 +102,7 @@ Template.tabsPollsRadio.helpers({
 });
 
 Template.tabsPollsRadio.events({
-    'touchstart .btn-answer': function(event){
+    'click .btn-answer': function(event){
         event.preventDefault();
 
         if(!document.querySelector('input[name="answer"]:checked').value){

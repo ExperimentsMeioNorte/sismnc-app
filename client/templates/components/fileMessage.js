@@ -3,7 +3,7 @@ Meteor.startup(function(){
 });
 
 Template.fileMessage.events({
-    'touchstart #btn-cancel-file' : function(){
+    'click #btn-cancel-file' : function(){
       document.querySelector('body').classList.remove('show-file-message');
       document.querySelector('.file-message').classList.add('hide');
 
