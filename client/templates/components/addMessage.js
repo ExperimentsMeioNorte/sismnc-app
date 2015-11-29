@@ -17,16 +17,18 @@ Template.addMessage.events({
               Session.set("photo", data);
 
             });
-          } else {
-            toastr.info(
-              "Veish, não deu certo",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
-              }
-            );
+          } else if (Meteor.isClient) {
+            var cameraOptions = {
+              width: 640,
+              height: 480,
+              quality:80,
+              sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+            };
+
+            MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+              Session.set("photo", data);
+
+            });
           }
           document.querySelector('body').classList.add('show-file-message');
           IonPopup.close();
@@ -47,16 +49,17 @@ Template.addMessage.events({
               Session.set("photo", data);
             });
 
-          } else {
-            toastr.info(
-              "Opa, não deu certo",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 2000
-              }
-            );
+          } else if (Meteor.isClient) {
+            var cameraOptions = {
+              width: 640,
+              height: 480,
+              quality:80
+            };
+
+            MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+              Session.set("photo", data);
+
+            });
           }
 
           document.querySelector('body').classList.add('show-file-message');
@@ -109,17 +112,17 @@ Template.addMessage.events({
 
       });
 
-    } else {
-      toastr.info(
-        "Eita, não deu certo",
-        '',
-        {
-          "positionClass": "toast-top-center",
-          "tapToDismiss": true,
-          "timeOut": 3000
-        }
-      );
-      document.querySelector('body').classList.add('show-file-message');
+    } else if (Meteor.isClient) {
+      var cameraOptions = {
+        width: 640,
+        height: 480,
+        quality:80
+      };
+
+      MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+        Session.set("photo", data);
+
+      });
     }
   },
 
@@ -137,18 +140,19 @@ Template.addMessage.events({
         Session.set("photo", data);
 
       });
-    } else {
-      toastr.info(
-        "Ixi, não deu certo",
-        '',
-        {
-          "positionClass": "toast-top-center",
-          "tapToDismiss": true,
-          "timeOut": 3000
-        }
-      );
-      document.querySelector('body').classList.add('show-file-message');
-    }
+    } else if (Meteor.isClient) {
+        var cameraOptions = {
+          width: 640,
+          height: 480,
+          quality:80,
+          sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+        };
+
+        MeteoricCamera.getPicture(cameraOptions, function (error, data) {
+          Session.set("photo", data);
+
+        });
+      }
   },
 
   // ENVIO DA MENSAGEM

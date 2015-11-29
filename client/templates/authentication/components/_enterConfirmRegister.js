@@ -46,6 +46,9 @@ Template._enterConfirmRegister.events({
                                 "timeOut": 3000
                               }
                             );
+                            Router.go('index');
+                            IonModal.close();
+                            IonLoading.hide();
 
                         }else{
                             toastr.info(
@@ -75,7 +78,7 @@ Template._enterConfirmRegister.events({
         }else{
             IonLoading.hide();
             toastr.info(
-              "Opaaa, preencha todos os campos obrigatorios.",
+              "Opa, preencha todos os campos obrigatorios.",
               '',
               {
                 "positionClass": "toast-top-center",

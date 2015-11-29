@@ -57,6 +57,7 @@ Template._enterEmail.events({
                 localStorage.setItem('Meteor.emailId', userId.email);
 
                 Router.go('index');
+                IonModal.close();
                 IonLoading.hide();
             }
         }else{

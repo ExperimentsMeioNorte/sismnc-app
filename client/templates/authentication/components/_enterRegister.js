@@ -1,5 +1,5 @@
 Template._enterRegister.rendered = function () {
-    document.querySelector('body').classList.add('entertRegister');
+    document.querySelector('body').classList.add('enterRegister');
     document.querySelector('body').classList.remove('show-confirm-code');
 };
 
