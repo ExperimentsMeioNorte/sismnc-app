@@ -4,6 +4,9 @@ Template._resetPassword.rendered = function () {
 };
 
 Template._resetPassword.events({
+   'touchstart .button-cancel': function () {
+        document.querySelector('body').classList.remove('show-reset-password');
+    },
     'touchstart .reset-password': function (event) {
         event.preventDefault();
         IonLoading.show({
