@@ -86,20 +86,26 @@ Template.authentication.events({
                     1,
                     1
                   ],
-                  function(result){
-                      var userId = User.findOne(
-                        {
-                          facebook_id:usersSearch.services.facebook.id,
-                          email:usersSearch.services.facebook.email
-                        }
-                      );
+                  function(error, result){
+                    if(result){
                       localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
                       localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
-                      localStorage.setItem('Meteor.userServerId', userId._id);
-                      localStorage.setItem('Meteor.userId', userId._id);
+                      localStorage.setItem('Meteor.userServerId', result[1]);
+                      localStorage.setItem('Meteor.userId', result[1]);
 
                       IonLoading.hide();
                       Router.go('index');
+                    }else{
+                      toastr.info(
+                        "Estranho, " + error,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
+                    }
                   }
               );
             }
@@ -169,18 +175,23 @@ Template.authentication.events({
                     1
                   ],
                   function(error, result){
-                      var userId = User.findOne(
-                        {
-                          google_id:usersSearch.services.google.id,
-                          email:usersSearch.services.google.email
-                        }
-                      );
-
+                    if(result){
                       localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
                       localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
-                      localStorage.setItem('Meteor.userServerId', userId._id);
-                      localStorage.setItem('Meteor.userId', userId._id);
+                      localStorage.setItem('Meteor.userServerId', result[1]);
+                      localStorage.setItem('Meteor.userId', result[1]);
                       Router.go('index');
+                    }else{
+                      toastr.info(
+                        "Estranho, " + error,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
+                    }
                   }
               );
             }
