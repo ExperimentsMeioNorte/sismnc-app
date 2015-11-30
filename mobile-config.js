@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.43'
+  version: '0.1.44'
 });
 
 App.icons({
