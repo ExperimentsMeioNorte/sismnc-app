@@ -149,7 +149,15 @@ Template._editProfile.events({
     var phone = document.querySelector('#phone').value;
     var phone = (phone !== '')? phone : null;
     if(!name || !email){
-        console.log('necessario preencher os campos obrigatorios');
+      toastr.info(
+        "Opa, necessário preencher os campos obrigatórios.",
+        '',
+        {
+          "positionClass": "toast-top-center",
+          "tapToDismiss": true,
+          "timeOut": 3000
+        }
+      );
     }else{
       Meteor.remote.call('updatePerfil',
             [
@@ -196,10 +204,10 @@ Template._editProfile.events({
 
 Template._editProfile.helpers({
     user: function(){
-        if(localStorage.getItem('Meteor.userId')){
-            return [User.findOne({_id:localStorage.getItem('Meteor.userId'), status:1})];
-        }else{
-            return '';
-        }
+      if(Session.get('getupUserData')){
+        return Session.get('getupUserData');
+      }else{
+        return '';
+      }
     }
 });
