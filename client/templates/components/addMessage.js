@@ -1,5 +1,5 @@
 Template.addMessage.events({
-  'click [data-action="addMedia"]': function(event, template) {
+  'tap [data-action="addMedia"]': function(event, template) {
     IonPopup.show({
       buttons: [{
         text: '<i class="ion-paperclip"></i>',
@@ -98,7 +98,7 @@ Template.addMessage.events({
     });
   },
 
-  'click #btn-capture-image': function () {
+  'tap #btn-capture-image': function () {
     if (Meteor.isCordova) {
 
       var cameraOptions = {
@@ -126,7 +126,7 @@ Template.addMessage.events({
     }
   },
 
-  'click #btn-upload-image' : function(){
+  'tap #btn-upload-image' : function(){
     if (Meteor.isCordova) {
 
       var cameraOptions = {
@@ -156,11 +156,11 @@ Template.addMessage.events({
   },
 
   // ENVIO DA MENSAGEM
-  'click .send-button, click .send-button': function(events){
-        events.preventDefault();
+  'tap .send-button': function(event){
+        event.preventDefault();
         if(!document.querySelector('#message').value){
           toastr.info(
-            "Precisa digitar uma mensagem",
+            "Precisa escrever uma mensagem",
             '',
             {
               "positionClass": "toast-top-center",

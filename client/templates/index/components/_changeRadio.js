@@ -3,7 +3,7 @@ Template._changeRadio.rendered = function () {
 };
 
 Template._changeRadio.events({
-  'click .change-radio .item' : function(){
+  'tap .change-radio .item' : function(){
     IonModal.close();
     IonNavigation.skipTransitions = false;
     return true;

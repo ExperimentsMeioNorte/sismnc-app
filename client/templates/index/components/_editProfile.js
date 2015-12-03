@@ -1,5 +1,5 @@
 Template._editProfile.events({
-    'touchstart .upload-image': function(event, template) {
+    'tap .upload-image': function(event, template) {
         IonPopup.show({
           buttons: [{
             text: '<i class="ion-paperclip"></i>',
@@ -142,7 +142,7 @@ Template._editProfile.events({
         });
     },
 
-  'touchstart .update-perfil' : function(){
+  'tap .update-perfil' : function(){
     //form.preventDefault();
     var name = document.querySelector('#name').value;
     var email = document.querySelector('#mail').value;
@@ -188,7 +188,7 @@ Template._editProfile.events({
       IonModal.close();
       Router.go('index');
   },
-  'touchstart [data-dismiss="modal"]' : function (){
+  'tap [data-dismiss="modal"]' : function (){
     IonModal.close();
     Router.go('index');
   }

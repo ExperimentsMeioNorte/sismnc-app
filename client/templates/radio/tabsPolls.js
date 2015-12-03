@@ -102,7 +102,7 @@ Template.tabsPollsRadio.helpers({
 });
 
 Template.tabsPollsRadio.events({
-    'click .btn-answer': function(event){
+    'tap .btn-answer': function(event){
         event.preventDefault();
 
         if(!document.querySelector('input[name="answer"]:checked').value){

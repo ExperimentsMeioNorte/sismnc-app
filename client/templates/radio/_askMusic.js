@@ -1,5 +1,5 @@
 Template._askMusic.events({
-    'click .btn-askmusic': function(event){
+    'tap .btn-askmusic': function(event){
         event.preventDefault();
         if(document.querySelector('#music').value === ''){
             toastr.info(

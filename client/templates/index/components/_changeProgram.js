@@ -3,7 +3,7 @@
 // };
 
 Template._changeProgram.events({
-  'click .change-television .item' : function(){
+  'tap .change-television .item' : function(){
     IonModal.close();
     IonNavigation.skipTransitions = false;
     return true;
