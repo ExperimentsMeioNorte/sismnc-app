@@ -32,26 +32,22 @@
             <p>
               {{text}}
             </p>
-             <a href="#" class="openImage">
-                <img src="/images/television/img1.png" width="100%" />
-              </a>
-              <div class="hideImage">
-                <img src="/images/television/img1.png" width="100%" />
-
-                <a href="#" class="closeHideImage">
-                  <i class="icon-cancel-3"></i>
-                </a>
-
-              </div>
           {{#if img}}
-            <a href="#">
+            <a href="#" class="openImage">
               <img src="{{img}}" width="100%" />
             </a>
+            <div class="hideImage">
+              <img src="{{img}}" width="100%" />
 
+              <a href="#" class="closeHideImage">
+                <i class="icon-cancel-3"></i>
+              </a>
+
+            </div>
            {{/if}}
           </div>
 
-          <div class="message-actions">
+          <!-- <div class="message-actions">
             <span class="message-edit">
               <i class="icon-edit"></i>
             </span>
@@ -59,7 +55,7 @@
               <i class="icon-cancel-3"></i>
             </span>
 
-          </div>
+          </div> -->
 
         </div>
         {{else}}
