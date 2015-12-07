@@ -18,24 +18,17 @@
       {{> _liveTV }}
 
       {{#each programList}}
-        <section class="section-program">
+        <div class="section-program">
           {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}
 
           {{#ionItem path="tabs.timelineTelevision" data-action="goProgram"}}
             <img src="{{image_avatar}}" width="100%" />
           {{/ionItem}}
 
-        </section>
+        </div>
       {{/each}}
       {{/ionList}}
 
     {{/ionContent}}
   {{/ionView}}
 </template>
-
-
-<!-- {{#ionItem path="tabs.timeline" iconLeft=true iconRight=true}}
-{{> ionIcon icon="ios-checkmark" class="positive"}}
-Tabs
-{{> ionIcon icon="ios-arrow-right"}}
-{{/ionItem}} -->

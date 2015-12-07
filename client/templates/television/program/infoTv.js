@@ -1,5 +1,6 @@
 
 Template.infoTv.helpers({
+
  // mostra a televisao
  playTvValidate: function(hour_begin, hour_end){
    document.querySelector('body').classList.add('playTV');

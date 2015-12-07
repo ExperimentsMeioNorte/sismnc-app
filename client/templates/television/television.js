@@ -7,7 +7,7 @@ Template.television.destroyed = function(){
 };
 
 Template.television.events({
-  'touchstart [data-action="goProgram"]' : function(){
+  'tap [data-action="goProgram"]' : function(){
     IonNavigation.skipTransitions = true;
   }
 });

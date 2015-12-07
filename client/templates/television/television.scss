@@ -51,13 +51,13 @@
 
   .tabs-television {
     // .tabs{top:44px;background:#fff;border-bottom:0 none!important;}
-    .tabs{top:154px;background:#fff;border-bottom:0 none!important;}
+    .tabs{top:264px;background:#fff;border-bottom:0 none!important;}
   }
 
   .has-tab-program {
     .has-header {
       //top: 95px!important;
-      top: 205px!important;
+      top: 315px!important;
       background: #f8f8fc;
       padding:20px 20px 48px 20px;
     }
@@ -132,7 +132,7 @@
     width: 100%;
     position: absolute;
     left: 0;
-    top: 44px;
+    top: 0;
     background:#fff;
     z-index: 990;
     .program-description {
@@ -271,7 +271,7 @@
       }
     }
     .poll-answers-footer {
-      position:fixed;bottom:0;left:0;width:100%;
+      // position:fixed;bottom:0;left:0;width:100%;
       .btn {
         width:100%;border-radius:0!important;-webkit-border-radius:0!important;-moz-border-radius:0!important;background:#84D672;font-weight:bold;color:#fff!important;padding:0;border:0 none!important;
         i {font-size:32px;}
@@ -289,6 +289,9 @@
   width:100%;
   margin:0;
   float:left;
+  position: fixed;
+  top: 44px;
+  z-index: 9990;
 
   iframe {
     display:block;

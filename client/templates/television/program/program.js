@@ -7,6 +7,7 @@ Template.program.destroyed = function() {
   document.querySelector('body').classList.remove('television-page');
 }
 
+// Transferir esse helper para infoTv.js
 Template.program.helpers({
   // gera os dados do programa atual
   programs: function(){
