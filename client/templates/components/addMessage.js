@@ -193,7 +193,7 @@ Template.addMessage.events({
                 [
                     111,
                     Router.current().params._id,
-                    localStorage.getItem('Meteor.userId'),
+                    localStorage.getItem('Meteor.userServerId'),
                     document.querySelector('#message').value, // texto
                     (Session.get("photo"))? Session.get("photo") : '', // imagem
                     null, // (videoData !== null)? videoData : '', // video
