@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.45'
+  version: '0.1.46'
 });
 
 App.icons({
@@ -62,5 +62,6 @@ App.setPreference("SplashScreenDelay", 20000);
 
 // // regras de acesso cross origen
 App.accessRule("*");
-App.accessRule("*://*.meteor.com");
+App.accessRule('*.google-analytics.com/*');
+App.accessRule("*://*.meteor.com/*");
 // //App.accessRule("*://localhost:3010/*");
