@@ -24,11 +24,7 @@ Template.tabsTimelineRadio.helpers({
     var content = Content.findOne(
       {
         program_id:Router.current().params._id,
-        status: 1,
-        date_record: {
-          $gte: Session.get('getupDateBegin'),
-          $lte: Session.get('getupDateEnd')
-        }
+        status: 1
       }
     );
 
@@ -36,11 +32,7 @@ Template.tabsTimelineRadio.helpers({
       content = Content.find(
       {
         program_id:Router.current().params._id,
-        status: 1,
-        date_record: {
-          $gte: Session.get('getupDateBegin'),
-          $lte: Session.get('getupDateEnd')
-        }
+        status: 1
       },
       {
         sort: {sequence_id: -1},
@@ -105,11 +97,7 @@ Template.tabsTimelineRadio.helpers({
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
-      status: 1,
-      date_record: {
-        $gte: Session.get('getupDateBegin'),
-        $lte: Session.get('getupDateEnd')
-      }
+      status: 1
     }).count();
     IonLoading.hide();
     return (Session.get('limit') >= contentCount)? false : true;

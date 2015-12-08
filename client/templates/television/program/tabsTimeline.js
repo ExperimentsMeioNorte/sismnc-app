@@ -21,11 +21,7 @@ Template.tabsTimelineTelevision.helpers({
     var content = Content.findOne(
       {
         program_id:Router.current().params._id,
-        status: 1,
-        date_record: {
-          $gte: Session.get('getupDateBegin'),
-          $lte: Session.get('getupDateEnd')
-        }
+        status: 1
       }
     );
 
@@ -33,11 +29,7 @@ Template.tabsTimelineTelevision.helpers({
       content = Content.find(
       {
         program_id:Router.current().params._id,
-        status: 1,
-        date_record: {
-          $gt: Session.get('getupDateBegin'),
-          $lt: Session.get('getupDateEnd')
-        }
+        status: 1
       },
       {
         sort: {sequence_id: -1},
@@ -103,11 +95,7 @@ Template.tabsTimelineTelevision.helpers({
     var contentCount = Content.find(
     {
       program_id:Router.current().params._id,
-      status: 1,
-      date_record: {
-        $gte: Session.get('getupDateBegin'),
-        $lte: Session.get('getupDateEnd')
-      }
+      status: 1
     }).count();
     IonLoading.hide();
     return (Session.get('limit') >= contentCount)? false : true;
