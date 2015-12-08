@@ -81,6 +81,8 @@ Template._resetConfirmPassword.events({
         }
     },
 
+
+
     'tap .resetCodePassword': function(event){
         event.preventDefault();
         IonLoading.show({

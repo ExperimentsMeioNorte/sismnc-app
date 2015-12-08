@@ -87,6 +87,7 @@ Template.index.helpers({
 
 Template.index.rendered = function(){
   document.querySelector('body').classList.remove('popup-open');
+  document.querySelector('body').classList.remove('show-confirm-code-email');
 };
 
 Template.index.destroyed = function(){

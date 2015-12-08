@@ -51,13 +51,13 @@
 
   .tabs-television {
     // .tabs{top:44px;background:#fff;border-bottom:0 none!important;}
-    .tabs{top:264px;background:#fff;border-bottom:0 none!important;}
+    .tabs{top:224px;background:#fff;border-bottom:0 none!important;}
   }
 
   .has-tab-program {
     .has-header {
       //top: 95px!important;
-      top: 315px!important;
+      top: 275px!important;
       background: #f8f8fc;
       padding:20px 20px 48px 20px;
     }
@@ -235,21 +235,62 @@
   .polls-question {
     font-size: 18px;
     line-height: 22px;
-    color:#7A8B91;
+    color:#5796b5;
     display: table;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     img {
       position:absolute;width:100%;border-radius:5px;top:0;left:0;width:100%;border-radius:0;
     }
   }
   .polls-answers {
     margin:10px 0;padding-top:105px;
-    [type="checkbox"]:checked + label:before {
-      border-bottom-color:#62A0BD!important;
-      border-right-color:#62A0BD!important;
+
+    input[type=radio],
+    input[type=checkbox] {
+      display: none;
     }
+    label:before {
+      content: "";
+      display: inline-block;
+
+      width: 16px;
+      height: 16px;
+
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-color: #fff;
+      box-shadow:0 0 0 2px #5796b5;
+      border-radius:50%;
+    }
+
+    .radio label:before {
+      border-radius: 8px;
+    }
+    .checkbox label {
+      margin-bottom: 10px;
+    }
+    .checkbox label:before {
+        border-radius: 3px;
+    }
+
+    input[type=radio]:checked + label:before {
+        background:#5796b5;
+        font-size: 30px;
+        text-align: center;
+        line-height: 18px;
+    }
+
+    input[type=checkbox]:checked + label:before {
+      font-size: 15px;
+      background:#5796b5;
+      text-align: center;
+        line-height: 15px;
+    }
+
     .polls-answers-item {
-      margin-bottom:5px;display:block;position:relative;padding:5px 0;
+      margin-bottom:25px;display:block;position:relative;padding:3px 5px 0 25px;
       img {
         position:absolute;width:100%;border-radius:5px;top:0;left:0;width:100%;border-radius:0;
       }
@@ -273,7 +314,7 @@
     .poll-answers-footer {
       // position:fixed;bottom:0;left:0;width:100%;
       .btn {
-        width:100%;border-radius:0!important;-webkit-border-radius:0!important;-moz-border-radius:0!important;background:#84D672;font-weight:bold;color:#fff!important;padding:0;border:0 none!important;
+        width:100%;background:#84D672;font-weight:bold;color:#fff!important;padding:0;border:0 none!important;border-radius:28px;-moz-border-radius:28px;-webkit-border-radius:28px;
         i {font-size:32px;}
       }
     }
@@ -314,8 +355,8 @@
 
 
 #mais {
-      border-radius: 5px;
-    padding: 12px;
+      border-radius: 28px;
+    padding: 4px 12px;
       text-align:center;
     width: 100%;
     display: table;
@@ -326,3 +367,10 @@
     font-size: 14px;
 }
 
+
+
+.ion-information-circled {
+  &:before {
+    font-size:26px!important;
+  }
+}

@@ -3,6 +3,10 @@ Template._resetPassword.rendered = function () {
     document.querySelector('body').classList.remove('show-confirm-code');
 };
 
+Template._resetPassword.destroyed = function () {
+  document.querySelector('body').classList.remove('show-confirm-code-email');
+};
+
 Template._resetPassword.events({
    'tap .button-cancel': function () {
         document.querySelector('body').classList.remove('show-reset-password');
@@ -49,8 +53,8 @@ Template._resetPassword.events({
                 );
 
                 IonLoading.hide();
-                    document.querySelector('body').classList.remove('new-password');
-                    document.querySelector('body').classList.add('show-confirm-code');
+                    document.querySelector('body').classList.remove('show-reset-password');
+                    document.querySelector('body').classList.add('show-confirm-code-email');
             }else{
                 IonLoading.hide();
                 toastr.info(

@@ -88,7 +88,9 @@ Template.tabsTimelineTelevision.helpers({
       return content;
     }else{
       IonLoading.hide();
-      return [{notFound: false}];
+      return [{
+        notFound: false
+      }];
     }
   },
 
