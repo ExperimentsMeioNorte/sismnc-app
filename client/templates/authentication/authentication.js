@@ -96,6 +96,7 @@ Template.authentication.events({
                       IonLoading.hide();
                       Router.go('index');
                     }else{
+                      IonLoading.hide();
                       toastr.info(
                         "Estranho, " + error,
                         '',
@@ -112,90 +113,103 @@ Template.authentication.events({
           }
         });
     },
+
+    // login da rede social google
     'tap .bg-google': function (event, tmp) {
+      IonLoading.show({
+        customTemplate: '<i class="spinner spinner-spiral"><svg viewBox="0 0 64 64"><g><defs><linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="0.1" class="stop1"></stop><stop offset="1" class="stop2"></stop></linearGradient></defs><g stroke-width="4" stroke-linecap="round" fill="none" transform="rotate(196.349 32 32)"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32"></path><animateTransform values="0,32,32;360,32,32" attributeName="transform" type="rotate" repeatCount="indefinite" dur="750ms"></animateTransform></g></g></svg></i>'
+      });
+
       event.preventDefault();
 
-        // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
-        Meteor.loginApp(event);
+      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
+      Meteor.loginApp(event);
 
-        // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
-        Meteor.loginAppService(Meteor.loginAppOptions, function(err){
-          if (err){
-            toastr.info(
-              "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
-              '',
+      // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
+      Meteor.loginAppService(Meteor.loginAppOptions, function(err){
+        if (err){
+          IonLoading.hide();
+          toastr.info(
+            "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
+            '',
+            {
+              "positionClass": "toast-top-center",
+              "tapToDismiss": true,
+              "timeOut": 3000
+            }
+          );
+        }else{
+          var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
+          var userId = User.findOne(
               {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
+                google_id:usersSearch.services.google.id,
+                email:usersSearch.services.google.email
               }
-            );
-          }else{
-            var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
-            var userId = User.findOne(
+          );
+
+          if(userId !== undefined){
+            if(userId.status === 0){
+              IonLoading.hide();
+              toastr.info(
+                "Você não tem autorização, precisa de um login",
+                '',
                 {
-                  google_id:usersSearch.services.google.id,
-                  email:usersSearch.services.google.email
+                  "positionClass": "toast-top-center",
+                  "tapToDismiss": true,
+                  "timeOut": 3000
+                }
+              );
+            }else{
+
+              localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
+              localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
+              localStorage.setItem('Meteor.userServerId', userId._id);
+              localStorage.setItem('Meteor.userId', userId._id);
+
+              IonLoading.hide();
+              Router.go('index');
+            }
+          }else{
+            Meteor.remote.call(
+                'insertUser',
+                [
+                  111,
+                  '0',
+                  usersSearch.services.google.name,
+                  usersSearch.services.google.picture,
+                  usersSearch.services.google.email,
+                  null,
+                  null,
+                  usersSearch.services.google.id,
+                  null,
+                  1,
+                  1
+                ],
+                function(error, result){
+                  if(result){
+                    localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
+                    localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
+                    localStorage.setItem('Meteor.userServerId', result[1]);
+                    localStorage.setItem('Meteor.userId', result[1]);
+
+                    IonLoading.hide();
+                    Router.go('index');
+                  }else{
+                    IonLoading.hide();
+                    toastr.info(
+                      "Estranho, " + error,
+                      '',
+                      {
+                        "positionClass": "toast-top-center",
+                        "tapToDismiss": true,
+                        "timeOut": 3000
+                      }
+                    );
+                  }
                 }
             );
-
-            if(userId !== undefined){
-              if(userId.status === 0){
-                toastr.info(
-                  "Você não tem autorização, precisa de um login",
-                  '',
-                  {
-                    "positionClass": "toast-top-center",
-                    "tapToDismiss": true,
-                    "timeOut": 3000
-                  }
-                );
-              }else{
-
-                localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
-                localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
-                localStorage.setItem('Meteor.userServerId', userId._id);
-                localStorage.setItem('Meteor.userId', userId._id);
-                Router.go('index');
-              }
-            }else{
-              Meteor.remote.call(
-                  'insertUser',
-                  [
-                    111,
-                    '0',
-                    usersSearch.services.google.name,
-                    usersSearch.services.google.picture,
-                    usersSearch.services.google.email,
-                    null,
-                    null,
-                    usersSearch.services.google.id,
-                    null,
-                    1,
-                    1
-                  ],
-                  function(error, result){
-                    if(result){
-                      localStorage.setItem('Meteor.googleId', usersSearch.services.google.id);
-                      localStorage.setItem('Meteor.emailId', usersSearch.services.google.email);
-                      localStorage.setItem('Meteor.userServerId', result[1]);
-                      localStorage.setItem('Meteor.userId', result[1]);
-                      Router.go('index');
-                    }else{
-                      toastr.info(
-                        "Estranho, " + error,
-                        '',
-                        {
-                          "positionClass": "toast-top-center",
-                          "tapToDismiss": true,
-                          "timeOut": 3000
-                        }
-                      );
-                    }
-                  }
-              );
-            }
           }
-        });
+        }
+      });
     }
 });
