@@ -14,53 +14,49 @@ Template.television.events({
 
 Template.television.helpers({
   programList: function(){
-    var categoryId = null;
-    var programs = [];
-
-    var category = Category.find(
-      { description: { $not: 'Radio' } },
-      {sort: {description:"asc"}}
+    var cityId = City.find(
+      {
+        name: 'Piauí',
+        status: 1
+      }
     ).map(
       function(c) {
         return {
-          _id: c._id,
-          description: c.description
+          _id: c._id
         };
       }
     );
 
-    var program = Program.find(
+    var vehicleId = Vehicle.find(
       {
-        city_id: Router.current().params._idTv,
-        status:1
-      },
-      {sort: {category_id:"asc"}}
+        name: 'Rede Meio Norte',
+        status: 1
+      }
     ).map(
-      function(p) {
+      function(c) {
         return {
-          _id: p._id,
-          _idTv: p.city_id,
-          image_avatar: p.image_avatar,
-          category_id: p.category_id
+          _id: c._id
         };
       }
     );
 
-    for(cID in category){
-      for(pID in program){
-        if(program[pID].category_id === category[cID]._id){
-          programs[pID] = {
-            _id: program[pID]._id,
-            program_id: program[pID]._id,
-            image_avatar: program[pID].image_avatar,
-            category_name: category[cID].description,
-            categoryValid: categoryId !== program[pID].category_id
-          };
-          categoryId = category[cID]._id;
+    if((cityId && cityId[0] !== undefined) && (vehicleId && vehicleId[0] !== undefined)){
+      return Program.find(
+        {
+          city_id: cityId[0]._id,
+          vehicle_id: vehicleId[0]._id,
+          status: 1
         }
-      }
+      ).map(
+        function(p) {
+          return {
+            _id: p._id,
+            image_folder: p.image_folder,
+          };
+        }
+      );
+    }else{
+      return '';
     }
-
-    return programs;
-  }
+ }
 });
