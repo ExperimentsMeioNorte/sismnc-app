@@ -14,19 +14,36 @@
   {{#ionView}}
     {{#ionContent}}
       {{#ionList class="television-programs"}}
+        <div class="padding change-television">
+          {{#if programList}}
+            {{> _liveTV }}
+          
+            {{#each programList}}
+              {{#if categoryValid}}
+                <ul class="no-style">
+                  <li><strong>{{category_name}}</strong></li>
+                 </ul>
+              {{/if}}
+              <ul class="no-style">
+                <li>
+                  {{#ionItem path="tabs.timelineTelevision" data-action="goProgram"}}
+                    <img src="{{ image_avatar }}" width="80" height="80" />
+                  {{/ionItem}}
+                </li>
+              </ul>
+              <!--<div class="section-program">
+                {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}
 
-      {{> _liveTV }}
+                {{#ionItem path="tabs.timelineTelevision" data-action="goProgram"}}
+                  <img src="{{image_avatar}}" width="100%" />
+                {{/ionItem}}
 
-      {{#each programList}}
-        <div class="section-program">
-          {{#if categoryValid}}<strong>{{category_name}}</strong>{{/if}}
-
-          {{#ionItem path="tabs.timelineTelevision" data-action="goProgram"}}
-            <img src="{{image_avatar}}" width="100%" />
-          {{/ionItem}}
-
+              </div>-->
+            {{/each}}
+          {{else}}
+            {{> loading }}
+          {{/if}}
         </div>
-      {{/each}}
       {{/ionList}}
 
     {{/ionContent}}
