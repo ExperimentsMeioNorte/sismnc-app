@@ -47,6 +47,7 @@ App.setPreference('BackgroundColor', '0xffffffff');
 App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
+App.setPreference('Orientation', 'portrait');
 App.setPreference("SplashScreenDelay", 20000);
 
 // cordova plugin facebook

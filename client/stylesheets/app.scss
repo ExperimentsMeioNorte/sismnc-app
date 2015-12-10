@@ -2325,7 +2325,22 @@ button.toast-close-button {
 }
 
 
-
+.popup-head {
+  border:0 none;
+}
 .button {
   min-height:42px;
+}
+
+
+.popup-sub-title {
+  color:#666;font-size:15px;margin:15px 0 0 0;
+}
+
+.button-cancel {
+  color:#666;
+}
+
+.button-desconnect {
+  background:#ff807d;color:#fff;
 }
