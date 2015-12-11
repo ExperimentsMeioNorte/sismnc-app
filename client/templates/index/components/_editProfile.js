@@ -19,7 +19,7 @@ Template._editProfile.events({
                             [
                                 222,
                                 data,
-                                localStorage.getItem('Meteor.userId')
+                                localStorage.getItem('Meteor.userServerId')
                             ],
                             function(error, result){
                                 if(!result){
@@ -87,7 +87,7 @@ Template._editProfile.events({
                             [
                                 222,
                                 data,
-                                localStorage.getItem('Meteor.userId')
+                                localStorage.getItem('Meteor.userServerId')
                             ],
                             function(error, result){
                                 if(!result){
@@ -165,7 +165,7 @@ Template._editProfile.events({
                 name,
                 email,
                 phone,
-                localStorage.getItem('Meteor.userId')
+                localStorage.getItem('Meteor.userServerId')
             ],
             function(error, result){
                 if(!result){
