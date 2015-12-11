@@ -16,7 +16,7 @@ Template.infoTv.helpers({
 	      	var friday = (c.day_friday === 1)? 'sexta - ' : '';
 	      	var saturday = (c.day_saturday === 1)? 'sabado - ' : '';
 	      	var sunday = (c.day_sunday === 1)? 'domingo - ' : '';
-	      	var days = monday + tuesday + wednesday + thursday + friday + saturday + sunday; 
+	      	var days = monday + tuesday + wednesday + thursday + friday + saturday + sunday;
 
 	        return {
 	          day: days,

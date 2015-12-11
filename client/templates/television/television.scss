@@ -52,13 +52,13 @@
 
   .tabs-television {
     // .tabs{top:44px;background:#fff;border-bottom:0 none!important;}
-    .tabs{top:224px;background:#fff;border-bottom:0 none!important;}
+    .tabs{top:234px;background:#fff;border-bottom:0 none!important;}
   }
 
   .has-tab-program {
     .has-header {
       //top: 95px!important;
-      top: 275px!important;
+      top: 285px!important;
       background: #f8f8fc;
       padding:20px 20px 48px 20px;
     }
@@ -334,7 +334,7 @@
   position: fixed;
   top: 44px;
   padding: 5px;
-  background: #212121;
+  background:rgba(0,0,0,0.69);
   z-index: 9990;
 
   iframe {
@@ -377,4 +377,10 @@
   &:before {
     font-size:26px!important;
   }
+}
+
+
+.ion-ios-information-outline:before {
+
+    text-shadow: -1px 0px 1px #fff!important;
 }
