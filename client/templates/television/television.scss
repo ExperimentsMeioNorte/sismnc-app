@@ -341,6 +341,16 @@
     display:block;z-index:5;position:relative;
   }
 
+  .spinner-spiral {
+    stroke: #fff!important;
+    position: absolute!important;
+    left: 50%!important;
+    margin-left: -14px!important;
+    top: 50%!important;
+    margin-top: -16px!important;
+    z-index:4!important;
+  }
+
 
 }
 
