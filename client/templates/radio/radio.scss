@@ -1,5 +1,13 @@
 .radio-page {
 
+
+  .loading-container {
+    top:-125px!important;left:50px!important;right:auto!important;
+    .loading {
+      left:50px!important;margin:5px!important;right:auto!important;
+    }
+  }
+
   .title {
     img {
       margin: 2px 0px 0px;

@@ -1433,6 +1433,7 @@ img {display:block;}
 }
 
 .spinner {
+  background:transparent!important;
   stroke: #2d2d2d;
   fill: #666;
 }
@@ -2241,7 +2242,7 @@ button.toast-close-button {
 
 .loading-container {
   .loading {
-    font-size:20px!important;
+    font-size:20px!important;background:transparent!important;
   }
 }
 
@@ -2338,9 +2339,23 @@ button.toast-close-button {
 }
 
 .button-cancel {
-  color:#666;
+  color:#999;
 }
 
 .button-desconnect {
   background:#ff807d;color:#fff;
+  &:active {
+    background:#ff807d!important;color:#fff!important;opacity:0.7!important;
+  }
+  &:focus {
+    background:#ff807d!important;color:#fff!important;opacity:0.7!important;
+  }
+}
+.button-desconnect.active {
+  background:#ff807d!important;color:#fff!important;opacity:0.7!important;
+}
+.button-desconnect {
+  &:hover {
+    color:#fff!important;
+  }
 }

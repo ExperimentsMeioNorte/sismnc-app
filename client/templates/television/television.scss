@@ -18,6 +18,7 @@
 
 
   .television-programs {
+    top:191px;
     .section-program {
       strong {
         width: 100%;
@@ -332,11 +333,14 @@
   float:left;
   position: fixed;
   top: 44px;
+  padding: 5px;
+  background: #212121;
   z-index: 9990;
 
   iframe {
-    display:block;
+    display:block;z-index:5;position:relative;
   }
+
 
 }
 
