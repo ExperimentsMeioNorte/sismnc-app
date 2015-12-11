@@ -1,28 +1,34 @@
 <template name="infoTv">
   {{#ionModal title="Informações" class="bar-television"}}
-  <div class="info-program">
-    <div class="row">
-      <div  class="col">
-        <small>DIA(S)</small>
-        <strong id="programDias" class="truncate">
-          {{ day }}
-        </strong>
-      </div>
-      <div class="col">
-        <small>HORÁRIO</small>
-        <strong class="truncate">
-          <span id="programHoraInicial">
-            {{ hour_begin }}
-          </span> às
-          <span id="programHoraFinal">
-            {{ hour_end }}
-          </span>
-        </strong>
-      </div>
-    </div>
-    <p class="program-description">
-      {{ description }}
-    </p>
-  </div>
+    {{#if info}}
+      {{#each info}}
+        <div class="info-program">
+          <div class="row">
+            <div  class="col">
+              <small>DIA(S)</small>
+              <strong id="programDias" class="truncate">
+                {{ day }}
+              </strong>
+            </div>
+            <div class="col">
+              <small>HORÁRIO</small>
+              <strong class="truncate">
+                <span id="programHoraInicial">
+                  {{ hour_begin }}
+                </span> às
+                <span id="programHoraFinal">
+                  {{ hour_end }}
+                </span>
+              </strong>
+            </div>
+          </div>
+          <p class="program-description">
+            {{ description }}
+          </p>
+        </div>
+      {{/each}}
+    {{else}}
+      {{> loading }}
+    {{/if}}
   {{/ionModal }}
 </template>
