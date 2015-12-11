@@ -2282,8 +2282,10 @@ button.toast-close-button {
     color: #DD4B39;
   }
 }
-
 .show-hide-image {
+  .message-timeline, .tabs, .play-tv {
+    z-index:0!important;
+  }
   .hideImage {
     opacity:1;
     visibility:visible;

@@ -33,7 +33,7 @@ Template.tabsPollsTelevision.helpers({
           {
               status: 1,
               poll_id: poll[0]._id,
-              user_id: localStorage.getItem('Meteor.userId')
+              user_id: localStorage.getItem('Meteor.userServeId')
           }).map(
             function(pu){
               return {
@@ -114,7 +114,7 @@ Template.tabsPollsTelevision.events({
                     111,
                     document.querySelector('#poll_id').value,
                     document.querySelector('input[name="answer"]:checked').value,
-                    localStorage.getItem('Meteor.userId')
+                    localStorage.getItem('Meteor.userServeId')
                 ],
                 function(error, result){
                     if(!result){

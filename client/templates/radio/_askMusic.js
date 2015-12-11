@@ -17,10 +17,10 @@ Template._askMusic.events({
                 [
                     111,
                     Router.current().params._id,
-                    localStorage.getItem('Meteor.userId'),
+                    localStorage.getItem('Meteor.userServeId'),
                     document.querySelector('#music').value,
                     document.querySelector('#artist').value,
-                    localStorage.getItem('Meteor.userId')
+                    localStorage.getItem('Meteor.userServeId')
                 ],
                 function(error, result){
                     if(!error){

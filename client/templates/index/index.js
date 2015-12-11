@@ -16,7 +16,7 @@ Template.index.helpers({
                     222,
                     phone,
                     true,
-                    localStorage.getItem('Meteor.userId')
+                    localStorage.getItem('Meteor.userServeId')
                 ],
                 function(error, result){
                     if(!result){
@@ -49,7 +49,7 @@ Template.index.helpers({
               [
                   222,
                   true,
-                  localStorage.getItem('Meteor.userId')
+                  localStorage.getItem('Meteor.userServeId')
               ],
               function(error, result){
                   if(!result){
@@ -91,7 +91,6 @@ Template.index.rendered = function(){
 };
 
 Template.index.destroyed = function(){
-
+  document.querySelector('body').classList.remove('popup-open');
   document.querySelector('body').classList.remove('home-page');
-
 };
