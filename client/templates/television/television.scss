@@ -179,7 +179,7 @@
 
   .vote {
     span {
-      &:before {position:absolute;left:0;top:-20px;font-size:10px;font-weight:bold;content:"MEU VOTO";color:#62A0BD;}
+      &:before {position:absolute;left:0;top:-20px;font-size:10px;font-weight:bold;content:"MEU VOTO";color:#62A0BD;white-space:nowrap;}
     }
   }
 
@@ -188,7 +188,7 @@
     padding-top:0!important;
 
     .polls-answers-item {
-      padding-left:185px !important;
+      padding-left:155px !important;
 
       strong {
         position: absolute;
@@ -205,8 +205,8 @@
 
       &:before {
         position: absolute;
-        left: 145px;
-        top: 13px;
+        left: 115px;
+        top: 12px;
         width: 10px;
         height: 10px;
         background: #D8D8D8;
@@ -302,7 +302,7 @@
           position: relative;
           padding-left: 0;
           cursor: pointer;
-          display: inline-block;
+          display: inline;
           height: 25px;
           line-height: 25px;
           font-size: 1rem;

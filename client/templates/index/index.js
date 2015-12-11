@@ -16,7 +16,7 @@ Template.index.helpers({
                     222,
                     phone,
                     true,
-                    localStorage.getItem('Meteor.userServeId')
+                    localStorage.getItem('Meteor.userId')
                 ],
                 function(error, result){
                     if(!result){
@@ -49,7 +49,7 @@ Template.index.helpers({
               [
                   222,
                   true,
-                  localStorage.getItem('Meteor.userServeId')
+                  localStorage.getItem('Meteor.userId')
               ],
               function(error, result){
                   if(!result){

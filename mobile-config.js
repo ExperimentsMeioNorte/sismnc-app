@@ -2,7 +2,10 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.47'
+  version: '0.1.48',
+  author: 'Agência Getup!',
+  email: 'alexandesigner@gmail.com',
+  website: 'http://app.sistemameionorte.com.br'
 });
 
 App.icons({
@@ -48,21 +51,17 @@ App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('Orientation', 'portrait');
-App.setPreference("SplashScreenDelay", 20000);
+App.setPreference("SplashScreen", "screen");
+App.setPreference("SplashScreenDelay", "20000");
 
 // cordova plugin facebook
-/*App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
      APP_ID: '580730978674615',
      APP_NAME: 'sistemamn'
-});*/
+});
 
-/*App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-     APP_ID: '638977909535835',
-     APP_NAME: 'vtv'
-});*/
-
-// // regras de acesso cross origen
+// regras de acesso cross origen
 App.accessRule("*");
 App.accessRule('*.google-analytics.com/*');
 App.accessRule("*://*.meteor.com/*");
-// //App.accessRule("*://localhost:3010/*");
+//App.accessRule("*://localhost:3010/*");

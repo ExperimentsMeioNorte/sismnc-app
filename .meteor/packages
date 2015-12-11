@@ -15,7 +15,6 @@ accounts-ui-unstyled
 service-configuration
 accounts-base
 accounts-google
-accounts-facebook
 accounts-password
 meteorhacks:fast-render
 chrismbeckett:toastr
@@ -31,3 +30,4 @@ jparker:crypto-md5
 
 jimbog:tap
 reywood:iron-router-ga
+particle4dev:cordova-fb
