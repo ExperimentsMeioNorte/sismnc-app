@@ -69,7 +69,8 @@ Template.tabsTimelineTelevision.helpers({
               user_name: user[0].name,
               user_avatar: user[0].avatar,
               msg_time: Session.get('getupTimeLineTimeCompare' + c._id),
-              notFound: true
+              notFound: true,
+              user_edit: ((c.user_id === localStorage.getItem('Meteor.userServerId'))? true : false)
             };
           }else{
             return '';
@@ -116,7 +117,9 @@ Template.tabsTimelineTelevision.events({
     'tap .closeHideImage': function(){
       document.querySelector('body').classList.remove('show-hide-image');
     },
-    'tap [data-action="showCancel"]': function () {
+
+    // remove a mensagem escolhida do usuario atual
+    'tap [data-action="showCancel"]': function (events) {
       IonPopup.show({
         title: 'Excluir Mensagem',
         template: 'Tem <strong>certeza</strong> que deseja excluir?',
@@ -131,18 +134,62 @@ Template.tabsTimelineTelevision.events({
           text: 'Excluir',
           type: 'button-assertive',
           onTap: function() {
-            IonPopup.close();
-            toastr.info(
-              "Mensagem Excluída",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
+            Meteor.remote.call(
+              'disableContent',
+              [
+                333,
+                document.querySelector('#edit_id').value
+              ],
+              function(error, result){
+                IonPopup.close();
+                if(!result){
+                  toastr.info(
+                    error,
+                    '',
+                    {
+                      "positionClass": "toast-top-center",
+                      "tapToDismiss": true,
+                      "timeOut": 3000
+                    }
+                  );
+                }else{
+                  toastr.info(
+                    result,
+                    '',
+                    {
+                      "positionClass": "toast-top-center",
+                      "tapToDismiss": true,
+                      "timeOut": 3000
+                    }
+                  );
+                }
               }
             );
           }
         }]
       });
+    },
+
+    // altera a mensagem escolhida do usuario atual
+    'tap [data-action="showEdit"]': function () {
+      if(document.querySelector('#edit_id').value !== '' && document.querySelector('#edit_text').value !== ''){
+        Session.set('messageEditId', document.querySelector('#edit_id').value);
+        document.querySelector('#message').value = document.querySelector('#edit_text').value;
+
+        if(document.querySelector('#edit_img').value !== ''){
+          Session.set('photo', document.querySelector('#edit_img').value);
+          document.querySelector('body').classList.add('show-file-message');
+        }
+      }else{
+        toastr.info(
+          'ops, não foi possivel efetuar a sua ação.',
+          '',
+          {
+            "positionClass": "toast-top-center",
+            "tapToDismiss": true,
+            "timeOut": 3000
+          }
+        );
+      }
     }
 });

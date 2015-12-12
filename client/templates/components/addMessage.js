@@ -169,25 +169,25 @@ Template.addMessage.events({
             }
           );
         }else{
-            // var videoData = null;
-            // if(Session.get("videoUrl")){
-            //   // create a canvas element
-            //   var canvas = document.createElement('canvas'),     // canvas
-            //       ctx = canvas.getContext('2d'),                 // context
-            //       video = document.getElementById('video-file');  // get video element somehow
+          // var videoData = null;
+          // if(Session.get("videoUrl")){
+          //   // create a canvas element
+          //   var canvas = document.createElement('canvas'),     // canvas
+          //       ctx = canvas.getContext('2d'),                 // context
+          //       video = document.getElementById('video-file');  // get video element somehow
 
-            //   // setup canvas dimension
-            //   canvas.width = video.videoWidth || video.width;
-            //   canvas.height = video.videoHeight || video.height;
+          //   // setup canvas dimension
+          //   canvas.width = video.videoWidth || video.width;
+          //   canvas.height = video.videoHeight || video.height;
 
-            //   // draw in current video frame
-            //   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+          //   // draw in current video frame
+          //   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            //   // extract data-uri
-            //   videoData = canvas.toDataURL();  // PNG is default, use image/jpeg for JPEG
-            //   Session.setDefault("videoUrl", null);
-            // }
-
+          //   // extract data-uri
+          //   videoData = canvas.toDataURL();  // PNG is default, use image/jpeg for JPEG
+          //   Session.setDefault("videoUrl", null);
+          // }
+          if(Session.get('messageEditId') === undefined || Session.get('messageEditId') === null){
             Meteor.remote.call(
                 'insertContent',
                 [
@@ -223,6 +223,44 @@ Template.addMessage.events({
                     }
                 }
             );
+          }else{
+            Meteor.remote.call(
+                'updateContent',
+                [
+                    222,
+                    Router.current().params._id,
+                    localStorage.getItem('Meteor.userServerId'),
+                    document.querySelector('#message').value, // texto
+                    (Session.get("photo"))? Session.get("photo") : '', // imagem
+                    null, // (videoData !== null)? videoData : '', // video
+                    1,
+                    Session.get('messageEditId') // id da mensagem
+                ],
+                function(error, result){
+                    if(!error){
+                        Session.set('messageEditId', null);
+                        // remove o foco
+                        document.querySelector('#message').blur();
+
+                        //remove os dados dos campos do form para evitar a duplicidade do registro
+                        document.querySelector('#message').value = '';
+                        Session.set("photo", '');
+                        //Session.set("video", '');
+                        document.querySelector('body').classList.remove('show-file-message');
+                    }else{
+                        toastr.info(
+                          "Algo deu errado, tente novamente",
+                          '',
+                          {
+                            "positionClass": "toast-top-center",
+                            "tapToDismiss": true,
+                            "timeOut": 3000
+                          }
+                        );
+                    }
+                }
+            );
+          }
         }
     },
 
