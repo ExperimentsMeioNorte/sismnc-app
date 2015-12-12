@@ -1458,6 +1458,7 @@ img {display:block;}
 .television-programs {
   .spinner-spiral {
     margin: 25px auto!important;
+    stroke: #212121!important;
     display: table!important;
   }
 }
@@ -1795,9 +1796,16 @@ img {display:block;}
     color:#999;
   }
 
+
   .spinner-spiral {
-     stroke: #2d2d2d;
+     stroke: #fff;
     fill: #999;
+  }
+
+  .pg-loading {
+    .spinner-spiral {
+      stroke: #212121!important;
+    }
   }
 
   .pg-loading-logo-header {
@@ -1926,6 +1934,7 @@ img {display:block;}
   overflow:hidden!important;
 
   .spinner-spiral {
+    stroke: #212121!important;
     text-align: center!important;
     margin: 45px auto!important;
     display: block!important;

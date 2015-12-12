@@ -11,4 +11,16 @@ Meteor.startup(function() {
       secret: "wT1pGMsvLfuncOXp1YP4hR5L"
     });
 
+    ServiceConfiguration.configurations.remove({
+      service: "facebook"
+    });
+    ServiceConfiguration.configurations.insert({
+      service: "facebook",
+      appId: "580730978674615",
+      secret: "17f294e3ae5aa7e088aa88fbe042dac6",
+      loginStyle: "redirect"
+    });
+
+
+
 });

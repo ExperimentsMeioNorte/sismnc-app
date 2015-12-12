@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.48',
+  version: '0.1.49',
   author: 'Agência Getup!',
   email: 'alexandesigner@gmail.com',
   website: 'http://app.sistemameionorte.com.br'
@@ -55,10 +55,10 @@ App.setPreference("SplashScreen", "screen");
 App.setPreference("SplashScreenDelay", "20000");
 
 // cordova plugin facebook
-App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-     APP_ID: '580730978674615',
-     APP_NAME: 'sistemamn'
-});
+// App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+//      APP_ID: '580730978674615',
+//      APP_NAME: 'sistemamn'
+// });
 
 // regras de acesso cross origen
 App.accessRule("*");
