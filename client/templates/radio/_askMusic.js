@@ -1,6 +1,6 @@
 Template._askMusic.events({
     'tap .btn-askmusic': function(event){
-        event.preventDefault();
+        //event.preventDefault();
         if(document.querySelector('#music').value === ''){
             toastr.info(
               "Precisa pedir a música",
@@ -17,15 +17,19 @@ Template._askMusic.events({
                 [
                     111,
                     Router.current().params._id,
-                    localStorage.getItem('Meteor.userServeId'),
+                    localStorage.getItem('Meteor.userServerId'),
                     document.querySelector('#music').value,
-                    document.querySelector('#artist').value,
-                    localStorage.getItem('Meteor.userServeId')
+                    document.querySelector('#artist').value
                 ],
                 function(error, result){
+                    //remove os dados dos campos do form para evitar a duplicidade do registro
+                    document.querySelector('#music').value = document.querySelector('#artist').value = '';
+                    IonModal.close();
+                    IonNavigation.skipTransitions = false;
+
                     if(!error){
                         toastr.info(
-                          result,
+                          'ok ' + result,
                           '',
                           {
                             "positionClass": "toast-top-center",
@@ -33,14 +37,9 @@ Template._askMusic.events({
                             "timeOut": 3000
                           }
                         );
-
-                        //remove os dados dos campos do form para evitar a duplicidade do registro
-                        document.querySelector('#music').value = document.querySelector('#artist').value = '';
-                        IonModal.close();
-                        IonNavigation.skipTransitions = false;
                     }else{
                         toastr.info(
-                          error,
+                          'erro ' + error,
                           '',
                           {
                             "positionClass": "toast-top-center",
