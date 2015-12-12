@@ -11,10 +11,8 @@ App.info({
 App.icons({
 
   // iOS
-  // 'iphone': 'public/icons/ios/Icon-60.png',
-  // 'iphone_2x': 'public/icons/ios/AppIcon.appiconset/Icon-60@2x.png',
-  // 'ipad': 'public/icons/ios/Icon-72.png',
-  // 'ipad_2x': 'public/icons/ios/Icon-72@2x.png',
+  'iphone': 'public/icons/ios/Icon-60.png',
+  'iphone_2x': 'public/icons/ios/AppIcon.appiconset/Icon-60@2x.png',
 
   // Android
   'android_ldpi': 'public/icons/android/drawable-ldpi/ic_launcher.png',
@@ -55,10 +53,10 @@ App.setPreference("SplashScreen", "screen");
 App.setPreference("SplashScreenDelay", "20000");
 
 // cordova plugin facebook
-// App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-//      APP_ID: '580730978674615',
-//      APP_NAME: 'sistemamn'
-// });
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+     APP_ID: '580730978674615',
+     APP_NAME: 'sistemamn'
+});
 
 // regras de acesso cross origen
 App.accessRule("*");
