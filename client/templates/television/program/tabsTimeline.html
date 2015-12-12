@@ -4,7 +4,7 @@
     {{> _tabsHeaderTelevision}}
 
     {{#ionContent class="padding"}}
-      {{#each contents}}
+    {{#each contents}}
       {{#if notFound}}
 
         <div class="message-item">
@@ -19,46 +19,52 @@
           <div class="message-info">
             <h4 class="message-author">
               <a href="#">
-                {{user_name}}
+                {{ user_name }}
               </a>
             </h4>
             <div class="message-date">
               <i class=""></i>
-              <span>{{msg_time}}</span>
+              <span>{{ msg_time }}</span>
             </div>
           </div>
 
           <div class="message-content">
             <p>
-              {{text}}
+              {{ text }}
             </p>
           {{#if img}}
             <a href="#" class="openImage">
-              <img src="{{img}}" width="100%" />
+              <img src="{{ img }}" width="100%" />
             </a>
             <div class="hideImage">
-              <img src="{{img}}" width="100%" />
+              <img src="{{ img }}" width="100%" />
 
               <a href="#" class="closeHideImage">
                 <i class="icon-cancel-3"></i>
               </a>
 
             </div>
-           {{/if}}
+          {{/if}}
           </div>
 
-          <!-- <div class="message-actions">
-            <span class="message-edit">
-              <i class="icon-edit"></i>
-            </span>
-            <span class="message-cancel" data-action="showCancel">
-              <i class="icon-cancel-3"></i>
-            </span>
+          {{#if user_edit}}
+            <div class="message-actions">
 
-          </div> -->
+              <input type="text" name="edit_id" id="edit_id" value="{{ _id }}" style="display:none" />
+              <input type="text" name="edit_text" id="edit_text" value="{{ text }}" style="display:none" />
+              <input type="text" name="edit_img" id="edit_img" value="{{ img }}" style="display:none" />
+
+              <span class="message-edit" data-action="showEdit">
+                <i class="icon-edit"></i>
+              </span>
+              <span class="message-cancel" data-action="showCancel">
+                <i class="icon-cancel-3"></i>
+              </span>
+            </div> 
+          {{/if}}
 
         </div>
-        {{else}}
+      {{else}}
         {{> notFoundTimelineTelevision}}
       {{/if}}
     {{/each}}

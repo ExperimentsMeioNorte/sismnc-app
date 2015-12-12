@@ -19,6 +19,7 @@ Template.index.helpers({
                     localStorage.getItem('Meteor.userServerId')
                 ],
                 function(error, result){
+                    IonPopup.close();
                     if(!result){
                         toastr.info(
                           error,
@@ -30,6 +31,7 @@ Template.index.helpers({
                           }
                         );
                     }else{
+
                         toastr.info(
                           result,
                           '',
@@ -52,6 +54,7 @@ Template.index.helpers({
                   localStorage.getItem('Meteor.userServerId')
               ],
               function(error, result){
+                  IonPopup.close();
                   if(!result){
                       toastr.info(
                         error,
