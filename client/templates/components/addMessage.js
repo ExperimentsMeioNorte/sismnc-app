@@ -238,7 +238,7 @@ Template.addMessage.events({
                 ],
                 function(error, result){
                     if(!error){
-
+                        Session.set('messageEditId', null);
                         // remove o foco
                         document.querySelector('#message').blur();
 
