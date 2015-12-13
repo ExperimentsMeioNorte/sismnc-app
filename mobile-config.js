@@ -13,6 +13,7 @@ App.icons({
   // iOS
   'iphone': 'public/icons/ios/Icon-60.png',
   'iphone_2x': 'public/icons/ios/AppIcon.appiconset/Icon-60@2x.png',
+  'iphone_3x': 'public/icons/ios/AppIcon.appiconset/Icon-60@3x.png',
 
   // Android
   'android_ldpi': 'public/icons/android/drawable-ldpi/ic_launcher.png',
@@ -25,13 +26,11 @@ App.icons({
 App.launchScreens({
 
   // iOS
-  // 'iphone': 'public/images/splash/splash-320x480.png',
-  // 'iphone_2x': 'public/images/splash/splash-320x480@2x.png',
-  // 'iphone5': 'public/images/splash/splash-320x568@2x.png',
-  // 'ipad_portrait': 'public/images/splash/splash-768x1024.png',
-  // 'ipad_portrait_2x': 'public/images/splash/splash-768x1024@2x.png',
-  // 'ipad_landscape': 'public/images/splash/splash-1024x768.png',
-  // 'ipad_landscape_2x': 'public/images/splash/splash-1024x768@2x.png',
+  'iphone': 'public/splash/ios/splash-320x480.png',
+  'iphone_2x': 'public/splash/ios/splash-320x480.png',
+  'iphone5': 'public/splash/ios/splash-320x568.png',
+  'iphone6': 'public/splash/ios/splash-375x667.png',
+  'iphone6p_portrait': 'public/splash/ios/splash-414x736.png',
 
   // Android
   'android_ldpi_portrait': 'public/splash/android/drawable-ldpi/screen.png',
