@@ -10,6 +10,7 @@ Template.authentication.rendered = function(){
 // Ao sair
 Template.authentication.destroyed = function(){
   document.querySelector('body').classList.remove('authentication-page');
+  IonLoading.hide();
 };
 
 Template.authentication.events({

@@ -15,16 +15,7 @@ Template.layout.events({
   'tap [data-activate="logout"]' : function(){
     IonPopup.show({
       title: 'Deseja sair',
-      subTitle: 'Tem certeza que deseja desconectar da sua conta?',
       buttons: [
-
-        {
-          text: 'Cancelar',
-          type: 'button-cancel',
-          onTap: function() {
-            IonPopup.close();
-          }
-        },
         {
           text: 'Sair',
           type: 'button-desconnect',
@@ -32,6 +23,13 @@ Template.layout.events({
             Meteor.logout();
             localStorage.clear();
             Router.go('authentication');
+            IonPopup.close();
+          }
+        },
+         {
+          text: 'Cancelar',
+          type: 'button-cancel',
+          onTap: function() {
             IonPopup.close();
           }
         }
