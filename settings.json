@@ -7,26 +7,22 @@
         }
     },
     "public": {
-        "ga": {
-            "id": "UA-39880188-4"
-        },
         "facebook": {
             "permissions": [
                 "public_profile",
                 "user_interests",
                 "user_activities",
-                "user_photos",
-                "read_friendlists",
-                "user_friends",
-                "email"
+                "read_friendlists"
             ],
             "profileFields": [
-                "id",
                 "name",
                 "gender",
                 "location",
                 "email"
             ]
         }
+    },
+    "ga": {
+        "id": "UA-39880188-4"
     }
 }
