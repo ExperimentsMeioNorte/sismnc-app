@@ -13,21 +13,19 @@ var facebook = {
 Meteor.startup(function() {
 
     // Google
-    Accounts.loginServiceConfiguration.remove({
+    ServiceConfiguration.configurations.remove({
       service: "google"
     });
-    Accounts.loginServiceConfiguration.insert({
+    ServiceConfiguration.configurations.insert({
       service: "google",
       clientId: google.clientId,
-      secret: google.clientSecret,
-      loginStyle: "redirect",
-      redirectUrl: "/"
+      secret: google.clientSecret
     });
 
-    Accounts.loginServiceConfiguration.remove({
+    ServiceConfiguration.configurations.remove({
       service: "facebook"
     });
-    Accounts.loginServiceConfiguration.insert({
+    ServiceConfiguration.configurations.insert({
       service: "facebook",
       appId: facebook.appId,
       secret: facebook.appSecret,

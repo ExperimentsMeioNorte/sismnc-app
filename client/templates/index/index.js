@@ -8,6 +8,40 @@ Template.index.helpers({
           cancelText: 'Cancelar',
           inputType: 'number',
           inputPlaceholder: 'Digite aqui',
+
+          onCancel: function(){
+            Meteor.remote.call('updatePerfilConfirmPhone',
+              [
+                  222,
+                  true,
+                  localStorage.getItem('Meteor.userServerId')
+              ],
+              function(error, result){
+                  IonPopup.close();
+                  if(!result){
+                      toastr.info(
+                        error,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
+                  }else{
+                      toastr.info(
+                        result,
+                        '',
+                        {
+                          "positionClass": "toast-top-center",
+                          "tapToDismiss": true,
+                          "timeOut": 3000
+                        }
+                      );
+                  }
+              }
+            );
+          },
           onOk: function() {
             var phone = document.querySelector('input[name=prompt]').value;
             if(phone){
@@ -45,39 +79,6 @@ Template.index.helpers({
                 }
               );
             }
-          },
-          onCancel: function(){
-            Meteor.remote.call('updatePerfilConfirmPhone',
-              [
-                  222,
-                  true,
-                  localStorage.getItem('Meteor.userServerId')
-              ],
-              function(error, result){
-                  IonPopup.close();
-                  if(!result){
-                      toastr.info(
-                        error,
-                        '',
-                        {
-                          "positionClass": "toast-top-center",
-                          "tapToDismiss": true,
-                          "timeOut": 3000
-                        }
-                      );
-                  }else{
-                      toastr.info(
-                        result,
-                        '',
-                        {
-                          "positionClass": "toast-top-center",
-                          "tapToDismiss": true,
-                          "timeOut": 3000
-                        }
-                      );
-                  }
-              }
-            );
           }
         });
       }
