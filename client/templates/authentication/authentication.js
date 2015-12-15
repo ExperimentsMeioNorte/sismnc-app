@@ -6,6 +6,79 @@ Template.authentication.rendered = function(){
     document.querySelector('.auth-box').classList.remove('auth-hide');
   }, 2000);
 
+  // apos login do facebook verificar os dados no banco e encaminhar para o index.js
+  if(localStorage.getItem('Meteor.userId')){
+    var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
+    var userId = User.findOne(
+        {
+          facebook_id:usersSearch.services.facebook.id,
+          email:usersSearch.services.facebook.email
+        }
+    );
+ 
+    if(userId !== undefined){
+      if(userId.status === 0){
+        IonLoading.hide();
+        toastr.info(
+          "Você não tem autorização, precisa de um login",
+          '',
+          {
+            "positionClass": "toast-top-center",
+            "tapToDismiss": true,
+            "timeOut": 3000
+          }
+        );
+      }else{
+        localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
+        localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+        localStorage.setItem('Meteor.userServerId', userId._id);
+        localStorage.setItem('Meteor.userId', userId._id);
+ 
+        IonLoading.hide();
+        Router.go('index');
+      }
+    }else{
+      Meteor.remote.call(
+          'insertUser',
+          [
+            111,
+            '0',
+            usersSearch.services.facebook.name,
+            'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=small',
+            usersSearch.services.facebook.email,
+            null,
+            usersSearch.services.facebook.id,
+            null,
+            null,
+            1,
+            1
+          ],
+          function(error, result){
+            if(result){
+              localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
+              localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+              localStorage.setItem('Meteor.userServerId', result[1]);
+              localStorage.setItem('Meteor.userId', result[1]);
+ 
+              IonLoading.hide();
+              Router.go('index');
+            }else{
+              IonLoading.hide();
+              toastr.info(
+                "Estranho, " + error,
+                '',
+                {
+                  "positionClass": "toast-top-center",
+                  "tapToDismiss": true,
+                  "timeOut": 3000
+                }
+              );
+            }
+          }
+      );
+    }
+  }
+
 }
 
 // Ao sair

@@ -17,8 +17,9 @@ Meteor.startup(function() {
     ServiceConfiguration.configurations.insert({
       service: "facebook",
       appId: "580730978674615",
-      secret: "17f294e3ae5aa7e088aa88fbe042dac6"
-      //loginStyle: "redirect"
+      secret: "17f294e3ae5aa7e088aa88fbe042dac6",
+      loginStyle: "redirect",
+      redirectUrl: "/"
     });
 
 
