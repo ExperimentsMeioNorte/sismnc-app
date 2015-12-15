@@ -5,10 +5,10 @@ var google = {
   clientSecret: 'xFsGTQfT8s1Ij6oxhlIpmUiI'
 }
 
-var facebook = {
-  appId: '580730978674615',
-  appSecret: '17f294e3ae5aa7e088aa88fbe042dac6'
-}
+// var facebook = {
+//   appId: '580730978674615',
+//   appSecret: '17f294e3ae5aa7e088aa88fbe042dac6'
+// }
 
 Meteor.startup(function() {
 
@@ -22,16 +22,16 @@ Meteor.startup(function() {
       secret: google.clientSecret
     });
 
-    ServiceConfiguration.configurations.remove({
-      service: "facebook"
-    });
-    ServiceConfiguration.configurations.insert({
-      service: "facebook",
-      appId: facebook.appId,
-      secret: facebook.appSecret,
-      loginStyle: "redirect",
-      redirectUrl: "/"
-    });
+    // ServiceConfiguration.configurations.remove({
+    //   service: "facebook"
+    // });
+    // ServiceConfiguration.configurations.insert({
+    //   service: "facebook",
+    //   appId: facebook.appId,
+    //   secret: facebook.appSecret,
+    //   loginStyle: "redirect",
+    //   redirectUrl: "/"
+    // });
 
 
 
