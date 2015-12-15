@@ -9,7 +9,6 @@ zimme:iron-router-active
 meteoric:ionic-sass@0.3.0
 meteoric:ionicons-sass@0.1.7
 meteoric:ionic@0.1.19
-meteorhacks:kadira
 accounts-ui-unstyled
 service-configuration
 accounts-base
@@ -28,4 +27,5 @@ jparker:crypto-md5
 
 jimbog:tap
 reywood:iron-router-ga
+accounts-ui
 particle4dev:cordova-fb

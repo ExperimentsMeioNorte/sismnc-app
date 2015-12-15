@@ -48,6 +48,8 @@ App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('Orientation', 'portrait');
+App.setPreference("SplashScreen", "screen");
+App.setPreference("SplashScreenDelay", "10000");
 
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {

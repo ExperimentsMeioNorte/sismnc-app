@@ -25,18 +25,8 @@
                 "name",
                 "gender",
                 "location",
-                "email",
-                "first_name",
-                "last_name",
-                "link",
-                "username",
-                "locale",
-                "age_range"
+                "email"
             ]
         }
-    },
-    "kadira": {
-        "appId": "Ek7zcnZ3Au8jDdBrM",
-        "appSecret": "05e821e3-7a67-46cb-8b12-accc96e3696c"
     }
 }
