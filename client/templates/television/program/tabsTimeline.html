@@ -32,19 +32,11 @@
             <p>
               {{ text }}
             </p>
+
           {{#if img}}
-            <a href="#" class="openImage">
-              <img src="{{ img }}" width="100%" />
-            </a>
-            <div class="hideImage">
-              <img src="{{ img }}" width="100%" />
-
-              <a href="#" class="closeHideImage">
-                <i class="icon-cancel-3"></i>
-              </a>
-
-            </div>
+            <img src="{{ img }}" width="100%" />
           {{/if}}
+
           </div>
 
           {{#if user_edit}}
@@ -60,7 +52,7 @@
               <span class="message-cancel" data-action="showCancel">
                 <i class="icon-cancel-3"></i>
               </span>
-            </div> 
+            </div>
           {{/if}}
 
         </div>

@@ -9,7 +9,6 @@ Template.tabsTimelineTelevision.rendered = function(){
 
 Template.tabsTimelineTelevision.destroyed = function(){
   document.querySelector('.scroll-content').classList.remove('has-tab-program');
-  document.querySelector('body').classList.remove('show-hide-image');
 }
 
 Template.tabsTimelineTelevision.helpers({
