@@ -107,6 +107,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#566ca0', end
 
   .message-item {
     margin-bottom:3rem;
+    .message-actions {
+      display: table;
+      margin-top:10px;
+      position: relative;
+      float: right;
+      .message-cancel {
+        color:#DD4B39;
+      }
+      .message-edit {}
+
+      span {
+        color:#999;font-size:16px;float:left;
+      }
+    }
     figure {
       margin:0;float:left;
       img {

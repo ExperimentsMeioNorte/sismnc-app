@@ -18,6 +18,7 @@ accounts-base
 accounts-google
 accounts-password
 particle4dev:cordova-fb
+oauth2
 
 meteorhacks:fast-render
 chrismbeckett:toastr
@@ -31,5 +32,3 @@ fourseven:scss
 jparker:crypto-md5
 jimbog:tap
 reywood:iron-router-ga
-
-
