@@ -3,23 +3,50 @@
     {{#if info}}
       {{#each info}}
         <div class="info-program">
-          <div class="row">
-            <div  class="col">
-              <small>DIA(S)</small>
-              <strong id="programDias" class="truncate">
-                {{ day_monday }} - {{ day_tuesday }} - {{ day_wednesday }} - {{ day_thursday }} - {{ day_friday }} - {{ day_saturday }} - {{ day_sunday }}
-              </strong>
+          <div class="fullItem">
+            <div  class="item item-data">
+              <small class="itemTitle">DIA(S)</small>
+              <div id="programDias" class="itemElement truncate">
+                <span>
+                  <i class="ion-ios-close-empty"></i>
+                  <strong>{{ day_monday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-close-empty"></i>
+                  <strong>{{ day_tuesday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-close-empty"></i>
+                  <strong>{{ day_wednesday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-checkmark-empty"></i>
+                  <strong>{{ day_thursday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-checkmark-empty"></i>
+                  <strong>{{ day_friday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-checkmark-empty"></i>
+                  <strong>{{ day_saturday }}</strong>
+                </span>
+                <span>
+                  <i class="ion-ios-checkmark-empty"></i>
+                  <strong>{{ day_sunday }}</strong>
+                </span>
+              </div>
             </div>
-            <div class="col">
-              <small>HORÁRIO</small>
-              <strong class="truncate">
+            <div class="item">
+              <small class="itemTitle">HORÁRIO</small>
+              <div class="itemElement truncate">
                 <span id="programHoraInicial">
                   {{ hour_begin }}
                 </span> às
                 <span id="programHoraFinal">
                   {{ hour_end }}
                 </span>
-              </strong>
+              </div>
             </div>
           </div>
           <p class="program-description">

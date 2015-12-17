@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.53',
+  version: '0.1.54',
   author: 'Agência Getup!',
   email: 'alexandesigner@gmail.com',
   website: 'http://app.sistemameionorte.com.br'
@@ -26,11 +26,11 @@ App.icons({
 App.launchScreens({
 
   // iOS
-  'iphone': 'public/splash/ios/splash-320x480.png',
-  'iphone_2x': 'public/splash/ios/splash-320x480.png',
-  'iphone5': 'public/splash/ios/splash-320x568.png',
-  'iphone6': 'public/splash/ios/splash-375x667.png',
-  'iphone6p_portrait': 'public/splash/ios/splash-414x736.png',
+  'iphone': 'public/splash/ios/iphone.png',
+  'iphone_2x': 'public/splash/ios/iphone_2x.png',
+  'iphone5': 'public/splash/ios/iphone5.png',
+  'iphone6': 'public/splash/ios/iphone6.png',
+  'iphone6p_portrait': 'public/splash/ios/iphone6p_portrait.png',
 
   // Android
   'android_ldpi_portrait': 'public/splash/android/drawable-ldpi/screen.png',
@@ -44,7 +44,7 @@ App.launchScreens({
 });
 
 App.setPreference('BackgroundColor', '0xffffffff');
-App.setPreference('HideKeyboardFormAccessoryBar', true);
+//App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('Orientation', 'portrait');
