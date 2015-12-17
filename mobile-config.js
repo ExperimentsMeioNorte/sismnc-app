@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.53',
+  version: '0.1.54',
   author: 'Agência Getup!',
   email: 'alexandesigner@gmail.com',
   website: 'http://app.sistemameionorte.com.br'
@@ -11,9 +11,9 @@ App.info({
 App.icons({
 
   // iOS
-  'iphone': 'public/icons/ios/Icon-60.png',
+  /*'iphone': 'public/icons/ios/Icon-60.png',
   'iphone_2x': 'public/icons/ios/AppIcon.appiconset/Icon-60@2x.png',
-  'iphone_3x': 'public/icons/ios/AppIcon.appiconset/Icon-60@3x.png',
+  'iphone_3x': 'public/icons/ios/AppIcon.appiconset/Icon-60@3x.png',*/
 
   // Android
   'android_ldpi': 'public/icons/android/drawable-ldpi/ic_launcher.png',
@@ -26,11 +26,11 @@ App.icons({
 App.launchScreens({
 
   // iOS
-  'iphone': 'public/splash/ios/splash-320x480.png',
+  /*'iphone': 'public/splash/ios/splash-320x480.png',
   'iphone_2x': 'public/splash/ios/splash-320x480.png',
   'iphone5': 'public/splash/ios/splash-320x568.png',
   'iphone6': 'public/splash/ios/splash-375x667.png',
-  'iphone6p_portrait': 'public/splash/ios/splash-414x736.png',
+  'iphone6p_portrait': 'public/splash/ios/splash-414x736.png',*/
 
   // Android
   'android_ldpi_portrait': 'public/splash/android/drawable-ldpi/screen.png',

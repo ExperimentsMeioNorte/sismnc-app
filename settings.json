@@ -3,7 +3,9 @@
         "com.phonegap.plugins.facebookconnect": {
            "APP_ID": "580730978674615",
            "APP_NAME": "sistemamn",
-           "secret": "17f294e3ae5aa7e088aa88fbe042dac6"
+           "secret": "17f294e3ae5aa7e088aa88fbe042dac6",
+           "loginStyle": "redirect",
+           "redirectUrl": "/"
         }
     },
     "public": {
