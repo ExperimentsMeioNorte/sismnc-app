@@ -1,11 +1,11 @@
 App.info({
   id: 'br.com.app.sistemameionorte',
-  name: 'Meio Norte',
+  name: 'Sistema Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
   version: '0.1.54',
-  author: 'Agência Getup!',
-  email: 'alexandesigner@gmail.com',
-  website: 'http://app.sistemameionorte.com.br'
+  author: 'Getup!',
+  email: 'alissonplus@gmail.com',
+  website: 'http://sistemameionorte.com.br'
 });
 
 App.icons({
@@ -45,7 +45,7 @@ App.launchScreens({
 });
 
 App.setPreference('BackgroundColor', '0xffffffff');
-//App.setPreference('HideKeyboardFormAccessoryBar', true);
+App.setPreference('HideKeyboardFormAccessoryBar', true);
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('Orientation', 'portrait');
