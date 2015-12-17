@@ -3,7 +3,7 @@ App.info({
   name: 'Sistema Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
   version: '0.1.54',
-  author: 'Getup!',
+  author: 'Agência Getup',
   email: 'alissonplus@gmail.com',
   website: 'http://sistemameionorte.com.br'
 });
