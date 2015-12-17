@@ -9,11 +9,17 @@ zimme:iron-router-active
 meteoric:ionic-sass@0.3.0
 meteoric:ionicons-sass@0.1.7
 meteoric:ionic@0.1.19
+
+# login
 accounts-ui-unstyled
 service-configuration
 accounts-base
+#accounts-ui
 accounts-google
 accounts-password
+particle4dev:cordova-fb
+oauth2
+
 meteorhacks:fast-render
 chrismbeckett:toastr
 meteoric:camera
@@ -24,9 +30,5 @@ mrt:modernizr-meteor
 pcel:loading
 fourseven:scss
 jparker:crypto-md5
-
 jimbog:tap
 reywood:iron-router-ga
-accounts-ui
-particle4dev:cordova-fb
-oauth2

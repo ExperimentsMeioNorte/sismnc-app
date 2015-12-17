@@ -32,6 +32,7 @@ App.launchScreens({
   'iphone6': 'public/splash/ios/iphone6.png',
   'iphone6p_portrait': 'public/splash/ios/iphone6p_portrait.png',
 
+
   // Android
   'android_ldpi_portrait': 'public/splash/android/drawable-ldpi/screen.png',
   'android_ldpi_landscape': 'public/splash/android/drawable-land-ldpi/screen.png',
