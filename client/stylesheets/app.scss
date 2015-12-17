@@ -1467,10 +1467,10 @@ img {display:block;}
   .tab-item {
     font-size: 16px!important;width:50%!important;max-width:50%;
     &:active {
-      background:rgba(0,0,0,0.2);
+      background:rgba(0,0,0,0.1);
     }
     .active, .activated {
-      background:rgba(0,0,0,0.2);
+      background:rgba(0,0,0,0.1);
     }
   }
 }

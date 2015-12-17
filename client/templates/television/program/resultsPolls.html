@@ -8,8 +8,10 @@
 
     {{#each answersResult}}
     <div class="polls-answers-item {{ voto }}">
-      <strong>{{porcent}}%</strong>
-      <span>{{description}}</span>
+      <span class="description">{{description}}</span>
+      <small class="percent" style="width:{{porcent}}%">
+        <span>{{porcent}}%</span>
+      </small>
     </div>
     {{/each}}
   </div>

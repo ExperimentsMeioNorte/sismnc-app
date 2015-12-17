@@ -2,9 +2,6 @@
   {{> _tabsHeaderTelevision }}
 
   {{#ionContent class="polls-content padding"}}
-    <div class="polls-answers">
-
-    </div>
    <div class="polls-answers">
 
     {{#each pollActive}}
@@ -18,6 +15,9 @@
       <div class="polls-answers-item">
         <input class="radio" name="answer" type="radio" id="{{ _id }}" value="{{ _id }}"/>
         <label for="{{ _id }}">{{ description }}</label>
+        <small class="percent" style="width:{{porcent}}%">
+          <span>{{porcent}}%</span>
+        </small>
       </div>
     {{/each}}
     {{#if pollActive}}
