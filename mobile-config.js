@@ -52,6 +52,7 @@ App.setPreference('Orientation', 'portrait');
 App.setPreference("SplashScreen", "screen");
 App.setPreference("SplashScreenDelay", "10000");
 
+
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {
      APP_ID: '580730978674615',
@@ -59,7 +60,8 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 });
 
 // regras de acesso cross origen
-App.accessRule("*");
+App.accessRule("*", {launchExternal: true});
 App.accessRule('*.google-analytics.com/*');
 App.accessRule("*://*.meteor.com/*");
+App.accessRule("http://admin.sistemameionorte.com.br");
 //App.accessRule("*://localhost:3010/*");
