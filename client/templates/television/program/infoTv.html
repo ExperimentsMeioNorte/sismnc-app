@@ -8,32 +8,67 @@
               <small class="itemTitle">DIA(S)</small>
               <div id="programDias" class="itemElement truncate">
                 <span>
-                  <i class="ion-ios-close-empty"></i>
-                  <strong>{{ day_monday }}</strong>
+                  {{#if day_monday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>seg</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>seg</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-close-empty"></i>
-                  <strong>{{ day_tuesday }}</strong>
+                  {{#if day_tuesday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>ter</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>ter</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-close-empty"></i>
-                  <strong>{{ day_wednesday }}</strong>
+                  {{#if day_wednesday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>qua</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>qua</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-checkmark-empty"></i>
-                  <strong>{{ day_thursday }}</strong>
+                  {{#if day_thursday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>qui</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>qui</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-checkmark-empty"></i>
-                  <strong>{{ day_friday }}</strong>
+                  {{#if day_friday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>sex</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>sex</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-checkmark-empty"></i>
-                  <strong>{{ day_saturday }}</strong>
+                  {{#if day_saturday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>sab</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>sab</strong>
+                  {{/if}}
                 </span>
                 <span>
-                  <i class="ion-ios-checkmark-empty"></i>
-                  <strong>{{ day_sunday }}</strong>
+                  {{#if day_sunday}}
+                    <i class="ion-ios-checkmark-empty"></i>
+                    <strong>dom</strong>
+                  {{else}}
+                    <i class="ion-ios-close-empty"></i>
+                    <strong>dom</strong>
+                  {{/if}}
                 </span>
               </div>
             </div>
