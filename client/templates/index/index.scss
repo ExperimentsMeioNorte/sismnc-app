@@ -34,7 +34,7 @@
   }
 
   .scroll-content .content {
-    width:100%;height:100%;top:200px;
+    width:100%;height:100%;top:200px!important;
   }
 
   .box-index {
@@ -84,7 +84,7 @@
       }
     }
     .content {
-      top:80px;
+      top:80px!important;
       .item {
         color:#999;border-color:#e5e5e5;font-size:16px;font-weight:500;
       }

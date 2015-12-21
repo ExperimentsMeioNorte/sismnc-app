@@ -18,7 +18,7 @@
 
 
   .television-programs {
-    top:191px;
+    top:191px!important;
     .section-program {
       strong {
         width: 100%;
@@ -52,7 +52,7 @@
 
   .tabs-television {
     // .tabs{top:44px;background:#fff;border-bottom:0 none!important;}
-    .tabs{top:234px;background:#fff;border-bottom:0 none!important;}
+    .tabs{top:234px!important;background:#fff;border-bottom:0 none!important;}
   }
 
   .has-tab-program {
@@ -139,6 +139,9 @@
     text-align:center;
     .fullItem {
       width:100%;
+      .mute {
+        opacity:0.4;
+      }
       .item-data {
         span {
           margin: 0 3px;
@@ -146,7 +149,7 @@
           display: inline-block;
         }
         i {
-          font-size:30px;float:left;margin-right:5px;
+          font-size:18px;float:left;margin-right:5px;
         }
         strong {
           float:left;font-size:12px;
@@ -225,6 +228,7 @@
         position: absolute;
         left: 0;
         bottom: -15px;
+            min-width: 8%;
 
 
         span {
@@ -318,14 +322,15 @@
     }
 
     .polls-answers-item {
-      margin-bottom:35px;display:block;position:relative;padding:3px 5px 0 0;
+      margin-bottom:45px;display:block;position:relative;padding:3px 5px 0 0;
 
       .percent {
         height: 2px;
         background: #5796b5;
         position: absolute;
         left: 0;
-        bottom: -15px;
+        bottom: -20px;
+            min-width: 8%;
 
         span {
           color: #5796b5;
@@ -372,7 +377,7 @@
   margin:0;
   float:left;
   position: fixed;
-  top: 44px;
+  top: 44px!important;
   padding: 5px;
   background:rgba(0,0,0,0.80);
   z-index: 9990;
