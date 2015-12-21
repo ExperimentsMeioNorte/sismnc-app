@@ -50,7 +50,7 @@ App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('Orientation', 'portrait');
 App.setPreference("SplashScreen", "screen");
-App.setPreference("SplashScreenDelay", "10000");
+App.setPreference("SplashScreenDelay", "1000");
 
 
 // cordova plugin facebook
@@ -60,9 +60,9 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 });
 
 // regras de acesso cross origen
-App.accessRule("*", {launchExternal: true});
+App.accessRule("*");
 App.accessRule('*.google-analytics.com/*');
 App.accessRule("*://*.meteor.com/*");
-App.accessRule("*://*.sistemameionorte.com.br/*");
-App.accessRule("*://*.meionorte.com/*");
-//App.accessRule("*://localhost:3010/*");
+App.accessRule("http://admin.sistemameionorte.com.br/");
+App.accessRule("http://meionorte.com/");
+App.accessRule("http://jornal.meionorte.com/");
