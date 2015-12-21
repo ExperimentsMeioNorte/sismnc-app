@@ -1,3 +1,11 @@
+// Regras de acesso cross origen
+App.accessRule("http://meteor.local");
+App.accessRule('http://sistemameionorte.com.br');
+App.accessRule('http://*.sistemameionorte.com.br');
+App.accessRule('http://meionorte.com');
+App.accessRule('http://*.meionorte.com');
+App.accessRule('*.google-analytics.com/*');
+
 App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
@@ -52,17 +60,8 @@ App.setPreference('Orientation', 'portrait');
 App.setPreference("SplashScreen", "screen");
 App.setPreference("SplashScreenDelay", "1000");
 
-
 // cordova plugin facebook
 App.configurePlugin('com.phonegap.plugins.facebookconnect', {
      APP_ID: '580730978674615',
      APP_NAME: 'sistemamn'
 });
-
-// regras de acesso cross origen
-App.accessRule("*");
-App.accessRule('*.google-analytics.com/*');
-App.accessRule("*://*.meteor.com/*");
-App.accessRule("http://admin.sistemameionorte.com.br/");
-App.accessRule("http://meionorte.com/");
-App.accessRule("http://jornal.meionorte.com/");
