@@ -71,9 +71,9 @@
       .item-avatar {
         padding-left:82px!important;
         img {
-          width: 60px!important;
+          width: 52px!important;
           top: 10px!important;
-          height: 60px!important;
+          height: 52px!important;
         }
         strong {
           margin-top:10px;float:left;color:#212121;
@@ -86,7 +86,7 @@
     .content {
       top:80px!important;
       .item {
-        color:#999;border-color:#e5e5e5;font-size:16px;font-weight:500;
+        color:#999;border-color:#e5e5e5;font-size:16px;font-weight:500;border-bottom:0!important;
       }
     }
     .item-logout {
