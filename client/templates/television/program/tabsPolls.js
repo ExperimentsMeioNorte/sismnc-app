@@ -169,7 +169,6 @@ Template.tabsPollsTelevision.events({
                         IonLoading.hide();
                         document.querySelector('.radio').disabled = true;
                         document.querySelector('#poll-answers-footer').style.display = 'none';
-
                     }
                 }
             );
