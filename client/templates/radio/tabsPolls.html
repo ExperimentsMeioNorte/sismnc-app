@@ -14,11 +14,14 @@
 
     {{#each answersActive}}
       <div class="polls-answers-item">
-        <input name="answer" type="radio" id="{{ _id }}" value="{{ _id }}"/>
+        <input class="radio" name="answer" type="radio" id="{{ _id }}" value="{{ _id }}" {{ voto }}/>
         <label for="{{ _id }}">{{ description }}</label>
+        <small class="percent" style="width:{{porcent}}%">
+          <span>{{porcent}}%</span>
+        </small>
       </div>
     {{/each}}
-    {{#if pollActive}}
+
     <div class="poll-answers-footer">
 
        <button class="btn btn-answer">
@@ -26,10 +29,8 @@
        </button>
 
     </div>
-    {{/if}}
 
   </div>
-    {{> resultsPollsRadio }}
     {{> notFoundPollsRadio }}
   {{/ionContent}}
 

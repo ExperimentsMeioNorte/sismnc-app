@@ -41,7 +41,7 @@ Template.tabsPollsRadio.helpers({
           {
               status: 1,
               poll_id: poll[0]._id,
-              user_id: localStorage.getItem('Meteor.userServeId')
+              user_id: localStorage.getItem('Meteor.userServerId')
           }).map(
             function(pu){
               return {
@@ -50,22 +50,27 @@ Template.tabsPollsRadio.helpers({
             }
           );
 
-          if((pollUser && pollUser[0] !== undefined)
-            && (document.querySelector('.polls-answers') !== null
-            && document.querySelector('.results-question') !== null)){
-            document.querySelector('.polls-answers').classList.add('hide');
-            document.querySelector('.results-question').classList.remove('hide');
+          if((pollUser && pollUser[0] !== undefined)){
+            //&& (document.querySelector('.polls-answers') !== null
+            //&& document.querySelector('.results-question') !== null)){
+            document.querySelector('.poll-answers-footer').style.display = 'none';
+            var radioButtonArray = document.getElementsByClassName('radio');
+            for(var i = 0; i < radioButtonArray.length; i++){
+              radioButtonArray[i].disabled = true;
+            }  
           }
-        }else if(document.querySelector('.polls-answers') !== null
+        }/*else if(document.querySelector('.polls-answers') !== null
             && document.querySelector('.message-feedback') !== null){
-            document.querySelector('.polls-answers').classList.add('hide');
-            document.querySelector('.message-feedback').classList.remove('hide');
-        }
+            //document.querySelector('.polls-answers').classList.add('hide');
+           // document.querySelector('.message-feedback').classList.remove('hide');
+        }*/
 
         return poll;
     },
   // mostra as respostas
   answersActive: function(){
+    var anwersPorcent = Meteor.anwersResult();
+    
     var poll = Poll.find(
       {
         status: 1,
@@ -89,9 +94,22 @@ Template.tabsPollsRadio.helpers({
         }
       ).map(
         function(a){
+          var porcentValidate = 0;
+          var voto = '';
+          if(anwersPorcent){
+            for(var x in anwersPorcent){
+              if(anwersPorcent[x]['_id'] === a._id){
+                porcentValidate = anwersPorcent[x]['porcent'];
+                voto = anwersPorcent[x]['voto'];
+              } 
+            }
+          }
+
           return {
             _id: a._id,
-            description: a.description
+            description: a.description,
+            porcent: porcentValidate,
+            voto: voto
           }
         }
       );
@@ -122,7 +140,7 @@ Template.tabsPollsRadio.events({
                     111,
                     document.querySelector('#poll_id').value,
                     document.querySelector('input[name="answer"]:checked').value,
-                    localStorage.getItem('Meteor.userServeId')
+                    localStorage.getItem('Meteor.userServerId')
                 ],
                 function(error, result){
                     if(!result){
@@ -147,8 +165,8 @@ Template.tabsPollsRadio.events({
                         );
 
                         IonLoading.hide();
-                        document.querySelector('.polls-answers').classList.add('hide');
-                        document.querySelector('.results-question').classList.remove('hide');
+                        document.querySelector('.radio').disabled = true;
+                        document.querySelector('#poll-answers-footer').style.display = 'none';
                     }
                 }
             );

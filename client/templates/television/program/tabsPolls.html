@@ -2,6 +2,7 @@
   {{> _tabsHeaderTelevision }}
 
   {{#ionContent class="polls-content padding"}}
+  
    <div class="polls-answers">
 
     {{#each pollActive}}
@@ -13,24 +14,22 @@
 
     {{#each answersActive}}
       <div class="polls-answers-item">
-        <input class="radio" name="answer" type="radio" id="{{ _id }}" value="{{ _id }}"/>
+        <input class="radio" name="answer" type="radio" id="{{ _id }}" value="{{ _id }}" {{ voto }} />
         <label for="{{ _id }}">{{ description }}</label>
         <small class="percent" style="width:{{porcent}}%">
           <span>{{porcent}}%</span>
         </small>
       </div>
     {{/each}}
-    {{#if pollActive}}
-    <div class="poll-answers-footer">
 
-       <button class="btn btn-answer">
-       {{> ionIcon icon='android-checkmark-circle'}}
-       </button>
+      <div class="poll-answers-footer">
 
-    </div>
-    {{/if}}
+         <button class="btn btn-answer">
+         {{> ionIcon icon='android-checkmark-circle'}}
+         </button>
+
+      </div>
   </div>
-  {{> resultsPollsTelevision }}
   {{> notFoundPollsTelevision }}
 
   {{/ionContent}}
