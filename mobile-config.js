@@ -63,8 +63,10 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 // App.accessRule("*://meteor.local");
 // App.accessRule("*");
 App.accessRule("*.meteor.com/*");
-App.accessRule("http://meteor.local/*");
+App.accessRule("http://meteor.local");
 App.accessRule('*.google-analytics.com/*');
 App.accessRule("*://*.sistemameionorte.com.br/*");
+App.accessRule("*://*.kadira.io/*");
+App.accessRule("*://new.livestream.com/*");
 // App.accessRule("localhost:3000");
 // App.accessRule("*://localhost:3000/*");
