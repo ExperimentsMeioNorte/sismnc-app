@@ -1433,8 +1433,8 @@ img {display:block;}
 }
 
 .spinner {
-  stroke: #2d2d2d;
-  fill: #666;
+  stroke: #2d2d2d!important;
+  fill: #666!important;
 }
 
 .backdrop {
@@ -2394,7 +2394,7 @@ button.toast-close-button {
 
 .portal-page {
   .button {
-    min-width:47px!important;
+    min-width:42px!important;
   }
 }
 
