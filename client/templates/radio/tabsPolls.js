@@ -49,7 +49,7 @@ Template.tabsPollsRadio.helpers({
               }
             }
           );
-          
+
           // verifica se a enquete atual que está ativa ja foi respondida
           if((pollUser && pollUser[0] !== undefined)){
             document.querySelector('.message-feedback').classList.add('hide');
@@ -61,6 +61,7 @@ Template.tabsPollsRadio.helpers({
           }
         }else{
           document.querySelector('.message-feedback').classList.remove('hide');
+          document.querySelector('.poll-answers-footer').style.display = 'none';
         }
 
         return poll;
@@ -153,7 +154,7 @@ Template.tabsPollsRadio.events({
                         );
                     }else{
                         toastr.info(
-                          result,
+                          'Oba, enquete respondida.',
                           '',
                           {
                             "positionClass": "toast-top-center",

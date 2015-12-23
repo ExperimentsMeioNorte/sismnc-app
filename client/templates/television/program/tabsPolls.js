@@ -54,6 +54,7 @@ Template.tabsPollsTelevision.helpers({
           }
         }else{
           document.querySelector('.message-feedback').classList.remove('hide');
+          document.querySelector('.poll-answers-footer').style.display = 'none';
         }
 
         return poll;
@@ -147,7 +148,7 @@ Template.tabsPollsTelevision.events({
                         );
                     }else{
                         toastr.info(
-                          result,
+                          'Oba, enquete respondida.',
                           '',
                           {
                             "positionClass": "toast-top-center",
