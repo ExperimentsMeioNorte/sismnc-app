@@ -50,11 +50,11 @@ Template.tabsPollsTelevision.helpers({
             var radioButtonArray = document.getElementsByClassName('radio');
             for(var i = 0; i < radioButtonArray.length; i++){
               radioButtonArray[i].disabled = true;
-            }  
+            }
           }
         }else{
           document.querySelector('.message-feedback').classList.remove('hide');
-          document.querySelector('.poll-answers-footer').style.display = 'none';
+          //document.querySelector('.poll-answers-footer').style.display = 'none';
         }
 
         return poll;
@@ -93,7 +93,7 @@ Template.tabsPollsTelevision.helpers({
               if(anwersPorcent[x]['_id'] === a._id){
                 porcentValidate = anwersPorcent[x]['porcent'];
                 voto = anwersPorcent[x]['voto'];
-              } 
+              }
             }
           }
 
