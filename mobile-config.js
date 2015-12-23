@@ -2,7 +2,7 @@ App.info({
   id: 'br.com.app.sistemameionorte',
   name: 'Meio Norte',
   description: 'Aplicativo Interativo Sistema Meio Norte de Comunicação',
-  version: '0.1.58',
+  version: '0.1.59',
   author: 'Agência Getup',
   email: 'alissonplus@gmail.com',
   website: 'http://sistemameionorte.com.br'
@@ -62,7 +62,7 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 // regras de acesso cross origen
 //App.accessRule("*", {launchExternal: true});
 // App.accessRule("*://meteor.local");
-App.accessRule("tel://*", {launchExternal: true});
+App.accessRule("*", {launchExternal: true});
 App.accessRule("*.meteor.com/*");
 App.accessRule("*://meteor.local/*");
 App.accessRule('*.google-analytics.com/*');
