@@ -7,8 +7,8 @@ Meteor.startup(function() {
     });
     ServiceConfiguration.configurations.insert({
       service: "google",
-      clientId: google.clientId,
-      secret: google.clientSecret
+      clientId: Meteor.settings.google.clientId,
+      secret: Meteor.settings.google.clientSecret
     });
 
 
