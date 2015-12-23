@@ -60,10 +60,10 @@ App.configurePlugin('com.phonegap.plugins.facebookconnect', {
 });
 
 // regras de acesso cross origen
-App.accessRule("*", {launchExternal: true});
-App.accessRule('*.google-analytics.com/*');
-App.accessRule("*://meteor.local");
-App.accessRule("*://*.meteor.com");
+//App.accessRule("*", {launchExternal: true});
+// App.accessRule("*://meteor.local");
+// App.accessRule("*://*.meteor.com");
+App.accessRule('*://*.google-analytics.com/*');
 App.accessRule("http://admin.sistemameionorte.com.br");
 App.accessRule("*://admin.sistemameionorte.com.br/*");
 App.accessRule("http://localhost:3000");
