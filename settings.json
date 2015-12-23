@@ -8,6 +8,10 @@
            "redirectUrl": "/"
         }
     },
+    "google": {
+        "clientId": "89878768792-horg1beja8ai32j24bg6k532ce2bhi5p.apps.googleusercontent.com",
+        "clientSecret": "xFsGTQfT8s1Ij6oxhlIpmUiI"
+    },
     "public": {
         "facebook": {
             "permissions": [
@@ -24,5 +28,9 @@
     },
     "ga": {
         "id": "UA-39880188-4"
+    },
+    "kadira": {
+        "appId": "Ek7zcnZ3Au8jDdBrM",
+        "appSecret": "05e821e3-7a67-46cb-8b12-accc96e3696c"
     }
 }
