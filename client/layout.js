@@ -11,8 +11,6 @@ Tracker.autorun(function() {
     Meteor.subscribe('users');
 });
 
-
-
 Template.layout.events({
   'tap [data-activate="logout"]' : function(){
     IonPopup.show({

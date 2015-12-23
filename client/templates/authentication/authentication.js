@@ -4,7 +4,6 @@ Template.authentication.rendered = function(){
 
   setTimeout(function () {
     document.querySelector('.auth-box').classList.remove('auth-hide');
-    IonLoading.hide();
   }, 2000);
 
 }

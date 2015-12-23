@@ -3,7 +3,7 @@ Template.loading.rendered = function () {
     this.loading = window.pleaseWait({
       // logo: '/images/home/logo-sistema.png',
       backgroundColor: '#ffffff',
-      loadingHtml: spinner + message;
+      loadingHtml: spinner + message
     });
     // manually remove loading for demo
     var loading = this.loading;
