@@ -49,21 +49,19 @@ Template.tabsPollsRadio.helpers({
               }
             }
           );
-
+          
+          // verifica se a enquete atual que está ativa ja foi respondida
           if((pollUser && pollUser[0] !== undefined)){
-            //&& (document.querySelector('.polls-answers') !== null
-            //&& document.querySelector('.results-question') !== null)){
+            document.querySelector('.message-feedback').classList.add('hide');
             document.querySelector('.poll-answers-footer').style.display = 'none';
             var radioButtonArray = document.getElementsByClassName('radio');
             for(var i = 0; i < radioButtonArray.length; i++){
               radioButtonArray[i].disabled = true;
             }  
           }
-        }/*else if(document.querySelector('.polls-answers') !== null
-            && document.querySelector('.message-feedback') !== null){
-            //document.querySelector('.polls-answers').classList.add('hide');
-           // document.querySelector('.message-feedback').classList.remove('hide');
-        }*/
+        }else{
+          document.querySelector('.message-feedback').classList.remove('hide');
+        }
 
         return poll;
     },
