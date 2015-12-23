@@ -26,8 +26,8 @@ mobile-status-bar
 launch-screen
 fastclick
 mrt:modernizr-meteor
-pcel:loading
 fourseven:scss
 jparker:crypto-md5
 jimbog:tap
 reywood:iron-router-ga
+mdg:reload-on-resume
