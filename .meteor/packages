@@ -25,10 +25,7 @@ meteoric:camera
 mobile-status-bar
 launch-screen
 fastclick
-mrt:modernizr-meteor
 fourseven:scss
 jparker:crypto-md5
 jimbog:tap
-reywood:iron-router-ga
-mdg:reload-on-resume
 pcel:loading
