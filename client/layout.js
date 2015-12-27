@@ -1,4 +1,4 @@
-Tracker.autorun(function() {
+/*Tracker.autorun(function() {
     Meteor.remote.subscribe('program');
     Meteor.remote.subscribe('category');
     Meteor.remote.subscribe('content');
@@ -9,7 +9,7 @@ Tracker.autorun(function() {
     Meteor.remote.subscribe('user');
     Meteor.remote.subscribe('city');
     Meteor.subscribe('users');
-});
+});*/
 
 Template.layout.events({
   'tap [data-activate="logout"]' : function(){

@@ -18,100 +18,97 @@ Template.authentication.events({
     // executa o login da rede social facebook
     'tap .bg-facebook': function (events, tmp) {
       events.preventDefault();
-      if(Meteor.isCordova){
-        Session.set('getupRemoveLoading', false);
 
-        // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
-        Meteor.loginApp(events);
+      Session.set('getupRemoveLoading', false);
 
-        // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
-        Meteor.loginAppService(Meteor.loginAppOptions, function(err){
-          if(err){
-            //IonLoading.hide();
-            toastr.info(
-              "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
-              '',
+      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
+      Meteor.loginApp(events);
+
+      // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
+      Meteor.loginAppService(Meteor.loginAppOptions, function(err){
+        if(err){
+          //IonLoading.hide();
+          toastr.info(
+            "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
+            '',
+            {
+              "positionClass": "toast-top-center",
+              "tapToDismiss": true,
+              "timeOut": 3000
+            }
+          );
+        }else{
+          var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
+          var userId = User.findOne(
               {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
+                facebook_id:usersSearch.services.facebook.id,
+                email:usersSearch.services.facebook.email
               }
-            );
-          }else{
-            var usersSearch = Meteor.users.findOne({_id:Meteor.userId()});
-            var userId = User.findOne(
+          );
+
+          if(userId !== undefined){
+            if(userId.status === 0){
+              //IonLoading.hide();
+              toastr.info(
+                "Você não tem autorização, precisa de um login",
+                '',
                 {
-                  facebook_id:usersSearch.services.facebook.id,
-                  email:usersSearch.services.facebook.email
+                  "positionClass": "toast-top-center",
+                  "tapToDismiss": true,
+                  "timeOut": 3000
+                }
+              );
+            }else{
+              localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
+              localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+              localStorage.setItem('Meteor.userServerId', userId._id);
+              localStorage.setItem('Meteor.userId', userId._id);
+
+              //IonLoading.hide();
+              Router.go('index');
+            }
+          }else{
+            Meteor.remote.call(
+                'insertUser',
+                [
+                  111,
+                  '0',
+                  usersSearch.services.facebook.name,
+                  'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=small',
+                  usersSearch.services.facebook.email,
+                  null,
+                  usersSearch.services.facebook.id,
+                  null,
+                  null,
+                  1,
+                  1
+                ],
+                function(error, result){
+                  if(result){
+                    localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
+                    localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
+                    localStorage.setItem('Meteor.userServerId', result[1]);
+                    localStorage.setItem('Meteor.userId', result[1]);
+
+                    //IonLoading.hide();
+                    Router.go('index');
+                  }else{
+                    //IonLoading.hide();
+                    toastr.info(
+                      "Estranho, " + error,
+                      '',
+                      {
+                        "positionClass": "toast-top-center",
+                        "tapToDismiss": true,
+                        "timeOut": 3000
+                      }
+                    );
+                  }
                 }
             );
-
-            if(userId !== undefined){
-              if(userId.status === 0){
-                //IonLoading.hide();
-                toastr.info(
-                  "Você não tem autorização, precisa de um login",
-                  '',
-                  {
-                    "positionClass": "toast-top-center",
-                    "tapToDismiss": true,
-                    "timeOut": 3000
-                  }
-                );
-              }else{
-                localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
-                localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
-                localStorage.setItem('Meteor.userServerId', userId._id);
-                localStorage.setItem('Meteor.userId', userId._id);
-
-                //IonLoading.hide();
-                Router.go('index');
-              }
-            }else{
-              Meteor.remote.call(
-                  'insertUser',
-                  [
-                    111,
-                    '0',
-                    usersSearch.services.facebook.name,
-                    'http://graph.facebook.com/' + usersSearch.services.facebook.id + '/picture/?type=small',
-                    usersSearch.services.facebook.email,
-                    null,
-                    usersSearch.services.facebook.id,
-                    null,
-                    null,
-                    1,
-                    1
-                  ],
-                  function(error, result){
-                    if(result){
-                      localStorage.setItem('Meteor.facebookId', usersSearch.services.facebook.id);
-                      localStorage.setItem('Meteor.emailId', usersSearch.services.facebook.email);
-                      localStorage.setItem('Meteor.userServerId', result[1]);
-                      localStorage.setItem('Meteor.userId', result[1]);
-
-                      //IonLoading.hide();
-                      Router.go('index');
-                    }else{
-                      //IonLoading.hide();
-                      toastr.info(
-                        "Estranho, " + error,
-                        '',
-                        {
-                          "positionClass": "toast-top-center",
-                          "tapToDismiss": true,
-                          "timeOut": 3000
-                        }
-                      );
-                    }
-                  }
-              );
-            }
           }
-        });
-      }else{
-        alert('opa n eh cordova.');
-      }
+        }
+      });
     },
 
     // login da rede social google
