@@ -16,19 +16,13 @@ Template.authentication.destroyed = function(){
 
 Template.authentication.events({
     // executa o login da rede social facebook
-    'tap .bg-facebook': function (evento, tmp) {
-      evento.preventDefault();
+    'tap .bg-facebook': function (events, tmp) {
+      events.preventDefault();
 
-      if(Meteor.isCordova){
-        alert('eh cordova');
-      }else{
-        alert('ops nao eh cordova');
-      }
-
-      /*Session.set('getupRemoveLoading', false);
+      Session.set('getupRemoveLoading', false);
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
-      Meteor.loginApp(evento);
+      Meteor.loginApp(events);
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
       Meteor.loginAppService(Meteor.loginAppOptions, function(err){
@@ -114,16 +108,16 @@ Template.authentication.events({
             );
           }
         }
-      });*/
+      });
     },
 
     // login da rede social google
-    'tap .bg-google': function (evento, tmp) {
+    'tap .bg-google': function (events, tmp) {
 
-      evento.preventDefault();
+      events.preventDefault();
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
-      Meteor.loginApp(evento);
+      Meteor.loginApp(events);
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
       Meteor.loginAppService(Meteor.loginAppOptions, function(err){
