@@ -19,7 +19,13 @@ Template.authentication.events({
     'tap .bg-facebook': function (evento, tmp) {
       evento.preventDefault();
 
-      Session.set('getupRemoveLoading', false);
+      if(Meteor.isCordova){
+        alert('eh cordova');
+      }else{
+        alert('ops nao eh cordova');
+      }
+
+      /*Session.set('getupRemoveLoading', false);
 
       // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
       Meteor.loginApp(evento);
@@ -108,7 +114,7 @@ Template.authentication.events({
             );
           }
         }
-      });
+      });*/
     },
 
     // login da rede social google
