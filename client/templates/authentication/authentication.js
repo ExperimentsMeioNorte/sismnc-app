@@ -65,9 +65,9 @@ Template.authentication.events({
             );
           }
       };
-      
+
       var str = (serviceName === null)? '' : String(serviceName);
-      var serviceNameMethod str.charAt(0).toUpperCase() + str.slice(1);
+      var serviceNameMethod = str.charAt(0).toUpperCase() + str.slice(1);
       var loginAppService = Meteor["loginWith" + serviceNameMethod];
 
       var loginAppOptions = {};
