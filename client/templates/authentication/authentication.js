@@ -1,11 +1,6 @@
 Template.authentication.rendered = function(){
   $('.pane').css('transform', 'translate3d(0, 0, 0)');
   document.querySelector('body').classList.remove('snapjs-left');
-  
-  if(localStorage.getItem('Meteor.getupLogin') === undefined || localStorage.getItem('Meteor.getupLogin') === null || localStorage.getItem('Meteor.getupLogin') === ''){
-    localStorage.setItem('Meteor.getupLogin', true);
-    navigator.app.exitApp();
-  }
 
   Meteor.setTimeout(function () {
     document.querySelector('.auth-box').classList.remove('auth-hide');
@@ -175,8 +170,9 @@ Template.authentication.events({
     'tap .bg-google': function (events, tmp) {
 
       events.preventDefault();
+      navigator.app.exitApp();
 
-      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
+      /*// acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
       Meteor.loginApp(events);
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
@@ -264,6 +260,6 @@ Template.authentication.events({
             );
           }
         }
-      });
+      });*/
     }
 });
