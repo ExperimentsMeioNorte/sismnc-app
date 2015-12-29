@@ -21,7 +21,7 @@ Template.authentication.events({
 
       Session.set('getupRemoveLoading', false);
 
-      var serviceName = $(evento.currentTarget).attr('data-service');
+      var serviceName = $(events.currentTarget).attr('data-service');
       var callback = function (err) {
            if (!err) {
             toastr.info(
