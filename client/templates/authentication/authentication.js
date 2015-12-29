@@ -21,11 +21,66 @@ Template.authentication.events({
 
       Session.set('getupRemoveLoading', false);
 
-      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
-      Meteor.loginApp(events);
+      var serviceName = $(evento.currentTarget).attr('data-service');
+      var callback = function (err) {
+           if (!err) {
+            toastr.info(
+              "Seja bem-vindo",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
+          } else if (err instanceof Accounts.LoginCancelledError) {
+            toastr.info(
+              "Ocorreu um problema",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
+          } else if (err instanceof ServiceConfiguration.ConfigError) {
+            toastr.info(
+              "Algumas informações incompletas",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
+          } else {
+            toastr.info(
+              "Ops.. o que houve?",
+              '',
+              {
+                "positionClass": "toast-top-center",
+                "tapToDismiss": true,
+                "timeOut": 3000
+              }
+            );
+          }
+      };
+      
+      var str = (serviceName === null)? '' : String(serviceName);
+      var serviceNameMethod str.charAt(0).toUpperCase() + str.slice(1);
+      var loginAppService = Meteor["loginWith" + serviceNameMethod];
+
+      var loginAppOptions = {};
+      if (Accounts.ui._options.requestPermissions[serviceName]){
+          loginAppOptions.requestPermissions = Accounts.ui._options.requestPermissions[serviceName];
+      }
+
+      if (Accounts.ui._options.requestOfflineToken[serviceName]){
+          loginAppOptions.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName];
+      }
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
-      Meteor.loginAppService(Meteor.loginAppOptions, function(err){
+      loginAppService(loginAppOptions, function(err){
         if(err){
           //IonLoading.hide();
           toastr.info(
