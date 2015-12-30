@@ -8,7 +8,7 @@ Meteor.methods({
 	'removeBugFacebook': function(){
 	    BugFacebook.remove({});
 	}
-)};
+});
 
 Meteor.publish('bugfacebook', function() {
     return BugFacebook.find({});
