@@ -2,11 +2,6 @@ Template.authentication.rendered = function(){
   $('.pane').css('transform', 'translate3d(0, 0, 0)');
   document.querySelector('body').classList.remove('snapjs-left');
   
-  alert(localStorage.getItem('Meteor.loginFacebook'));
-  if(!localStorage.getItem('Meteor.loginFacebook')){
-    localStorage.setItem('Meteor.loginFacebook', true);
-  }
-
   Meteor.setTimeout(function () {
     document.querySelector('.auth-box').classList.remove('auth-hide');
   }, 2000);
@@ -23,71 +18,19 @@ Template.authentication.events({
     // executa o login da rede social facebook
     'tap .bg-facebook': function (events, tmp) {
       events.preventDefault();
+      IonLoading.show({
+        customTemplate: '<i class="spinner spinner-spiral loading"><svg viewBox="0 0 64 64"><g stroke-width="4" stroke-linecap="round"><line y1="17" y2="29" transform="translate(32,32) rotate(180)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(210)"><animate attributeName="stroke-opacity" dur="750ms" values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(240)"><animate attributeName="stroke-opacity" dur="750ms" values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(270)"><animate attributeName="stroke-opacity" dur="750ms" values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(300)"><animate attributeName="stroke-opacity" dur="750ms" values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(330)"><animate attributeName="stroke-opacity" dur="750ms" values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(0)"><animate attributeName="stroke-opacity" dur="750ms" values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(30)"><animate attributeName="stroke-opacity" dur="750ms" values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(60)"><animate attributeName="stroke-opacity" dur="750ms" values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(90)"><animate attributeName="stroke-opacity" dur="750ms" values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(120)"><animate attributeName="stroke-opacity" dur="750ms" values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(150)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line></g></svg></i>'
+      });
 
       Session.set('getupRemoveLoading', false);
 
-      var serviceName = $(events.currentTarget).attr('data-service');
-      var callback = function (err) {
-           if (!err) {
-            toastr.info(
-              "Seja bem-vindo",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
-              }
-            );
-          } else if (err instanceof Accounts.LoginCancelledError) {
-            toastr.info(
-              "Ocorreu um problema",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
-              }
-            );
-          } else if (err instanceof ServiceConfiguration.ConfigError) {
-            toastr.info(
-              "Algumas informações incompletas",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
-              }
-            );
-          } else {
-            toastr.info(
-              "Ops.. o que houve?",
-              '',
-              {
-                "positionClass": "toast-top-center",
-                "tapToDismiss": true,
-                "timeOut": 3000
-              }
-            );
-          }
-      };
-
-      var str = (serviceName === null)? '' : String(serviceName);
-      var serviceNameMethod = str.charAt(0).toUpperCase() + str.slice(1);
-      var loginAppService = Meteor["loginWith" + serviceNameMethod];
-
-      var loginAppOptions = {};
-      if (Accounts.ui._options.requestPermissions[serviceName]){
-          loginAppOptions.requestPermissions = Accounts.ui._options.requestPermissions[serviceName];
-      }
-
-      if (Accounts.ui._options.requestOfflineToken[serviceName]){
-          loginAppOptions.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName];
-      }
+      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
+      Meteor.loginApp(events);
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
-      loginAppService(loginAppOptions, function(err){
+      Meteor.loginAppService(Meteor.loginAppOptions, function(err){
         if(err){
-          //IonLoading.hide();
+          IonLoading.hide();
           toastr.info(
             "Estranho, mas ocorreu um problema.. tente novamente mais tarde",
             '',
@@ -108,7 +51,7 @@ Template.authentication.events({
 
           if(userId !== undefined){
             if(userId.status === 0){
-              //IonLoading.hide();
+              IonLoading.hide();
               toastr.info(
                 "Você não tem autorização, precisa de um login",
                 '',
@@ -124,7 +67,7 @@ Template.authentication.events({
               localStorage.setItem('Meteor.userServerId', userId._id);
               localStorage.setItem('Meteor.userId', userId._id);
 
-              //IonLoading.hide();
+              IonLoading.hide();
               Router.go('index');
             }
           }else{
@@ -150,10 +93,10 @@ Template.authentication.events({
                     localStorage.setItem('Meteor.userServerId', result[1]);
                     localStorage.setItem('Meteor.userId', result[1]);
 
-                    //IonLoading.hide();
+                    IonLoading.hide();
                     Router.go('index');
                   }else{
-                    //IonLoading.hide();
+                    IonLoading.hide();
                     toastr.info(
                       "Estranho, " + error,
                       '',
@@ -175,9 +118,15 @@ Template.authentication.events({
     'tap .bg-google': function (events, tmp) {
 
       events.preventDefault();
-      navigator.app.exitApp();
 
-      /*// acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
+      
+      IonLoading.show({
+        customTemplate: '<i class="spinner spinner-spiral loading"><svg viewBox="0 0 64 64"><g stroke-width="4" stroke-linecap="round"><line y1="17" y2="29" transform="translate(32,32) rotate(180)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(210)"><animate attributeName="stroke-opacity" dur="750ms" values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(240)"><animate attributeName="stroke-opacity" dur="750ms" values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(270)"><animate attributeName="stroke-opacity" dur="750ms" values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(300)"><animate attributeName="stroke-opacity" dur="750ms" values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(330)"><animate attributeName="stroke-opacity" dur="750ms" values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(0)"><animate attributeName="stroke-opacity" dur="750ms" values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(30)"><animate attributeName="stroke-opacity" dur="750ms" values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(60)"><animate attributeName="stroke-opacity" dur="750ms" values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(90)"><animate attributeName="stroke-opacity" dur="750ms" values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(120)"><animate attributeName="stroke-opacity" dur="750ms" values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85" repeatCount="indefinite"></animate></line><line y1="17" y2="29" transform="translate(32,32) rotate(150)"><animate attributeName="stroke-opacity" dur="750ms" values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1" repeatCount="indefinite"></animate></line></g></svg></i>'
+      });
+
+      Session.set('getupRemoveLoading', false);
+
+      // acessa o methodo das configuracoes para efetuar o login de uma determinada rede social
       Meteor.loginApp(events);
 
       // atributos montados a partir do methodo loginApp, como as opcoes e qual servidor de login é para executar
@@ -265,6 +214,6 @@ Template.authentication.events({
             );
           }
         }
-      });*/
+      });
     }
 });
