@@ -1,6 +1,11 @@
 Template.authentication.rendered = function(){
   $('.pane').css('transform', 'translate3d(0, 0, 0)');
   document.querySelector('body').classList.remove('snapjs-left');
+  
+  alert(localStorage.getItem('Meteor.loginFacebook'));
+  if(!localStorage.getItem('Meteor.loginFacebook')){
+    localStorage.setItem('Meteor.loginFacebook', true);
+  }
 
   Meteor.setTimeout(function () {
     document.querySelector('.auth-box').classList.remove('auth-hide');
